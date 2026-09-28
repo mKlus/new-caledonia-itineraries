@@ -618,6 +618,7 @@
 
       // --- OPTION 2 DESTINATIONS & PATHS ---
       var opt2Locs = [
+        { name: "Option 2 Mainland Base: Nouméa (Citrons & Signal)", lat: -22.2986, lng: 166.4357, emoji: "🏙️", pin: "pin-emerald", info: "3 nights mainland stay (Nights 1, 5, 6). Baie des Citrons, Îlot Signal turtle trip, Tjibaou." },
         { name: "Option 2 Base: Isle of Pines (Kanumera)", lat: -22.6625, lng: 167.4475, emoji: "🏖️", pin: "pin-emerald", info: "3 nights bungalow stay; walk-in coral reef snorkeling off beach." },
         { name: "Option 2: Piscine Naturelle (Oro Bay)", lat: -22.5894, lng: 167.5147, emoji: "🐠", pin: "pin-emerald", info: "Wave-free tidal basin filled with friendly parrotfish and blue stars." },
         { name: "Option 2: Baie d'Upi Pirogues", lat: -22.6167, lng: 167.5167, emoji: "⛵", pin: "pin-emerald", info: "Traditional Kanak outrigger sailing across mirror-turquoise lagoon." },
@@ -631,6 +632,7 @@
       // Flight line Magenta to ILP
       L.polyline([[-22.2592, 166.4719], [-22.5992, 167.4564]], { color: '#0d9488', weight: 4, dashArray: '6, 8' }).addTo(groupOpt2);
       L.circle([-22.62, 167.48], { radius: 18000, color: '#0d9488', fillColor: '#0d9488', fillOpacity: 0.15 }).addTo(groupOpt2);
+      L.circle([-22.29, 166.43], { radius: 14000, color: '#0d9488', fillColor: '#0d9488', fillOpacity: 0.15 }).addTo(groupOpt2);
 
       // --- OPTION 3 DESTINATIONS & PATHS ---
       var opt3Locs = [

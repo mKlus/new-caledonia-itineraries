@@ -107,49 +107,82 @@
         <!-- Interactive Map Section -->
         <div id="map-section" class="card">
           <div class="card-header">
-            <h2>Interactive Isle of Pines & Route Map</h2>
-            <span class="day-tag">14 Plotted Destinations & Routes</span>
+            <h2>Interactive Multi-Region Route Map</h2>
+            <span class="day-tag highlight">21 Destinations Across Nouméa & Isle of Pines</span>
           </div>
-          <p class="card-subtext">Click any pin or chip below to zoom to that spot. Includes the flight corridor between Nouméa and Isle of Pines, traditional pirogue sailing route, and island road network.</p>
+          <p class="card-subtext">Option 2 spans <strong>both mainland Nouméa and the Isle of Pines</strong>. Use the buttons below to switch view focus or see the full flight corridor connecting both hubs.</p>
+
+          <!-- Region View Toggle Buttons -->
+          <div class="comp-toolbar" style="margin-bottom: 1rem;">
+            <div class="toolbar-group">
+              <span class="toolbar-label">Map View:</span>
+              <button class="cat-filter-btn active" id="btn-view-both">🌐 Show Both Regions (Nouméa + Isle of Pines)</button>
+              <button class="cat-filter-btn" id="btn-view-iop">🏝️ Focus on Isle of Pines (Days 2–5)</button>
+              <button class="cat-filter-btn" id="btn-view-noumea">🏙️ Focus on Nouméa & Islets (Days 1, 2, 5, 6, 7)</button>
+            </div>
+          </div>
           
           <div class="map-wrapper">
-            <div id="opt2-map" class="map-container"></div>
+            <div id="opt2-map" class="map-container" style="height: 480px;"></div>
           </div>
 
           <!-- Map Actions Bar & Legend -->
           <div class="map-actions-bar">
             <div class="map-legend">
-              <span class="legend-item"><span class="legend-dot" style="background:#0d9488;"></span> 🏖️ Base & Bays</span>
-              <span class="legend-item"><span class="legend-dot" style="background:#0284c7;"></span> ⛵ Pirogues & Atolls</span>
-              <span class="legend-item"><span class="legend-dot" style="background:#16a34a;"></span> 🌿 Caves & Peaks</span>
-              <span class="legend-item"><span class="legend-dot" style="background:#7c3aed;"></span> ✈️ Airports & Flight</span>
+              <span class="legend-item"><span class="legend-dot" style="background:#0d9488;"></span> 🏝️ Isle of Pines Bays & Bases</span>
+              <span class="legend-item"><span class="legend-dot" style="background:#0284c7;"></span> 🏙️ Nouméa Bays & Islets</span>
+              <span class="legend-item"><span class="legend-dot" style="background:#16a34a;"></span> 🌿 Nature & Cultural Sites</span>
+              <span class="legend-item"><span class="legend-dot" style="background:#7c3aed;"></span> ✈️ Airports & Flight Path</span>
             </div>
-            <a href="https://www.google.com/maps/dir/Isle+of+Pines+Airport/Baie+de+Kanumera/Baie+d'Upi/Piscine+Naturelle+Baie+d'Oro/Ilot+Nokanhui/" target="_blank" rel="noopener" class="btn-gmaps">
-              🗺️ Open Route in Google Maps &rarr;
-            </a>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <a href="https://www.google.com/maps/dir/Isle+of+Pines+Airport/Baie+de+Kanumera/Baie+d'Upi/Piscine+Naturelle+Baie+d'Oro/Ilot+Nokanhui/" target="_blank" rel="noopener" class="btn-gmaps" style="background: #0d9488;">
+                🗺️ Isle of Pines in Google Maps &rarr;
+              </a>
+              <a href="https://www.google.com/maps/dir/La+Tontouta+Airport/Baie+des+Citrons,+Noumea/Centre+Culturel+Tjibaou/Noumea+Magenta+Airport/" target="_blank" rel="noopener" class="btn-gmaps" style="background: #0284c7;">
+                🗺️ Nouméa in Google Maps &rarr;
+              </a>
+            </div>
           </div>
 
-          <!-- Location Chips -->
-          <div class="location-chips-bar">
-            <button class="location-chip active" data-loc="kanumera">🏖️ Kanumera Bay & Sacred Rock</button>
-            <button class="location-chip" data-loc="kuto">🌅 Kuto Bay Sunset Beach</button>
-            <button class="location-chip" data-loc="stjoseph">⛵ St. Joseph Bay (Pirogue Departure)</button>
-            <button class="location-chip" data-loc="upi">🌊 Baie d'Upi (Pirogue Sailing)</button>
-            <button class="location-chip" data-loc="piscine">🐠 Piscine Naturelle (Natural Pool)</button>
-            <button class="location-chip" data-loc="kougny">🦞 Le Kou-Gny Beach Lunch</button>
-            <button class="location-chip" data-loc="nokanhui">🏝️ Îlot Nokanhui Sandbar</button>
-            <button class="location-chip" data-loc="brosse">🍖 Îlot Brosse BBQ</button>
-            <button class="location-chip" data-loc="cave">🌿 Queen Hortense Cave</button>
-            <button class="location-chip" data-loc="picnga">⛰️ Pic N'Ga (262m Peak)</button>
-            <button class="location-chip" data-loc="vao">⛪ Vao Village Mission</button>
-            <button class="location-chip" data-loc="ilp">✈️ Isle of Pines Airport (ILP)</button>
-            <button class="location-chip" data-loc="gea">🛫 Magenta Airport Nouméa (GEA)</button>
-            <button class="location-chip" data-loc="signal">🐢 Îlot Signal Turtle Reserve</button>
+          <!-- Location Chips Grouped by Region -->
+          <div style="margin-top: 1.25rem;">
+            <div style="font-size: 0.8rem; font-weight: 700; color: #0f766e; text-transform: uppercase; margin-bottom: 0.4rem;">
+              🏝️ Isle of Pines Destinations (Days 2–5):
+            </div>
+            <div class="location-chips-bar" style="margin-top: 0; margin-bottom: 0.85rem;">
+              <button class="location-chip active" data-loc="kanumera">🏖️ Kanumera Bay Base & Reef</button>
+              <button class="location-chip" data-loc="kuto">🌅 Kuto Bay Sunset Beach</button>
+              <button class="location-chip" data-loc="stjoseph">⛵ St. Joseph Bay (Pirogues)</button>
+              <button class="location-chip" data-loc="upi">🌊 Baie d'Upi Sailing Lagoon</button>
+              <button class="location-chip" data-loc="piscine">🐠 Piscine Naturelle (Natural Pool)</button>
+              <button class="location-chip" data-loc="kougny">🦞 Le Kou-Gny Beach Lunch</button>
+              <button class="location-chip" data-loc="nokanhui">🏝️ Îlot Nokanhui Sandbar</button>
+              <button class="location-chip" data-loc="brosse">🍖 Îlot Brosse BBQ</button>
+              <button class="location-chip" data-loc="cave">🌿 Queen Hortense Cave</button>
+              <button class="location-chip" data-loc="picnga">⛰️ Pic N'Ga Peak</button>
+              <button class="location-chip" data-loc="vao">⛪ Vao Village Mission</button>
+              <button class="location-chip" data-loc="ilp">✈️ Isle of Pines Airport (ILP)</button>
+            </div>
+
+            <div style="font-size: 0.8rem; font-weight: 700; color: #0369a1; text-transform: uppercase; margin-bottom: 0.4rem;">
+              🏙️ Nouméa & Mainland Destinations (Days 1, 2, 5, 6, 7):
+            </div>
+            <div class="location-chips-bar" style="margin-top: 0;">
+              <button class="location-chip" data-loc="citrons">🏖️ Nouméa Base (Baie des Citrons)</button>
+              <button class="location-chip" data-loc="vatanav">🚤 Anse Vata Beach (Day 2 Stroll)</button>
+              <button class="location-chip" data-loc="canard">🦆 Duck Island / Îlot Canard (Day 2 Snorkel)</button>
+              <button class="location-chip" data-loc="portmoselle">⛵ Port Moselle Marina (Day 6 Speedboat)</button>
+              <button class="location-chip" data-loc="signal">🐢 Îlot Signal Turtle Reserve (Day 6)</button>
+              <button class="location-chip" data-loc="tjibaou">🏛️ Tjibaou Cultural Centre (Day 6)</button>
+              <button class="location-chip" data-loc="latin">🍷 Quartier Latin Dining (Chez Toto - Day 5)</button>
+              <button class="location-chip" data-loc="gea">🛫 Magenta Domestic Airport (GEA)</button>
+              <button class="location-chip" data-loc="airport">✈️ La Tontouta International Airport (NOU)</button>
+            </div>
           </div>
 
           <!-- Distance & Travel Time Matrix -->
           <div class="distance-matrix">
-            <h4>⏱️ Distance & Travel Time Matrix</h4>
+            <h4>⏱️ Complete Distance & Travel Time Matrix</h4>
             <div class="distance-matrix-grid">
               <div class="distance-stat-card">
                 <strong>Magenta (GEA) ⇄ Isle of Pines (ILP)</strong>
@@ -174,6 +207,22 @@
               <div class="distance-stat-card">
                 <strong>Kanumera ⇄ Îlot Nokanhui Atoll</strong>
                 <span>16 km | 35 min speedboat cruise</span>
+              </div>
+              <div class="distance-stat-card">
+                <strong>La Tontouta Airport ⇄ Nouméa Base</strong>
+                <span>45 km | ~45 min drive / private transfer van</span>
+              </div>
+              <div class="distance-stat-card">
+                <strong>Baie des Citrons ⇄ Magenta Airport</strong>
+                <span>6 km | ~12 min drive across Nouméa</span>
+              </div>
+              <div class="distance-stat-card">
+                <strong>Port Moselle ⇄ Îlot Signal</strong>
+                <span>15 km | ~35 min high-speed taxi boat</span>
+              </div>
+              <div class="distance-stat-card">
+                <strong>Nouméa Base ⇄ Tjibaou Cultural Centre</strong>
+                <span>10 km | ~15 min drive</span>
               </div>
             </div>
           </div>
@@ -713,7 +762,7 @@
   <!-- Leaflet Map Setup -->
   <script>
     document.addEventListener("DOMContentLoaded", function() {
-      var map = L.map('opt2-map').setView([-22.52, 167.15], 9);
+      var map = L.map('opt2-map').setView([-22.45, 166.95], 9);
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; OpenStreetMap contributors'
       }).addTo(map);
@@ -730,6 +779,7 @@
       }
 
       var locations = {
+        // --- ISLE OF PINES (DAYS 2–5) ---
         kanumera: { name: "Kanumera Bay & Sacred Rock", lat: -22.6625, lng: 167.4475, pin: 'pin-emerald', emoji: '🏖️', info: "Your island bungalow base (Nataïwatch / Oure Lodge). Walk-in coral reef snorkeling right off the sand." },
         kuto:     { name: "Kuto Bay Sunset Beach", lat: -22.6583, lng: 167.4428, pin: 'pin-emerald', emoji: '🌅', info: "Powder-fine white silica sand beach, 5 min walk from Kanumera. Spectacular sunset spot." },
         stjoseph: { name: "St. Joseph Bay (Pirogue Pier)", lat: -22.6289, lng: 167.5097, pin: 'pin-blue', emoji: '⛵', info: "Board traditional wooden Kanak sailing pirogues with local captains for the Upi Bay crossing." },
@@ -742,8 +792,17 @@
         picnga:   { name: "Pic N'Ga Summit (262m)", lat: -22.6542, lng: 167.4608, pin: 'pin-emerald', emoji: '⛰️', info: "Highest peak on the island. 1-hour return hike with 360° views across the barrier reef." },
         vao:      { name: "Vao Village Mission & Market", lat: -22.6644, lng: 167.4811, pin: 'pin-amber', emoji: '⛪', info: "Main island settlement; historic 1860 mission church, local bakery, and fruit stalls." },
         ilp:      { name: "Isle of Pines Airport (ILP)", lat: -22.5992, lng: 167.4564, pin: 'pin-purple', emoji: '✈️', info: "Island arrival runway. Collect rental car for the 12-min drive to Kanumera." },
-        gea:      { name: "Nouméa Magenta Airport (GEA)", lat: -22.2592, lng: 166.4719, pin: 'pin-purple', emoji: '🛫', info: "Domestic terminal in Nouméa for 25-minute Air Calédonie flight to Isle of Pines." },
-        signal:   { name: "Îlot Signal Turtle Reserve (Nouméa)", lat: -22.2961, lng: 166.2922, pin: 'pin-emerald', emoji: '🐢', info: "Visited on Day 6 in Nouméa. Snorkel along reef drop-offs with wild green sea turtles." }
+
+        // --- NOUMÉA & MAINLAND (DAYS 1, 2, 5, 6, 7) ---
+        citrons:     { name: "Nouméa Base: Baie des Citrons", lat: -22.2986, lng: 166.4357, pin: 'pin-blue', emoji: '🏖️', info: "Mainland base for Nights 1, 5, & 6. Netted beach swimming, oceanfront apartments, and seaside bistros." },
+        vatanav:     { name: "Anse Vata Beach", lat: -22.3042, lng: 166.4468, pin: 'pin-blue', emoji: '🚤', info: "Morning stroll on Day 2; water taxi jetty and French pastry cafes." },
+        canard:      { name: "Duck Island (Îlot Canard)", lat: -22.3135, lng: 166.4368, pin: 'pin-blue', emoji: '🦆', info: "Introductory morning snorkel on Day 2 before flight to Isle of Pines." },
+        portmoselle: { name: "Port Moselle Marina & Pier K", lat: -22.2745, lng: 166.4411, pin: 'pin-blue', emoji: '⛵', info: "Speedboat departure pontoon for Îlot Signal turtle trip on Day 6; morning market." },
+        signal:      { name: "Îlot Signal Turtle Reserve", lat: -22.2961, lng: 166.2922, pin: 'pin-blue', emoji: '🐢', info: "Visited on Day 6 morning. Snorkel along reef drop-offs with wild green sea turtles." },
+        tjibaou:     { name: "Tjibaou Cultural Centre", lat: -22.2561, lng: 166.4831, pin: 'pin-emerald', emoji: '🏛️', info: "Visited on Day 6 afternoon. Renzo Piano’s Kanak pavilions set in coastal mangroves." },
+        latin:       { name: "Quartier Latin (Chez Toto)", lat: -22.2725, lng: 166.4440, pin: 'pin-amber', emoji: '🍷', info: "Day 5 celebration dinner after returning from Isle of Pines." },
+        gea:         { name: "Nouméa Magenta Domestic Airport (GEA)", lat: -22.2592, lng: 166.4719, pin: 'pin-purple', emoji: '🛫', info: "Domestic terminal in Nouméa for 25-minute Air Calédonie flight to Isle of Pines." },
+        airport:     { name: "La Tontouta International Airport (NOU)", lat: -22.0147, lng: 166.2131, pin: 'pin-purple', emoji: '✈️', info: "International flight arrival (QF91 at 12:35 PM) & departure (QF92 at 1:50 PM)." }
       };
 
       var markersMap = {};
@@ -752,7 +811,7 @@
         var loc = locations[key];
         var icon = createPin(loc.pin, loc.emoji);
         var marker = L.marker([loc.lat, loc.lng], { icon: icon }).addTo(map)
-          .bindPopup("<div style='font-family: var(--font-body); font-size: 0.9rem; min-width: 200px;'>" +
+          .bindPopup("<div style='font-family: var(--font-body); font-size: 0.9rem; min-width: 210px;'>" +
                      "<strong style='color: #0f766e; font-size: 0.95rem; display: block; margin-bottom: 0.25rem;'>" + loc.emoji + " " + loc.name + "</strong>" + 
                      "<p style='margin: 0.35rem 0; color: #334155; font-size: 0.85rem; line-height: 1.4;'>" + loc.info + "</p>" +
                      "<div style='margin-top: 0.5rem; padding-top: 0.4rem; border-top: 1px solid #e2e8f0;'>" +
@@ -795,6 +854,68 @@
         [-22.6625, 167.4475], // Kanumera
         [-22.6583, 167.4428]  // Kuto
       ], { color: '#10b981', weight: 3, opacity: 0.8 }).addTo(map);
+
+      // Nouméa Road Path: La Tontouta Airport to Baie des Citrons
+      L.polyline([
+        [-22.0147, 166.2131],
+        [-22.0800, 166.2400],
+        [-22.2500, 166.4200],
+        [-22.2986, 166.4357]
+      ], { color: '#0284c7', weight: 3, opacity: 0.8 }).addTo(map);
+
+      // Water taxi path: Anse Vata to Duck Island
+      L.polyline([
+        [-22.3042, 166.4468],
+        [-22.3135, 166.4368]
+      ], { color: '#0284c7', weight: 2, dashArray: '4, 6' }).addTo(map);
+
+      // Speedboat path: Port Moselle to Îlot Signal
+      L.polyline([
+        [-22.2745, 166.4411],
+        [-22.2961, 166.2922]
+      ], { color: '#0284c7', weight: 3, dashArray: '5, 8' }).addTo(map);
+
+      // Region View Toggle Buttons
+      var btnBoth   = document.getElementById('btn-view-both');
+      var btnIop    = document.getElementById('btn-view-iop');
+      var btnNoumea = document.getElementById('btn-view-noumea');
+
+      function setViewActive(btn) {
+        [btnBoth, btnIop, btnNoumea].forEach(function(b) {
+          if (b) b.classList.remove('active');
+        });
+        if (btn) btn.classList.add('active');
+      }
+
+      if (btnBoth) {
+        btnBoth.addEventListener('click', function() {
+          setViewActive(btnBoth);
+          map.flyToBounds([
+            [-22.00, 166.20],
+            [-22.75, 167.60]
+          ], { padding: [30, 30], duration: 1.2 });
+        });
+      }
+
+      if (btnIop) {
+        btnIop.addEventListener('click', function() {
+          setViewActive(btnIop);
+          map.flyTo([-22.63, 167.48], 11, { duration: 1.2 });
+        });
+      }
+
+      if (btnNoumea) {
+        btnNoumea.addEventListener('click', function() {
+          setViewActive(btnNoumea);
+          map.flyTo([-22.27, 166.42], 11, { duration: 1.2 });
+        });
+      }
+
+      // Initial framing
+      map.fitBounds([
+        [-22.00, 166.20],
+        [-22.75, 167.60]
+      ], { padding: [30, 30] });
 
       // Hook up map location chips
       if (typeof initMapChips === 'function') {

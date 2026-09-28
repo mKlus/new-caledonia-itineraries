@@ -108,7 +108,7 @@
         <div id="map-section" class="card">
           <div class="card-header">
             <h2>Interactive Route & Location Map</h2>
-            <span class="day-tag">13 Plotted Destinations & Routes</span>
+            <span class="day-tag">14 Plotted Destinations & Routes</span>
           </div>
           <p class="card-subtext">Click any pin or location chip below to zoom directly to that spot. Driving roads and marine speedboat corridors are plotted directly on the map.</p>
           
@@ -139,6 +139,7 @@
             <button class="location-chip" data-loc="portmoselle">⛵ Port Moselle Marina & Market</button>
             <button class="location-chip" data-loc="signal">🐢 Îlot Signal Turtle Sanctuary</button>
             <button class="location-chip" data-loc="amedee">🗼 Phare Amédée Lighthouse</button>
+            <button class="location-chip" data-loc="boulari">🤿 Boulari Barrier Reef Pass</button>
             <button class="location-chip" data-loc="riviere">🌲 Rivière Bleue Park Entrance</button>
             <button class="location-chip" data-loc="kaori">🌳 Grand Kaori (1000 yo)</button>
             <button class="location-chip" data-loc="foret">🛶 Drowned Forest Kayak</button>
@@ -740,6 +741,7 @@
         portmoselle: { name: "Port Moselle Marina & Pontoon K", lat: -22.2745, lng: 166.4411, pin: 'pin-emerald', emoji: '⛵', info: "Board high-speed water taxis to Îlot Signal; morning market with fresh tropical fruit." },
         signal:  { name: "Îlot Signal Turtle Sanctuary", lat: -22.2961, lng: 166.2922, pin: 'pin-emerald', emoji: '🐢', info: "Pristine marine sanctuary. Snorkel along the reef drop-off with wild green turtles." },
         amedee:  { name: "Phare Amédée Lighthouse & Outer Reef", lat: -22.4764, lng: 166.4678, pin: 'pin-rose', emoji: '🗼', info: "Historic 1865 cast-iron lighthouse, giant clams, sea kraits, glass-bottom boat tour." },
+        boulari: { name: "Passe de Boulari (Barrier Reef)", lat: -22.5020, lng: 166.4400, pin: 'pin-blue', emoji: '🤿', info: "Outer barrier reef canyon pass. Renowned for scuba diving with manta rays, reef sharks, and dramatic coral drop-offs." },
         riviere: { name: "Parc Provincial de la Rivière Bleue", lat: -22.1039, lng: 166.6578, pin: 'pin-emerald', emoji: '🌲', info: "Grand Sud rainforest reserve. Spot national flightless Cagou birds; mountain bike trails." },
         kaori:   { name: "Grand Kaori Ancient Tree", lat: -22.1080, lng: 166.6620, pin: 'pin-emerald', emoji: '🌳', info: "Over 1,000 years old! Giant rainforest tree in the heart of Rivière Bleue." },
         foret:   { name: "Forêt Noyée (Drowned Forest Kayak)", lat: -22.1480, lng: 166.6980, pin: 'pin-emerald', emoji: '🛶', info: "Paddle kayaks through bleached paperbark trees submerged in the calm lake." },
@@ -796,11 +798,12 @@
         [-22.2961, 166.2922]
       ], { color: '#0284c7', weight: 3, dashArray: '6, 8' }).addTo(map);
 
-      // Marine catamaran route: Port Moselle to Phare Amédée
+      // Marine catamaran route: Port Moselle to Phare Amédée & Boulari Pass
       L.polyline([
         [-22.2745, 166.4411],
         [-22.3500, 166.4500],
-        [-22.4764, 166.4678]
+        [-22.4764, 166.4678],
+        [-22.5020, 166.4400]
       ], { color: '#d97706', weight: 3, dashArray: '6, 8' }).addTo(map);
 
       // Hook up map location chips

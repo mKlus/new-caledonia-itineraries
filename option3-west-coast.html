@@ -108,18 +108,28 @@
         <div id="map-section" class="card">
           <div class="card-header">
             <h2>Interactive West Coast Drive & Route Map</h2>
-            <span class="day-tag">14 Plotted Destinations & Routes</span>
+            <span class="day-tag highlight">17 Plotted Destinations & Routes</span>
           </div>
-          <p class="card-subtext">Click any pin or chip below to zoom to that spot. Follow the RT1 scenic highway route from La Tontouta to Bourail, Poé lagoon, and the return drive to Nouméa.</p>
+          <p class="card-subtext">Option 3 combines a <strong>160 km scenic RT1 road trip north to Poé</strong> with a <strong>coastal island base in Nouméa</strong>. Use the buttons below to switch view focus or see the full road trip corridor.</p>
+
+          <!-- Region View Toggle Buttons -->
+          <div class="comp-toolbar" style="margin-bottom: 1rem;">
+            <div class="toolbar-group">
+              <span class="toolbar-label">Map View:</span>
+              <button class="cat-filter-btn active" id="btn-view-all">🌐 Show Full Road Trip (Poé to Nouméa)</button>
+              <button class="cat-filter-btn" id="btn-view-west">🏖️ Focus on West Coast & Poé (Days 1–4)</button>
+              <button class="cat-filter-btn" id="btn-view-noumea">🏙️ Focus on Nouméa & Islets (Days 4–7)</button>
+            </div>
+          </div>
           
           <div class="map-wrapper">
-            <div id="opt3-map" class="map-container"></div>
+            <div id="opt3-map" class="map-container" style="height: 480px;"></div>
           </div>
 
           <!-- Map Actions Bar & Legend -->
           <div class="map-actions-bar">
             <div class="map-legend">
-              <span class="legend-item"><span class="legend-dot" style="background:#d97706;"></span> 🏖️ Poé & Beach Base</span>
+              <span class="legend-item"><span class="legend-dot" style="background:#d97706;"></span> 🏖️ Poé Lagoon & West Coast</span>
               <span class="legend-item"><span class="legend-dot" style="background:#0284c7;"></span> 🏙️ Nouméa Base & Islets</span>
               <span class="legend-item"><span class="legend-dot" style="background:#16a34a;"></span> 🥾 Hikes & Lookouts</span>
               <span class="legend-item"><span class="legend-dot" style="background:#7c3aed;"></span> 🏰 Heritage & Airport</span>
@@ -131,6 +141,7 @@
 
           <!-- Location Chips -->
           <div class="location-chips-bar">
+            <!-- West Coast Region -->
             <button class="location-chip active" data-loc="poe">🏖️ Poé Beachfront Chalets Base</button>
             <button class="location-chip" data-loc="faille">🐢 Shark Fault (Reef Canyon)</button>
             <button class="location-chip" data-loc="roche">🪨 Roche Percée Landmark</button>
@@ -139,11 +150,15 @@
             <button class="location-chip" data-loc="deva">🚵 Domaine de Deva (Oua Koué)</button>
             <button class="location-chip" data-loc="bourail">🛒 Bourail Town & Supermarket</button>
             <button class="location-chip" data-loc="teremba">🏰 Fort Teremba (Moindou)</button>
+            <!-- Nouméa Region -->
             <button class="location-chip" data-loc="noumea">🏙️ Nouméa Base (Baie des Citrons)</button>
-            <button class="location-chip" data-loc="signal">🐢 Îlot Signal Turtle Reserve</button>
+            <button class="location-chip" data-loc="vatanav">🚤 Anse Vata Beach & Taxi Pier</button>
             <button class="location-chip" data-loc="canard">🦆 Îlot Canard (Duck Island)</button>
+            <button class="location-chip" data-loc="ouentoro">🔭 Ouen Toro Lookout</button>
+            <button class="location-chip" data-loc="portmoselle">⛵ Port Moselle Marina & Pier K</button>
+            <button class="location-chip" data-loc="signal">🐢 Îlot Signal Turtle Reserve</button>
             <button class="location-chip" data-loc="tjibaou">🏛️ Tjibaou Cultural Centre</button>
-            <button class="location-chip" data-loc="market">🥐 Port Moselle Market</button>
+            <button class="location-chip" data-loc="latin">🍷 Quartier Latin (Chez Toto)</button>
             <button class="location-chip" data-loc="airport">✈️ La Tontouta Airport (NOU)</button>
           </div>
 
@@ -174,6 +189,18 @@
               <div class="distance-stat-card">
                 <strong>Fort Teremba &rarr; Nouméa Base</strong>
                 <span>125 km | ~1h 35m drive south on RT1</span>
+              </div>
+              <div class="distance-stat-card">
+                <strong>Baie des Citrons ⇄ Port Moselle Marina</strong>
+                <span>3 km | ~8 min drive</span>
+              </div>
+              <div class="distance-stat-card">
+                <strong>Port Moselle ⇄ Îlot Signal</strong>
+                <span>15 km | ~35 min high-speed taxi boat</span>
+              </div>
+              <div class="distance-stat-card">
+                <strong>Nouméa Base ⇄ Tjibaou Cultural Centre</strong>
+                <span>10 km | ~15 min drive</span>
               </div>
             </div>
           </div>
@@ -740,6 +767,7 @@
       }
 
       var locations = {
+        // --- WEST COAST & BOURAIL (DAYS 1–4) ---
         poe:       { name: "Poé Beachfront Chalets Base", lat: -21.6167, lng: 165.3833, pin: 'pin-amber', emoji: '🏖️', info: "Your beachfront chalet base on 17 km of calm, shallow lagoon. Step directly into wave-free water." },
         faille:    { name: "The Shark Fault (Faille aux Requins)", lat: -21.6333, lng: 165.3333, pin: 'pin-blue', emoji: '🐢', info: "Underwater canyon cutting through outer barrier reef. Snorkel with green turtles and rays via glass-bottom boat." },
         roche:     { name: "Roche Percée & Bonhomme Landmark", lat: -21.6083, lng: 165.4542, pin: 'pin-amber', emoji: '🪨', info: "Iconic pierced rock and wave-carved monolith; trailhead for the scenic Sentier des Trois Baies." },
@@ -748,12 +776,17 @@
         deva:      { name: "Domaine de Deva & Oua Koué Lookout", lat: -21.5750, lng: 165.3417, pin: 'pin-emerald', emoji: '🚵', info: "8,000-hectare protected dry forest estate. Mountain bike tracks and panoramic UNESCO lagoon lookouts." },
         bourail:   { name: "Bourail Town (Supermarché Match & Bakery)", lat: -21.5706, lng: 165.4981, pin: 'pin-amber', emoji: '🛒', info: "Historic Caldoche rural hub; butchery with local beef, bakery, and pharmacy." },
         teremba:   { name: "Fort Teremba (Moindou)", lat: -21.7233, lng: 165.7167, pin: 'pin-purple', emoji: '🏰', info: "19th-century military fortress and penal settlement overlooking Mara Bay. Visited on Wednesday drive south." },
-        noumea:    { name: "Nouméa Base (Baie des Citrons)", lat: -22.2986, lng: 166.4357, pin: 'pin-blue', emoji: '🏙️', info: "Base for nights 4, 5, 6. Netted beach swimming, oceanfront apartments, and restaurants." },
-        signal:    { name: "Îlot Signal Turtle Reserve", lat: -22.2961, lng: 166.2922, pin: 'pin-blue', emoji: '🐢', info: "Day 5 speedboat excursion from Nouméa to snorkel with wild green turtles." },
-        canard:    { name: "Îlot Canard (Duck Island)", lat: -22.3135, lng: 166.4368, pin: 'pin-blue', emoji: '🦆', info: "Day 6 water-taxi hop from Anse Vata for the underwater coral trail." },
-        tjibaou:   { name: "Tjibaou Cultural Centre", lat: -22.2561, lng: 166.4831, pin: 'pin-emerald', emoji: '🏛️', info: "Renzo Piano’s world-renowned Kanak architectural pavilions set in coastal mangroves." },
-        market:    { name: "Marché de Port Moselle", lat: -22.2745, lng: 166.4411, pin: 'pin-amber', emoji: '🥐', info: "Nouméa morning market with tropical fruits, local crafts, and marina." },
-        airport:   { name: "La Tontouta Airport (NOU)", lat: -22.0147, lng: 166.2131, pin: 'pin-purple', emoji: '✈️', info: "SUV collection on arrival; head directly north on RT1 without driving through Nouméa." }
+
+        // --- NOUMÉA & ISLETS (DAYS 4–7) ---
+        noumea:      { name: "Nouméa Base (Baie des Citrons)", lat: -22.2986, lng: 166.4357, pin: 'pin-blue', emoji: '🏙️', info: "Base for nights 4, 5, 6. Netted beach swimming, oceanfront apartments, and restaurants." },
+        vatanav:     { name: "Anse Vata Beach & Taxi Pier", lat: -22.3042, lng: 166.4468, pin: 'pin-blue', emoji: '🚤', info: "Day 6 water-taxi hop to Duck Island; beachfront promenade and cafes." },
+        canard:      { name: "Îlot Canard (Duck Island)", lat: -22.3135, lng: 166.4368, pin: 'pin-blue', emoji: '🦆', info: "Day 6 water-taxi hop from Anse Vata for the underwater coral trail." },
+        ouentoro:    { name: "Ouen Toro Lookout", lat: -22.3117, lng: 166.4533, pin: 'pin-blue', emoji: '🔭', info: "Day 5 afternoon sunset viewpoint overlooking the southern coral lagoon barrier reef." },
+        portmoselle: { name: "Port Moselle Marina & Pier K", lat: -22.2745, lng: 166.4411, pin: 'pin-blue', emoji: '⛵', info: "Speedboat departure pontoon for Îlot Signal turtle trip on Day 5; morning market on Day 6." },
+        signal:      { name: "Îlot Signal Turtle Reserve", lat: -22.2961, lng: 166.2922, pin: 'pin-blue', emoji: '🐢', info: "Day 5 speedboat excursion from Nouméa to snorkel with wild green turtles." },
+        tjibaou:     { name: "Tjibaou Cultural Centre", lat: -22.2561, lng: 166.4831, pin: 'pin-emerald', emoji: '🏛️', info: "Renzo Piano’s world-renowned Kanak architectural pavilions set in coastal mangroves." },
+        latin:       { name: "Quartier Latin (Chez Toto)", lat: -22.2725, lng: 166.4440, pin: 'pin-amber', emoji: '🍷', info: "Day 5 celebration dinner at Chez Toto in Nouméa's historic dining quarter." },
+        airport:     { name: "La Tontouta Airport (NOU)", lat: -22.0147, lng: 166.2131, pin: 'pin-purple', emoji: '✈️', info: "SUV collection on arrival; head directly north on RT1 without driving through Nouméa." }
       };
 
       var markersMap = {};
@@ -806,6 +839,54 @@
         [-22.2745, 166.4411],
         [-22.2961, 166.2922]
       ], { color: '#0284c7', weight: 3, dashArray: '6, 8' }).addTo(map);
+
+      // Water-taxi path: Anse Vata to Duck Island
+      L.polyline([
+        [-22.3042, 166.4468],
+        [-22.3135, 166.4368]
+      ], { color: '#0284c7', weight: 2, dashArray: '4, 6' }).addTo(map);
+
+      // Region View Toggle Buttons
+      var btnAll    = document.getElementById('btn-view-all');
+      var btnWest   = document.getElementById('btn-view-west');
+      var btnNoumea = document.getElementById('btn-view-noumea');
+
+      function setViewActive(btn) {
+        [btnAll, btnWest, btnNoumea].forEach(function(b) {
+          if (b) b.classList.remove('active');
+        });
+        if (btn) btn.classList.add('active');
+      }
+
+      if (btnAll) {
+        btnAll.addEventListener('click', function() {
+          setViewActive(btnAll);
+          map.flyToBounds([
+            [-21.50, 165.20],
+            [-22.35, 166.55]
+          ], { padding: [30, 30], duration: 1.2 });
+        });
+      }
+
+      if (btnWest) {
+        btnWest.addEventListener('click', function() {
+          setViewActive(btnWest);
+          map.flyTo([-21.60, 165.40], 11, { duration: 1.2 });
+        });
+      }
+
+      if (btnNoumea) {
+        btnNoumea.addEventListener('click', function() {
+          setViewActive(btnNoumea);
+          map.flyTo([-22.28, 166.42], 12, { duration: 1.2 });
+        });
+      }
+
+      // Initial framing
+      map.fitBounds([
+        [-21.50, 165.20],
+        [-22.35, 166.55]
+      ], { padding: [30, 30] });
 
       // Hook up map location chips
       if (typeof initMapChips === 'function') {
