@@ -656,8 +656,8 @@
 
       // --- NORTH PROVINCE REFERENCE MARKERS ---
       var refLocs = [
-        { name: "Hienghène (East Coast - 10+ Day Trip)", lat: -20.6833, 164.9333, info: "380 km from Nouméa (5.5 hrs drive over mountain passes). Famous Lindéralique black limestone cliffs. Best for 10-14+ day trips." },
-        { name: "Cœur de Voh (North West - 10+ Day Trip)", lat: -20.9333, 164.6833, info: "310 km from Nouméa (4.5 hrs drive). Famous natural heart-shaped mangrove made famous by Yann Arthus-Bertrand." }
+        { name: "Hienghène (East Coast - 10+ Day Trip)", lat: -20.6833, lng: 164.9333, info: "380 km from Nouméa (5.5 hrs drive over mountain passes). Famous Lindéralique black limestone cliffs. Best for 10-14+ day trips." },
+        { name: "Cœur de Voh (North West - 10+ Day Trip)", lat: -20.9333, lng: 164.6833, info: "310 km from Nouméa (4.5 hrs drive). Famous natural heart-shaped mangrove made famous by Yann Arthus-Bertrand." }
       ];
       refLocs.forEach(function(l) {
         var grayPin = L.divIcon({
@@ -734,6 +734,14 @@
           masterMap.flyTo([-21.85, 165.90], 8, { duration: 1.2 });
         });
       }
+
+      // Ensure proper sizing
+      setTimeout(function() {
+        masterMap.invalidateSize();
+      }, 200);
+      window.addEventListener('resize', function() {
+        masterMap.invalidateSize();
+      });
     });
   </script>
 
