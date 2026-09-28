@@ -20,6 +20,7 @@ const getInitialTab = (): ItineraryId => {
   const hash = window.location.hash.replace('#', '').toLowerCase();
   if (hash === 'isle-of-pines' || hash === 'opt2') return 'isle-of-pines';
   if (hash === 'west-coast' || hash === 'opt3') return 'west-coast';
+  if (hash === 'best-of-both' || hash === 'opt4' || hash === 'express-iop') return 'best-of-both';
   if (hash === 'compare' || hash === 'matrix') return 'compare';
   return 'islet';
 };
@@ -280,6 +281,12 @@ export const App: React.FC = () => {
                 className="hover:text-cyan-400 transition cursor-pointer"
               >
                 Option 3
+              </button>
+              <button
+                onClick={() => handleTabChange('best-of-both')}
+                className="hover:text-cyan-400 transition cursor-pointer"
+              >
+                Option 4
               </button>
               <button
                 onClick={() => handleTabChange('compare')}

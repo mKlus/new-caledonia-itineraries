@@ -10,7 +10,7 @@ export const LOCATIONS: LocationMarker[] = [
     pinClass: 'pin-blue',
     emoji: '🏖️',
     info: 'Your apartment base. Safe netted swimming beach directly opposite; casual French bistros.',
-    itineraries: ['islet', 'isle-of-pines', 'west-coast']
+    itineraries: ['islet', 'isle-of-pines', 'west-coast', 'best-of-both']
   },
   {
     id: 'vatanav',
@@ -20,7 +20,7 @@ export const LOCATIONS: LocationMarker[] = [
     pinClass: 'pin-emerald',
     emoji: '🚤',
     info: '5 min boat hop to Duck Island; waterfront promenade, ice creams and bakeries.',
-    itineraries: ['islet', 'isle-of-pines', 'west-coast']
+    itineraries: ['islet', 'isle-of-pines', 'west-coast', 'best-of-both']
   },
   {
     id: 'canard',
@@ -30,7 +30,7 @@ export const LOCATIONS: LocationMarker[] = [
     pinClass: 'pin-emerald',
     emoji: '🦆',
     info: 'Underwater marine nature trail with marked buoys. Ideal kid snorkeling with friendly marine life.',
-    itineraries: ['islet', 'isle-of-pines', 'west-coast']
+    itineraries: ['islet', 'isle-of-pines', 'west-coast', 'best-of-both']
   },
   {
     id: 'ouentoro',
@@ -40,7 +40,7 @@ export const LOCATIONS: LocationMarker[] = [
     pinClass: 'pin-blue',
     emoji: '🔭',
     info: 'Panoramic 360° lookout over the southern lagoon barrier reef and historic WWII cannon emplacements.',
-    itineraries: ['islet', 'west-coast']
+    itineraries: ['islet', 'west-coast', 'best-of-both']
   },
   {
     id: 'aquarium',
@@ -50,7 +50,7 @@ export const LOCATIONS: LocationMarker[] = [
     pinClass: 'pin-blue',
     emoji: '🐠',
     info: 'Living coral exhibits, fluorescent corals, nautilus, and rescued sea turtles.',
-    itineraries: ['islet']
+    itineraries: ['islet', 'best-of-both']
   },
   {
     id: 'portmoselle',
@@ -60,7 +60,7 @@ export const LOCATIONS: LocationMarker[] = [
     pinClass: 'pin-emerald',
     emoji: '⛵',
     info: 'Board high-speed water taxis to Îlot Signal; morning market with fresh tropical fruits and baguettes.',
-    itineraries: ['islet', 'isle-of-pines', 'west-coast']
+    itineraries: ['islet', 'isle-of-pines', 'west-coast', 'best-of-both']
   },
   {
     id: 'signal',
@@ -70,7 +70,7 @@ export const LOCATIONS: LocationMarker[] = [
     pinClass: 'pin-emerald',
     emoji: '🐢',
     info: 'Pristine marine sanctuary. Snorkel along the reef drop-off with wild green turtles.',
-    itineraries: ['islet', 'isle-of-pines', 'west-coast']
+    itineraries: ['islet', 'isle-of-pines', 'west-coast', 'best-of-both']
   },
   {
     id: 'amedee',
@@ -80,7 +80,7 @@ export const LOCATIONS: LocationMarker[] = [
     pinClass: 'pin-rose',
     emoji: '🗼',
     info: 'Historic 1865 cast-iron lighthouse, giant clams, banded sea kraits, and glass-bottom boat tours.',
-    itineraries: ['islet']
+    itineraries: ['islet', 'best-of-both']
   },
   {
     id: 'boulari',
@@ -100,7 +100,7 @@ export const LOCATIONS: LocationMarker[] = [
     pinClass: 'pin-emerald',
     emoji: '🌲',
     info: 'Grand Sud rainforest reserve. Spot national flightless Cagou birds; mountain bike tracks.',
-    itineraries: ['islet']
+    itineraries: ['islet', 'best-of-both']
   },
   {
     id: 'kaori',
@@ -110,7 +110,7 @@ export const LOCATIONS: LocationMarker[] = [
     pinClass: 'pin-emerald',
     emoji: '🌳',
     info: 'Over 1,000 years old! Giant rainforest tree in the heart of Rivière Bleue.',
-    itineraries: ['islet']
+    itineraries: ['islet', 'best-of-both']
   },
   {
     id: 'foret',
@@ -120,7 +120,7 @@ export const LOCATIONS: LocationMarker[] = [
     pinClass: 'pin-emerald',
     emoji: '🛶',
     info: 'Paddle kayaks through bleached paperbark trees submerged in the tranquil lake.',
-    itineraries: ['islet']
+    itineraries: ['islet', 'best-of-both']
   },
   {
     id: 'tjibaou',
@@ -130,7 +130,7 @@ export const LOCATIONS: LocationMarker[] = [
     pinClass: 'pin-emerald',
     emoji: '🏛️',
     info: 'Renzo Piano’s Kanak architectural pavilions set in coastal mangroves.',
-    itineraries: ['isle-of-pines', 'west-coast']
+    itineraries: ['isle-of-pines', 'west-coast', 'best-of-both']
   },
   {
     id: 'latin',
@@ -140,7 +140,7 @@ export const LOCATIONS: LocationMarker[] = [
     pinClass: 'pin-amber',
     emoji: '🍷',
     info: 'Historic French quarter with classic bistros (Chez Toto, L’Échappée Belle).',
-    itineraries: ['islet', 'isle-of-pines', 'west-coast']
+    itineraries: ['islet', 'isle-of-pines', 'west-coast', 'best-of-both']
   },
   {
     id: 'airport',
@@ -150,7 +150,7 @@ export const LOCATIONS: LocationMarker[] = [
     pinClass: 'pin-purple',
     emoji: '✈️',
     info: 'International flight arrival (QF91 at 12:35 PM) & departure (QF92 at 1:50 PM).',
-    itineraries: ['islet', 'isle-of-pines', 'west-coast']
+    itineraries: ['islet', 'isle-of-pines', 'west-coast', 'best-of-both']
   },
   {
     id: 'gea',
@@ -160,10 +160,10 @@ export const LOCATIONS: LocationMarker[] = [
     pinClass: 'pin-purple',
     emoji: '🛫',
     info: 'Domestic terminal in Nouméa for 25-minute Air Calédonie flights to Isle of Pines.',
-    itineraries: ['isle-of-pines']
+    itineraries: ['isle-of-pines', 'best-of-both']
   },
 
-  // --- Isle of Pines (Option 2) ---
+  // --- Isle of Pines (Option 2 & Option 4) ---
   {
     id: 'kanumera',
     name: 'Kanumera Bay & Sacred Rock',
@@ -172,7 +172,7 @@ export const LOCATIONS: LocationMarker[] = [
     pinClass: 'pin-emerald',
     emoji: '🏖️',
     info: 'Your island bungalow base (Nataïwatch / Oure Lodge). Walk-in coral reef snorkeling right off the sand.',
-    itineraries: ['isle-of-pines']
+    itineraries: ['isle-of-pines', 'best-of-both']
   },
   {
     id: 'kuto',
@@ -182,7 +182,7 @@ export const LOCATIONS: LocationMarker[] = [
     pinClass: 'pin-emerald',
     emoji: '🌅',
     info: 'Powder-fine white silica sand beach, 5 min walk from Kanumera. Spectacular sunset spot.',
-    itineraries: ['isle-of-pines']
+    itineraries: ['isle-of-pines', 'best-of-both']
   },
   {
     id: 'stjoseph',
@@ -192,7 +192,7 @@ export const LOCATIONS: LocationMarker[] = [
     pinClass: 'pin-blue',
     emoji: '⛵',
     info: 'Board traditional wooden Kanak sailing pirogues with local captains for the Upi Bay crossing.',
-    itineraries: ['isle-of-pines']
+    itineraries: ['isle-of-pines', 'best-of-both']
   },
   {
     id: 'upi',
@@ -202,7 +202,7 @@ export const LOCATIONS: LocationMarker[] = [
     pinClass: 'pin-blue',
     emoji: '🌊',
     info: 'Mirror-flat turquoise lagoon studded with majestic ancient limestone coral mushroom rocks.',
-    itineraries: ['isle-of-pines']
+    itineraries: ['isle-of-pines', 'best-of-both']
   },
   {
     id: 'piscine',
@@ -212,7 +212,7 @@ export const LOCATIONS: LocationMarker[] = [
     pinClass: 'pin-emerald',
     emoji: '🐠',
     info: 'World-famous wave-free natural tidal basin teeming with friendly reef fish and blue sea stars.',
-    itineraries: ['isle-of-pines']
+    itineraries: ['isle-of-pines', 'best-of-both']
   },
   {
     id: 'kougny',
@@ -222,7 +222,7 @@ export const LOCATIONS: LocationMarker[] = [
     pinClass: 'pin-amber',
     emoji: '🦞',
     info: 'Open-air beachfront lunch restaurant next to Oro Bay; famous for grilled spiny lobster.',
-    itineraries: ['isle-of-pines']
+    itineraries: ['isle-of-pines', 'best-of-both']
   },
   {
     id: 'nokanhui',
@@ -252,7 +252,7 @@ export const LOCATIONS: LocationMarker[] = [
     pinClass: 'pin-emerald',
     emoji: '🌿',
     info: 'Lush limestone grotto covered in prehistoric giant ferns, stalactites, and streams.',
-    itineraries: ['isle-of-pines']
+    itineraries: ['isle-of-pines', 'best-of-both']
   },
   {
     id: 'picnga',
@@ -282,7 +282,7 @@ export const LOCATIONS: LocationMarker[] = [
     pinClass: 'pin-purple',
     emoji: '✈️',
     info: 'Island arrival runway. Collect rental car for the 12-min drive to Kanumera.',
-    itineraries: ['isle-of-pines']
+    itineraries: ['isle-of-pines', 'best-of-both']
   },
 
   // --- West Coast & Poé (Option 3) ---
@@ -481,6 +481,50 @@ export const MAP_CONFIGS = {
         color: '#0284c7',
         weight: 4,
         opacity: 0.85
+      }
+    ]
+  },
+  'best-of-both': {
+    center: [-22.45, 166.95] as [number, number],
+    zoom: 9,
+    polylines: [
+      {
+        points: [
+          [-22.2592, 166.4719], // Magenta GEA
+          [-22.5992, 167.4564]  // Isle of Pines ILP
+        ] as [number, number][],
+        color: '#7c3aed',
+        weight: 3,
+        dashArray: '8, 8',
+        opacity: 0.9
+      },
+      {
+        points: [
+          [-22.2745, 166.4411], // Port Moselle
+          [-22.2961, 166.2922]  // Îlot Signal
+        ] as [number, number][],
+        color: '#0284c7',
+        weight: 3,
+        dashArray: '6, 6'
+      },
+      {
+        points: [
+          [-22.3042, 166.4468], // Anse Vata
+          [-22.3135, 166.4368]  // Duck Island
+        ] as [number, number][],
+        color: '#0284c7',
+        weight: 3,
+        dashArray: '6, 6'
+      },
+      {
+        points: [
+          [-22.6289, 167.5097], // St Joseph
+          [-22.6167, 167.5167], // Upi Bay
+          [-22.5894, 167.5147]  // Piscine Naturelle
+        ] as [number, number][],
+        color: '#0284c7',
+        weight: 3,
+        dashArray: '5, 5'
       }
     ]
   },

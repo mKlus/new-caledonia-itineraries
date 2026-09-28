@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Palmtree, Compass, MapPin, Scale, Menu, X, Printer, DollarSign } from 'lucide-react';
+import { Palmtree, Compass, MapPin, Scale, Menu, X, Printer, DollarSign, Sparkles } from 'lucide-react';
 import { ItineraryId } from '../data/types';
 import { CurrencyMode } from '../hooks/useCurrency';
 
@@ -27,7 +27,8 @@ export const Navbar: React.FC<NavbarProps> = ({
     { id: 'islet', label: 'Option 1: Islet Explorer', icon: <Palmtree className="w-4 h-4 text-sky-400" /> },
     { id: 'isle-of-pines', label: 'Option 2: Isle of Pines', icon: <Compass className="w-4 h-4 text-emerald-400" /> },
     { id: 'west-coast', label: 'Option 3: West Coast & Poé', icon: <MapPin className="w-4 h-4 text-amber-400" /> },
-    { id: 'compare', label: 'Compare All 3', icon: <Scale className="w-4 h-4 text-indigo-400" />, badge: 'Decision Tool' },
+    { id: 'best-of-both', label: 'Option 4: Best of Both', icon: <Sparkles className="w-4 h-4 text-purple-400" />, badge: 'New' },
+    { id: 'compare', label: 'Compare All 4', icon: <Scale className="w-4 h-4 text-indigo-400" />, badge: 'Decision Tool' },
   ];
 
   return (

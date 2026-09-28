@@ -28,10 +28,15 @@ This single-page application (SPA) unifies 3 deep-dive itinerary options and an 
    - **Highlights:** 17 km calm lagoon at Poé, green turtles at the Shark Fault, Sentier des Trois Baies pine cliff hike, Domaine de Deva lookouts.
    - **Ideal for:** Outdoor adventurers who love road-trip freedom, coastal hiking, and beach barbecues.
 
-4. **12-Factor Comparison Matrix & Priority Quiz (`#compare`)**
+4. **Option 4: The Best of Both Worlds — Nouméa Base + Isle of Pines Express (`#best-of-both`)**
+   - **Base:** 5–6 nights Nouméa (Baie des Citrons) + 25-min domestic flight hop to Isle of Pines (Day Trip or 1-Night Overnight).
+   - **Highlights:** Savor world-class French dining, patisseries, and apartment luxury in Nouméa every night, while experiencing the #1 South Pacific wonder: Upi Bay wooden pirogues, Piscine Naturelle aquarium, and grilled spiny rock lobster.
+   - **Ideal for:** Families who demand excellent food and comfortable lodging, but refuse to miss the iconic natural wonders of the Isle of Pines.
+
+5. **12-Factor Comparison Matrix & Priority Quiz (`#compare`)**
    - **Interactive Priority Quiz:** Instant match based on your family's travel style.
    - **Master Archipelago Map:** Geographic scale comparison across Grande Terre and Isle of Pines.
-   - **12-Factor Side-by-Side Matrix:** Logistics, kid safety, snorkeling, bakeries, weather resilience, and total budget.
+   - **12-Factor Side-by-Side Matrix:** Logistics, kid safety, snorkeling, bakeries, weather resilience, and total budget across all 4 options.
    - **Dynamic Currency Converter:** Toggle between XPF, AUD, or both with live exchange rate adjustments.
    - **Persistent Checklist:** Pre-departure planning checklist stored in `localStorage`.
 

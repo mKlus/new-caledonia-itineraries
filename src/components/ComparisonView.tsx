@@ -10,9 +10,9 @@ interface ComparisonViewProps {
 }
 
 export const ComparisonView: React.FC<ComparisonViewProps> = ({ setActiveTab }) => {
-  const [selectedQuizId, setSelectedQuizId] = useState<string | null>('islet');
+  const [selectedQuizId, setSelectedQuizId] = useState<string | null>('best-of-both');
   const [activeCategory, setActiveCategory] = useState<string>('all');
-  const [highlightedCol, setHighlightedCol] = useState<'all' | 'islet' | 'isle-of-pines' | 'west-coast'>('all');
+  const [highlightedCol, setHighlightedCol] = useState<'all' | 'islet' | 'isle-of-pines' | 'west-coast' | 'best-of-both'>('all');
 
   const selectedQuizOption = QUIZ_OPTIONS.find((q) => q.id === selectedQuizId);
 
@@ -33,7 +33,7 @@ export const ComparisonView: React.FC<ComparisonViewProps> = ({ setActiveTab }) 
           Itinerary Comparison & Decision Guide
         </h1>
         <p className="text-sm sm:text-base text-slate-600">
-          Compare all three 6-night family options across budget, logistics, snorkeling quality, child safety, and weather resilience to make the best choice for your group.
+          Compare all four 6-night family options across budget, logistics, dining, snorkeling quality, child safety, and weather resilience to make the best choice for your group.
         </p>
       </div>
 
@@ -52,8 +52,8 @@ export const ComparisonView: React.FC<ComparisonViewProps> = ({ setActiveTab }) 
           </p>
         </div>
 
-        {/* 3 Quiz Option Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+        {/* 4 Quiz Option Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
           {QUIZ_OPTIONS.map((opt) => {
             const isSelected = selectedQuizId === opt.id;
             return (
@@ -209,27 +209,30 @@ export const ComparisonView: React.FC<ComparisonViewProps> = ({ setActiveTab }) 
           <table className="w-full text-left text-xs sm:text-sm">
             <thead className="bg-slate-900 text-white font-semibold">
               <tr>
-                <th className="py-4 px-4 sm:px-6 w-1/4">Evaluation Criteria</th>
-                <th className={`py-4 px-4 w-1/4 ${highlightedCol === 'islet' ? 'bg-sky-800' : ''}`}>
+                <th className="py-4 px-3 sm:px-4 w-[20%]">Evaluation Criteria</th>
+                <th className={`py-4 px-3 w-[20%] ${highlightedCol === 'islet' ? 'bg-sky-800' : ''}`}>
                   🏖️ Option 1: Islet Explorer
                 </th>
-                <th className={`py-4 px-4 w-1/4 ${highlightedCol === 'isle-of-pines' ? 'bg-emerald-800' : ''}`}>
+                <th className={`py-4 px-3 w-[20%] ${highlightedCol === 'isle-of-pines' ? 'bg-emerald-800' : ''}`}>
                   🏝️ Option 2: Isle of Pines
                 </th>
-                <th className={`py-4 px-4 w-1/4 ${highlightedCol === 'west-coast' ? 'bg-amber-800' : ''}`}>
+                <th className={`py-4 px-3 w-[20%] ${highlightedCol === 'west-coast' ? 'bg-amber-800' : ''}`}>
                   🚙 Option 3: West Coast & Poé
+                </th>
+                <th className={`py-4 px-3 w-[20%] ${highlightedCol === 'best-of-both' ? 'bg-indigo-800' : ''}`}>
+                  ✨ Option 4: Best of Both
                 </th>
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-100">
               {filteredFactors.map((factor, idx) => (
                 <tr key={factor.factor} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/60'}>
-                  <td className="py-4 px-4 sm:px-6 font-bold text-slate-900 align-top">
+                  <td className="py-4 px-3 sm:px-4 font-bold text-slate-900 align-top">
                     {factor.factor}
                   </td>
 
                   {/* Option 1 */}
-                  <td className={`py-4 px-4 text-slate-700 align-top ${highlightedCol === 'islet' ? 'bg-sky-50 font-medium' : ''}`}>
+                  <td className={`py-4 px-3 text-slate-700 align-top ${highlightedCol === 'islet' ? 'bg-sky-50 font-medium' : ''}`}>
                     {factor.islet.badge && (
                       <span className="inline-block text-[10px] font-extrabold uppercase tracking-wider text-sky-800 bg-sky-100 px-2 py-0.5 rounded mb-1">
                         ★ {factor.islet.badge}
@@ -239,7 +242,7 @@ export const ComparisonView: React.FC<ComparisonViewProps> = ({ setActiveTab }) 
                   </td>
 
                   {/* Option 2 */}
-                  <td className={`py-4 px-4 text-slate-700 align-top ${highlightedCol === 'isle-of-pines' ? 'bg-emerald-50 font-medium' : ''}`}>
+                  <td className={`py-4 px-3 text-slate-700 align-top ${highlightedCol === 'isle-of-pines' ? 'bg-emerald-50 font-medium' : ''}`}>
                     {factor.isleOfPines.badge && (
                       <span className="inline-block text-[10px] font-extrabold uppercase tracking-wider text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded mb-1">
                         ★ {factor.isleOfPines.badge}
@@ -249,13 +252,23 @@ export const ComparisonView: React.FC<ComparisonViewProps> = ({ setActiveTab }) 
                   </td>
 
                   {/* Option 3 */}
-                  <td className={`py-4 px-4 text-slate-700 align-top ${highlightedCol === 'west-coast' ? 'bg-amber-50 font-medium' : ''}`}>
+                  <td className={`py-4 px-3 text-slate-700 align-top ${highlightedCol === 'west-coast' ? 'bg-amber-50 font-medium' : ''}`}>
                     {factor.westCoast.badge && (
                       <span className="inline-block text-[10px] font-extrabold uppercase tracking-wider text-amber-800 bg-amber-100 px-2 py-0.5 rounded mb-1">
                         ★ {factor.westCoast.badge}
                       </span>
                     )}
                     <p className="leading-relaxed">{factor.westCoast.text}</p>
+                  </td>
+
+                  {/* Option 4 */}
+                  <td className={`py-4 px-3 text-slate-700 align-top ${highlightedCol === 'best-of-both' ? 'bg-indigo-50 font-medium' : ''}`}>
+                    {factor.bestOfBoth?.badge && (
+                      <span className="inline-block text-[10px] font-extrabold uppercase tracking-wider text-indigo-800 bg-indigo-100 px-2 py-0.5 rounded mb-1">
+                        ★ {factor.bestOfBoth.badge}
+                      </span>
+                    )}
+                    <p className="leading-relaxed">{factor.bestOfBoth?.text}</p>
                   </td>
                 </tr>
               ))}

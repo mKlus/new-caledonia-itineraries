@@ -1,12 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-import { LocationMarker } from '../data/types';
+import { LocationMarker, ItineraryId } from '../data/types';
 import { MAP_CONFIGS } from '../data/locations';
 import { ExternalLink, Navigation } from 'lucide-react';
 
 interface InteractiveMapProps {
-  itineraryId: 'islet' | 'isle-of-pines' | 'west-coast' | 'compare';
+  itineraryId: ItineraryId;
   locations: LocationMarker[];
 }
 

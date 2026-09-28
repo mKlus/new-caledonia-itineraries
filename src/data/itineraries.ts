@@ -1,6 +1,6 @@
 import { ItineraryOption } from './types';
 
-export const ITINERARIES: Record<'islet' | 'isle-of-pines' | 'west-coast', ItineraryOption> = {
+export const ITINERARIES: Record<'islet' | 'isle-of-pines' | 'west-coast' | 'best-of-both', ItineraryOption> = {
   islet: {
     id: 'islet',
     optionNumber: 1,
@@ -1244,6 +1244,444 @@ export const ITINERARIES: Record<'islet' | 'isle-of-pines' | 'west-coast', Itine
       { id: 'c3', task: 'Book Poé Shark Fault Glass-Bottom Boat Safari', deadline: '1 Month Prior', category: 'booking', notes: 'Subject to weather/tides, best booked for Monday morning' },
       { id: 'c4', task: 'Reserve Îlot Signal Turtle Charter from Nouméa', deadline: '1 Month Prior', category: 'booking', notes: 'Scheduled for Thursday morning' },
       { id: 'c5', task: 'Bring sturdy walking sneakers & water shoes', deadline: '1 Week Prior', category: 'gear', notes: 'Needed for Sentier des Trois Baies pine cliff walk' }
+    ]
+  },
+
+  'best-of-both': {
+    id: 'best-of-both',
+    optionNumber: 4,
+    title: 'The Best of Both Worlds (Nouméa Base + Isle of Pines Express)',
+    tagline: 'Gourmet French Mainland Hub with an Iconic 25-Min Isle of Pines Flight',
+    badge: '✨ Option 4 — Best of Both Worlds',
+    heroImageGradient: 'from-indigo-800 via-sky-800 to-teal-800',
+    baseLocation: '5–6 Nights Nouméa (Baie des Citrons) + Isle of Pines Express (Day Trip or 1-Night)',
+    hotelMoves: 0,
+    totalDrivingKm: 150,
+    avgDailyDrivingMins: 20,
+    cost5PaxXPF: 589600,
+    cost5PaxAUD: 8075,
+    costPerPersonAUD: 1615,
+    idealFor: 'Families who love French gastronomy, artisan bakeries, and high-standard apartment comfort, but refuse to miss the world-class spectacle of Piscine Naturelle and Upi Bay.',
+    overviewSummary: 'The golden middle ground. Stay in a spacious 2-bedroom oceanfront apartment in Nouméa’s Baie des Citrons—unpack once, swim at the safe shark-netted beach, and feast in world-class French bistros every evening. On Tuesday, take a 25-minute domestic flight across the turquoise lagoon to the Isle of Pines to sail traditional wooden outrigger pirogues in Upi Bay, snorkel the natural aquarium of Piscine Naturelle, and indulge in fresh grilled rock lobster, without being stuck in overpriced, mediocre island hotels.',
+    keyHighlights: [
+      'Piscine Naturelle & Upi Bay: Experience the #1 natural wonder of the South Pacific via a seamless 25-min domestic flight',
+      'Gourmet French Dining Every Night: Savor duck confit, fresh crêpes, artisanal baguettes, and fine wine in Nouméa’s premier dining district',
+      'Zero Hotel Frustration: Avoid aged, overpriced island resort rooms by basing at a top-tier Baie des Citrons oceanfront apartment',
+      'Wild Green Sea Turtles: High-speed boat charter to uninhabited Îlot Signal with guaranteed turtle swimming',
+      'Phare Amédée Day Cruise: Climb the historic 1865 cast-iron lighthouse and snorkel outer barrier reef drop-offs',
+      'Flexible Express Format: Choose between a zero-move 1-day fly-in/fly-out or a 1-night overnight stay'
+    ],
+    flightInfo: {
+      arrival: 'Sun 8 Nov: QF91 arrives La Tontouta (NOU) at 12:35 PM',
+      departure: 'Sat 14 Nov: QF92 departs NOU at 1:50 PM',
+      domesticFlights: 'Air Calédonie: Nouméa Magenta (GEA) ⇄ Isle of Pines (ILP) — 25 mins'
+    },
+    days: [
+      {
+        dayNumber: 1,
+        date: 'Sunday, 8 Nov 2026',
+        title: 'Arrival in Paradise & Baie des Citrons Sunset',
+        subtitle: 'Airport Welcome, Apartment Check-in, Sunset Netted Swim',
+        summary: 'Land on QF91 at La Tontouta, pick up your 7-seater SUV, drive the scenic RT1 to Nouméa, settle into your Baie des Citrons oceanfront apartment, and enjoy your first French bistro dinner.',
+        morning: {
+          time: '12:35 PM – 2:00 PM',
+          title: 'Touchdown & 7-Seater Vehicle Pickup',
+          description: 'Land on QF91 at La Tontouta (NOU). Clear customs, collect duty-free French wines, and pick up your 7-seater SUV at the terminal.',
+          tips: 'Buy local OPT-NC tourist SIM cards at the arrivals counter.'
+        },
+        lunch: {
+          place: 'Airport Café / Roadside Boulangerie',
+          description: 'Fresh ham-and-brie baguettes and cold drinks en route to Nouméa.',
+          estCostAUD: 60,
+          estCostXPF: 4400
+        },
+        afternoon: {
+          time: '3:00 PM – 5:30 PM',
+          title: 'Apartment Settle-in & Netted Beach Swim',
+          description: 'Check into your 2-bedroom apartment at Casa del Sole overlooking Baie des Citrons. Change into swimwear and cross the road for a warm lagoon swim inside the protective shark net.',
+          tips: 'The shark-net enclosure at Baie des Citrons is free, lifeguard-patrolled, and calm for children.'
+        },
+        evening: {
+          time: '6:30 PM – 9:00 PM',
+          title: 'Promenade Stroll & Waterfront Welcome Dinner',
+          description: 'Walk along the promenade as the sun sets over the lagoon. Enjoy craft beer, woodfired flammekueche, and gelato at Amorino.',
+          tips: 'Sunset is around 6:15 PM in November.'
+        },
+        dinner: {
+          place: 'Le Bout du Monde / Les 3 Brasseurs',
+          description: 'Casual marina dining with craft ales, woodfired flammekueche, and fresh grilled fish.',
+          estCostAUD: 160,
+          estCostXPF: 11700
+        },
+        dayEstCostAUD: 220,
+        dayEstCostXPF: 16100
+      },
+      {
+        dayNumber: 2,
+        date: 'Monday, 9 Nov 2026',
+        title: 'Duck Island Marine Trail & Ouen Toro Panoramas',
+        subtitle: '5-Minute Water Taxi Hop, Underwater Nature Trail, French Bistro',
+        summary: 'Take a 5-minute water taxi from Anse Vata to Duck Island for underwater trail snorkeling with clownfish and sea turtles, followed by the Aquarium des Lagons and dinner at Chez Toto.',
+        morning: {
+          time: '8:30 AM – 12:30 PM',
+          title: 'Îlot Canard (Duck Island) Snorkel Safari',
+          description: 'Walk to Anse Vata taxi pier and take the 5-minute boat hop. Explore the marked underwater snorkel trail with bilingual educational signs describing living corals.',
+          tips: 'Hire beach loungers under thatched umbrellas or bring your own beach mats.'
+        },
+        lunch: {
+          place: 'Le Canard Beach Restaurant',
+          description: 'Fresh Poisson Cru (Tahitian lime-cured tuna with coconut milk) on Duck Island.',
+          estCostAUD: 130,
+          estCostXPF: 9500
+        },
+        afternoon: {
+          time: '2:30 PM – 5:00 PM',
+          title: 'Aquarium des Lagons & Ouen Toro Lookout',
+          description: 'Return to Anse Vata and visit the world-famous Aquarium des Lagons to see fluorescent corals, giant groupers, and sea turtles, then drive up Ouen Toro for 360° lagoon views.',
+          tips: 'The WWII cannons at Ouen Toro are great fun for a 9-year-old to explore.'
+        },
+        evening: {
+          time: '6:30 PM – 9:00 PM',
+          title: 'Authentic French Bistro Dinner in Quartier Latin',
+          description: 'Feast on authentic French duck confit, steak frites, and homemade tarte tatin at Chez Toto.',
+          tips: 'Nouméa’s most beloved family-run bistro; essential to book 2 days in advance.'
+        },
+        dinner: {
+          place: 'Chez Toto (Quartier Latin)',
+          description: 'Warm French bistro atmosphere with classic provincial cuisine.',
+          estCostAUD: 190,
+          estCostXPF: 13900
+        },
+        dayEstCostAUD: 320,
+        dayEstCostXPF: 23400
+      },
+      {
+        dayNumber: 3,
+        date: 'Tuesday, 10 Nov 2026',
+        title: 'Isle of Pines Express: Upi Bay Pirogue & Piscine Naturelle',
+        subtitle: '25-Min Flight to Paradise, Wooden Outrigger Sailing, Lobster Feast',
+        summary: 'Early 25-minute flight from Nouméa Magenta to Isle of Pines. Sail across mirrored turquoise Upi Bay on a traditional wooden pirogue, walk the pine trail to the natural aquarium at Piscine Naturelle, and feast on fresh grilled lobster.',
+        morning: {
+          time: '6:45 AM – 12:00 PM',
+          title: 'Flight to Isle of Pines & Traditional Outrigger Pirogue',
+          description: 'Short 10-minute taxi to Nouméa Magenta (GEA) for the 7:20 AM Air Calédonie flight to Isle of Pines (ILP, 25 mins). Transfer to St. Joseph Bay and board a traditional wooden sailing pirogue with a local Kanak captain. Glide silently across mirrored turquoise waters past ancient coral limestone towers.',
+          tips: 'Pirogues are very stable and peaceful for kids; bring water shoes and dry bags.'
+        },
+        lunch: {
+          place: 'Le Kou-Gny Beach Restaurant (Oro Bay)',
+          description: 'Famous fresh grilled Isle of Pines spiny rock lobster with garlic butter and roasted sweet yams right on the beach.',
+          estCostAUD: 160,
+          estCostXPF: 11700
+        },
+        afternoon: {
+          time: '1:30 PM – 4:30 PM',
+          title: 'Piscine Naturelle Aquarium Snorkel',
+          description: 'Wade into the calm, wave-free tidal pool framed by soaring columnar pines. Schools of butterflyfish, mullet, and iridescent blue sea stars swim right up to child snorkel masks in waist-deep water.',
+          tips: 'Completely sheltered from ocean swell—ideal and 100% safe for a 9-year-old.'
+        },
+        evening: {
+          time: '5:30 PM – 9:00 PM',
+          title: 'Evening Return to Nouméa (or Optional 1-Night Stay)',
+          description: 'Option A (Day Trip): Catch the 5:45 PM return flight to Nouméa Magenta, back in your Baie des Citrons apartment in 15 mins for dinner. Option B (1-Night): Check into Kou-Bugny/Ouré Tera for a sunset stroll on Kuto Beach.',
+          tips: 'Day-trip travelers return to the comfort of their primary apartment; 1-night travelers enjoy sunset on Kuto Bay.'
+        },
+        dinner: {
+          place: 'Marmite et Tire-Bouchon (Nouméa) / Kou-Bugny (Island)',
+          description: 'Gourmet French seafood and wines in Nouméa or casual beachfront dining on the island.',
+          estCostAUD: 180,
+          estCostXPF: 13100
+        },
+        dayEstCostAUD: 340,
+        dayEstCostXPF: 24800
+      },
+      {
+        dayNumber: 4,
+        date: 'Wednesday, 11 Nov 2026 (Armistice Day)',
+        title: 'Îlot Signal Turtle Reserve & Holiday Promenade',
+        subtitle: 'Wild Green Sea Turtles, Coral Drop-offs, Island Holiday Atmosphere',
+        summary: 'Take a morning high-speed boat charter to uninhabited Îlot Signal. Snorkel along the reef wall with grazing green turtles, followed by a shaded island picnic and a relaxed holiday afternoon in Baie des Citrons.',
+        morning: {
+          time: '8:00 AM – 1:00 PM',
+          title: 'Îlot Signal Turtle Reserve Speedboat Charter',
+          description: 'Board a dedicated water taxi from Port Moselle Pontoon K to Îlot Signal. Snorkel directly off the white sand beach into the seagrass beds to swim alongside wild green sea turtles.',
+          tips: 'Pack artisanal baguettes, charcuterie, and pastries picked up Tuesday, as shops close for Armistice Day.'
+        },
+        lunch: {
+          place: 'Îlot Signal Beach Gazebo Picnic',
+          description: 'Artisanal French baguette picnic with Brie, saucisson, and fresh tropical fruit.',
+          estCostAUD: 60,
+          estCostXPF: 4400
+        },
+        afternoon: {
+          time: '2:30 PM – 5:30 PM',
+          title: 'Baie des Citrons Relaxed Beach Afternoon',
+          description: 'Return to Nouméa. (For 1-Night island guests, fly back on the afternoon flight from ILP to GEA). Enjoy a leisurely afternoon swim in the shark-netted bay, gelato at Amorino, and coffee.',
+          tips: 'Public holiday afternoon creates a festive, relaxed beachfront buzz along the promenade.'
+        },
+        evening: {
+          time: '6:30 PM – 9:00 PM',
+          title: 'Waterfront Sunset Dining at Baie des Citrons',
+          description: 'Relaxed bistro dinner overlooking the bay with fresh grilled lagoon fish and stone-cooked steaks.',
+          tips: 'Book an outdoor terrace table to catch the evening sea breeze.'
+        },
+        dinner: {
+          place: 'L’Oustalet / Stone Grill Baie des Citrons',
+          description: 'Hot stone seafood cooking, steak frites, and artisanal desserts.',
+          estCostAUD: 170,
+          estCostXPF: 12400
+        },
+        dayEstCostAUD: 230,
+        dayEstCostXPF: 16800
+      },
+      {
+        dayNumber: 5,
+        date: 'Thursday, 12 Nov 2026',
+        title: 'Phare Amédée Outer Barrier Reef Day Cruise',
+        subtitle: 'Cast-Iron Lighthouse, Outer Barrier Reef, Tahitian Feast & Show',
+        summary: 'Full-day catamaran cruise to Amédée Island. Climb the 247 steps of the 1865 lighthouse, take a glass-bottom boat over outer barrier coral bommies, and feast on a Polynesian buffet with live cultural dance.',
+        morning: {
+          time: '8:15 AM – 12:30 PM',
+          title: 'Mary D Catamaran to Phare Amédée',
+          description: 'Board the Mary D catamaran at Port Moselle. Cruise 45 mins to the marine reserve. Climb the 247 winding steps of the historic lighthouse for panoramic views of the turquoise reef pass. Board the glass-bottom boat tour to see giant clams and turtles.',
+          tips: 'Lighthouse stairs are very safe and exciting for a 9yo.'
+        },
+        lunch: {
+          place: 'Amédée Island Tropical Buffet Feast',
+          description: 'Lavish island lunch buffet included with roasted meats, grilled fish, salads, and live Tahitian dance show.',
+          estCostAUD: 0,
+          estCostXPF: 0
+        },
+        afternoon: {
+          time: '1:30 PM – 4:30 PM',
+          title: 'Outer Barrier Snorkeling & Coral Drop-off',
+          description: 'Snorkel in crystal visibility with giant clams and parrotfish, then cruise back to Nouméa at 4:30 PM.',
+          tips: 'All snorkel gear and glass-bottom rides are included in the day package.'
+        },
+        evening: {
+          time: '7:00 PM – 9:00 PM',
+          title: 'Baie des Citrons Casual Italian / Seafood',
+          description: 'Relaxed waterfront dinner overlooking the shimmering bay.',
+          tips: 'Aperitif cocktails for adults and mocktails for the 9yo.'
+        },
+        dinner: {
+          place: 'La Barca / Le Bilboquet Plage',
+          description: 'Fresh local mahi-mahi, calamari, and gourmet pizzas.',
+          estCostAUD: 160,
+          estCostXPF: 11700
+        },
+        dayEstCostAUD: 160,
+        dayEstCostXPF: 11700
+      },
+      {
+        dayNumber: 6,
+        date: 'Friday, 13 Nov 2026',
+        title: 'Rivière Bleue Rainforest & Grand Finale at Le Roof',
+        subtitle: 'Ancient Kauri Trees, Cagou Bird Spotting, Overwater Farewell Feast',
+        summary: 'Drive your 7-seater SUV into the Grand Sud red-earth wilderness of Parc Provincial de la Rivière Bleue. Spot rare flightless Cagou birds, kayak the Drowned Forest, and celebrate with an overwater dinner at Le Roof.',
+        morning: {
+          time: '8:00 AM – 12:30 PM',
+          title: 'Parc Provincial de la Rivière Bleue & Grand Kaori',
+          description: 'Scenic 1h15m drive through red laterite soils into the pristine rainforest reserve. Walk to the 1,000-year-old Grand Kaori tree and walk the lush bird trail to spot the national flightless Cagou bird in the wild.',
+          tips: 'Cagou birds are docile and often walk right alongside the walking tracks.'
+        },
+        lunch: {
+          place: 'Forest Riverside Picnic / Le Ponton',
+          description: 'Fresh pastries and savory baguettes enjoyed by the crystal mountain river pools.',
+          estCostAUD: 65,
+          estCostXPF: 4700
+        },
+        afternoon: {
+          time: '1:30 PM – 4:00 PM',
+          title: 'Forêt Noyée (Drowned Forest) Kayaking',
+          description: 'Paddle sit-on-top family kayaks through the hauntingly beautiful flooded paperbark forest of Lake Yaté.',
+          tips: 'Lifejackets provided; water is wave-free and peaceful for children.'
+        },
+        evening: {
+          time: '6:30 PM – 9:30 PM',
+          title: 'Celebration Farewell Dinner over the Lagoon',
+          description: 'Celebrate an unforgettable 6 nights at Le Roof, built on stilts directly over the water. Watch dolphins and spotted eagle rays through the illuminated glass viewing hole in the dining room floor!',
+          tips: 'Book well ahead to request a prime table next to the central marine observation portal.'
+        },
+        dinner: {
+          place: 'Le Roof (Overwater Restaurant, Anse Vata)',
+          description: 'Nouméa’s premier overwater dining experience with local rock oysters, vanilla prawns, and lagoon coral trout.',
+          estCostAUD: 250,
+          estCostXPF: 18200
+        },
+        dayEstCostAUD: 315,
+        dayEstCostXPF: 22900
+      },
+      {
+        dayNumber: 7,
+        date: 'Saturday, 14 Nov 2026',
+        title: 'Morning Bakery Run & Departure on QF92',
+        subtitle: 'Warm Croissants, Scenic Highway Drive, QF92 Departure at 1:50 PM',
+        summary: 'Final morning swim in Baie des Citrons, fresh warm croissants from L’Atelier Gourmand, easy 45-minute drive to La Tontouta Airport, and depart on QF92 at 1:50 PM.',
+        morning: {
+          time: '7:30 AM – 10:30 AM',
+          title: 'Final Bakery Breakfast & Packing Up',
+          description: 'Early morning coffee and warm pastries from L’Atelier Gourmand. Pack luggage, check out of Casa del Sole, and load the 7-seater vehicle.',
+          tips: 'Leave Nouméa by 10:30 AM to allow ample time for the 45-minute highway drive to La Tontouta.'
+        },
+        lunch: {
+          place: 'Airport Terminal Lounge & Duty Free',
+          description: 'Sandwiches, French chocolates, and coffee before boarding.',
+          estCostAUD: 60,
+          estCostXPF: 4400
+        },
+        afternoon: {
+          time: '11:30 AM – 1:50 PM',
+          title: 'Vehicle Return & QF92 Boarding',
+          description: 'Return rental car with full tank at La Tontouta terminal. Check in bags for QF92 departing at 1:50 PM for Sydney/Brisbane.',
+          tips: 'Duty-free shops sell French perfume, wines, and New Caledonian gourmet delicacies.'
+        },
+        evening: {
+          time: 'Afternoon / Evening',
+          title: 'Arrival Home',
+          description: 'Relaxed flight back home with camera cards packed with South Pacific memories.',
+          tips: 'Direct flight back to Australia.'
+        },
+        dinner: {
+          place: 'In-Flight / Home',
+          description: 'Qantas in-flight meal service.',
+          estCostAUD: 0,
+          estCostXPF: 0
+        },
+        dayEstCostAUD: 60,
+        dayEstCostXPF: 4400
+      }
+    ],
+    accommodations: [
+      {
+        name: 'Casa del Sole Apartments',
+        type: 'Self-Contained 2-Bedroom Oceanfront Apartment (Nouméa)',
+        location: 'Baie des Citrons, Nouméa',
+        nights: '5 or 6 Nights Base (Sun 8 Nov – Sat 14 Nov)',
+        bedding: '1 King Bed + 2 Single Beds + Sofa Bed in Living Area',
+        pricePerNightAUD: 310,
+        pricePerNightXPF: 22600,
+        totalCostAUD: 1860,
+        totalCostXPF: 135600,
+        features: ['Full Kitchen with Oven & Dishwasher', 'Washing Machine & Dryer', 'Large Oceanview Balcony', 'Outdoor Swimming Pool', 'Free Private Covered Parking'],
+        pros: ['Directly opposite safe shark-netted swimming beach', 'Walking distance to 15+ cafes and restaurants', 'Unpack once or keep luggage secured during island express'],
+        cons: ['Older style building, but spacious and clean'],
+        bookingTip: 'Request a High Floor Ocean View apartment for stunning sunset panoramas over the bay.'
+      },
+      {
+        name: 'Hôtel Kou-Bugny / Ouré Tera Resort',
+        type: 'Optional 1-Night Boutique Island Bungalow (Isle of Pines)',
+        location: 'Kuto / Kanumera Bay, Isle of Pines',
+        nights: 'Optional 1 Night (Tue 10 Nov – Wed 11 Nov)',
+        bedding: 'Family Bungalow / 2 Adjoining Rooms',
+        pricePerNightAUD: 420,
+        pricePerNightXPF: 30600,
+        totalCostAUD: 420,
+        totalCostXPF: 30600,
+        features: ['Beachfront Location', 'Air Conditioning', 'Private Veranda', 'Tropical Gardens'],
+        pros: ['Watch the sunset on Kuto beach silica sand', 'Only 1 night so no food or lodging fatigue'],
+        cons: ['Adds 1 overnight stay cost if selecting the 1-night variant over the day-trip variant'],
+        bookingTip: 'Book early; leave main suitcases at Casa del Sole and bring only a small overnight backpack.'
+      }
+    ],
+    snorkelingSpots: [
+      {
+        name: 'Piscine Naturelle (Natural Aquarium)',
+        location: 'Oro Bay, Isle of Pines (25-min flight from GEA)',
+        depth: '1 – 3 meters',
+        marineLife: ['Picasso triggerfish', 'Blue sea stars', 'Threadfin butterflyfish', 'Schools of silver mullet'],
+        kidFriendlyRating: 5,
+        currentCaution: 'Completely zero waves and no currents. Natural coral barrier breaks all ocean energy.',
+        entryType: 'Walk-in beach',
+        bestTime: 'Midday high tide for deep crystal water; low tide for wading.',
+        notes: 'World-famous natural tidal lagoon. Friendly fish swim right up to child snorkel masks.'
+      },
+      {
+        name: 'Îlot Signal Turtle Reserve',
+        location: 'Port Moselle (30 min boat charter)',
+        depth: '1 – 8 meters',
+        marineLife: ['Wild green sea turtles', 'Docile blacktip reef sharks', 'Giant trevally', 'Pristine staghorn corals'],
+        kidFriendlyRating: 4,
+        currentCaution: 'Mild drift current along the reef wall drop-off; easy drift snorkel for kids with fins.',
+        entryType: 'Walk-in beach',
+        bestTime: 'High tide morning for maximum water clarity over coral gardens.',
+        notes: 'Uninhabited reserve. Turtles feed on seagrass beds 20m from the white sand beach.'
+      },
+      {
+        name: 'Phare Amédée Outer Reef',
+        location: 'Outer Barrier Reef (45 min catamaran)',
+        depth: '2 – 10 meters',
+        marineLife: ['Giant clams (Tridacna)', 'Banded sea kraits', 'Parrotfish', 'Eagle rays'],
+        kidFriendlyRating: 5,
+        currentCaution: 'Very calm within the lighthouse reef flat; outer drop-off monitored by tour crew.',
+        entryType: 'Boat taxi',
+        bestTime: 'Midday glass-bottom boat tour followed by afternoon snorkel off the pier.',
+        notes: 'Supervised marine playground with lifesavers and rescue boats present.'
+      },
+      {
+        name: 'Îlot Canard (Duck Island)',
+        location: 'Anse Vata (5 min water taxi)',
+        depth: '1 – 4 meters',
+        marineLife: ['Green sea turtles', 'Clownfish in anemones', 'Banded butterflyfish', 'Blue sea stars'],
+        kidFriendlyRating: 5,
+        currentCaution: 'Minimal current within the buoyed zone. Wave-free and sheltered.',
+        entryType: 'Walk-in beach',
+        bestTime: 'Morning (9:00 AM – 12:00 PM) before afternoon sea breezes pick up.',
+        notes: 'Has a designated underwater educational trail with interpretive buoys. Flotation noodles can be hired.'
+      }
+    ],
+    diningSpots: [
+      {
+        name: 'L’Atelier Gourmand',
+        type: 'Bakery & Patisserie',
+        location: 'Baie des Citrons Promenade',
+        specialty: 'Artisanal butter croissants, pain au chocolat, almond croissants, fresh crusty baguettes',
+        recommendation: 'Walk over at 7:00 AM every morning for hot croissants straight out of the deck oven.'
+      },
+      {
+        name: 'Le Kou-Gny Beach Restaurant',
+        type: 'Bistro / Seafood',
+        location: 'Oro Bay, Isle of Pines',
+        specialty: 'Grilled Isle of Pines spiny rock lobster, garlic butter, roasted sweet yams',
+        recommendation: 'The quintessential island lunch feast. Must be reserved in advance for Tuesday.'
+      },
+      {
+        name: 'Chez Toto',
+        type: 'Bistro / Seafood',
+        location: 'Quartier Latin, Nouméa',
+        specialty: 'Confit de canard, steak tartare, escargots de Bourgogne, homemade tarte tatin',
+        recommendation: 'Nouméa’s most authentic, warm French bistro. Book 2 days ahead for dinner.'
+      },
+      {
+        name: 'Le Roof Overwater Restaurant',
+        type: 'Bistro / Seafood',
+        location: 'Anse Vata, Nouméa',
+        specialty: 'Lagoon coral trout, local rock oysters, vanilla-crusted prawns, chocolate lava cake',
+        recommendation: 'Dine over the water and watch dolphins and spotted eagle rays circle beneath the central floor cutout.'
+      },
+      {
+        name: 'Supermarché Port Moselle & Johnston Supermarket',
+        type: 'Supermarket / Deli',
+        location: 'Downtown / Marina',
+        specialty: 'French cheeses (Brie, Camembert, Roquefort), saucisson, French butter, Bonne Maman jams',
+        recommendation: 'Stock the apartment fridge on Sunday afternoon for effortless breakfasts and picnic lunches.',
+        holidayNote: 'Closed on Wednesday 11 Nov (Armistice Day) — do your main shop on Sunday or Tuesday!'
+      }
+    ],
+    budgetBreakdown: [
+      { category: 'Flights (Domestic)', item: 'Air Calédonie Flights (Nouméa Magenta ⇄ Isle of Pines, 5 pax)', costXPF: 165000, costAUD: 2260, notes: '25-minute scenic hop for all 5 passengers' },
+      { category: 'Accommodation', item: '6 Nights 2-Bed Oceanfront Apartment (Casa del Sole)', costXPF: 135600, costAUD: 1860, notes: 'High-standard apartment base with kitchen & laundry' },
+      { category: 'Vehicle & Fuel', item: '7-Seater SUV Rental (6 days) + Fuel & Tolls', costXPF: 68000, costAUD: 930, notes: 'Full 6 days mobility on mainland Grande Terre' },
+      { category: 'Isle of Pines Day Tour', item: 'Upi Bay Pirogue + Piscine Naturelle Transfers + Lobster Lunch', costXPF: 54000, costAUD: 740, notes: 'Authentic sailing pirogue charter & fresh rock lobster' },
+      { category: 'Marine Charters', item: 'Phare Amédée Day Cruise + Îlot Signal Turtle Charter', costXPF: 75000, costAUD: 1025, notes: 'Two premier marine reserves with buffet & charters' },
+      { category: 'Food & Dining', item: 'Artisan bakeries, gourmet groceries, 4 French bistro dinners', costXPF: 92000, costAUD: 1260, notes: 'Superior dining quality in Nouméa dining district' }
+    ],
+    checklist: [
+      { id: 'c1', task: 'Book Casa del Sole 2-Bedroom Ocean View Apartment', deadline: '3–6 Months Prior', category: 'booking', notes: 'Retain primary base for all 6 nights (leave luggage safe)' },
+      { id: 'c2', task: 'Book Air Calédonie Flights (GEA ⇄ ILP) for Tuesday morning', deadline: '4 Months Prior', category: 'booking', notes: 'Book 7:20 AM outbound and 5:45 PM return (or Wed return)' },
+      { id: 'c3', task: 'Reserve Upi Bay Traditional Sailing Pirogue & Lobster Lunch at Snack Kougny', deadline: '2 Months Prior', category: 'booking', notes: 'Essential to lock in pirogue captain and lobster catch' },
+      { id: 'c4', task: 'Book Mary D Phare Amédée Day Excursion (Thursday)', deadline: '2 Months Prior', category: 'booking', notes: 'Sails Thursday; includes island buffet feast' },
+      { id: 'c5', task: 'Reserve Îlot Signal Water Taxi for Wednesday morning', deadline: '1 Month Prior', category: 'booking', notes: 'Escape public holiday closures on the mainland' },
+      { id: 'c6', task: 'Reserve Chez Toto & Le Roof for evening celebrations', deadline: '2–3 Weeks Prior', category: 'booking', notes: 'Nouméa’s most popular French dining spots' }
     ]
   }
 };

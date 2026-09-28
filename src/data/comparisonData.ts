@@ -24,6 +24,14 @@ export const QUIZ_OPTIONS: QuizOption[] = [
     description: 'We want complete self-drive freedom, beach chalet barbecues, 17 km calm lagoon, and coastal pine cliff hiking.',
     recommendationTitle: '⭐ Recommended: Option 3 — The West Coast Reef & Bush Road Trip',
     recommendationBody: 'Pick up your 7-seater SUV and explore Grande Terre! Step straight from your beachfront chalet into the 17 km wave-free Poé Lagoon, hike the dramatic Sentier des Trois Baies pine cliffs, and spot green turtles at the Shark Fault.'
+  },
+  {
+    id: 'best-of-both',
+    icon: '✨',
+    title: 'We want gourmet food & Isle of Pines icons',
+    description: 'We want the French bistros and apartment comfort of Nouméa, but want to fly 25 mins to see Piscine Naturelle and sail Upi Bay.',
+    recommendationTitle: '⭐ Recommended: Option 4 — The Best of Both Worlds',
+    recommendationBody: 'Base in Nouméa with an Isle of Pines express hop! You avoid dated, overpriced island resort rooms and mediocre food by keeping a prime Baie des Citrons apartment, while taking an easy 25-minute flight to experience the miraculous Piscine Naturelle, Upi Bay pirogues, and grilled rock lobster.'
   }
 ];
 
@@ -41,6 +49,11 @@ export const COMPARISON_FACTORS: ComparisonFactor[] = [
     },
     westCoast: {
       text: 'Rugged coastal road trip, cowboy/bush heritage, and wide-open barrier lagoon.'
+    },
+    bestOfBoth: {
+      highlight: true,
+      badge: 'PERFECT BALANCE',
+      text: 'Gourmet French mainland apartment hub paired with an iconic 25-minute flight to Isle of Pines.'
     }
   },
   {
@@ -56,6 +69,11 @@ export const COMPARISON_FACTORS: ComparisonFactor[] = [
     },
     westCoast: {
       text: '2 Bases: 3 nights Poé Beach + 3 nights Nouméa (requires 1 hotel transition).'
+    },
+    bestOfBoth: {
+      highlight: true,
+      badge: 'FLEXIBLE',
+      text: '1 Primary Base: 6 nights in Baie des Citrons. 0 moves for day trip, or 1 optional overnight (leave luggage safe).'
     }
   },
   {
@@ -71,6 +89,11 @@ export const COMPARISON_FACTORS: ComparisonFactor[] = [
     },
     westCoast: {
       text: 'Shallow lagoon paddling off the sand; outer barrier reef pass (Shark Fault) reached by boat taxi.'
+    },
+    bestOfBoth: {
+      highlight: true,
+      badge: 'BEST OF BOTH',
+      text: 'Waist-deep natural aquarium at Piscine Naturelle, plus wild sea turtles at Îlot Signal and outer reef at Phare Amédée.'
     }
   },
   {
@@ -86,6 +109,11 @@ export const COMPARISON_FACTORS: ComparisonFactor[] = [
     },
     westCoast: {
       text: 'Stand-up paddleboarding in calm shallows; spotting turtles surfacing in surf; beach barbecues.'
+    },
+    bestOfBoth: {
+      highlight: true,
+      badge: 'HIGH ADVENTURE',
+      text: 'Safe netted beach across from apartment every afternoon; scenic 25-min flight; traditional sailing pirogues; tame reef fish.'
     }
   },
   {
@@ -101,6 +129,9 @@ export const COMPARISON_FACTORS: ComparisonFactor[] = [
       highlight: true,
       badge: 'NO DOMESTIC FLIGHTS',
       text: '7-seater car rental directly from international airport terminal. RT1 highway driving (1h45m north, 2h south).'
+    },
+    bestOfBoth: {
+      text: '7-seater rental SUV for mainland + 25-minute domestic flight (GEA ⇄ ILP). Leave heavy suitcases safely at apartment.'
     }
   },
   {
@@ -114,6 +145,9 @@ export const COMPARISON_FACTORS: ComparisonFactor[] = [
     },
     westCoast: {
       text: 'Bourail town quiet; ideal day for scenic drive south stopping at historic Fort Teremba.'
+    },
+    bestOfBoth: {
+      text: 'Escape mainland retail closures with an offshore speedboat charter to Îlot Signal turtle sanctuary (or return from island stay).'
     }
   },
   {
@@ -129,6 +163,11 @@ export const COMPARISON_FACTORS: ComparisonFactor[] = [
     },
     westCoast: {
       text: 'Chalet barbecues with local Bourail beef/venison; rural bakeries and farm markets.'
+    },
+    bestOfBoth: {
+      highlight: true,
+      badge: 'GOURMET STANDARD',
+      text: 'Daily hot croissants, French bistros & wine every evening in Nouméa, plus fresh grilled lobster feast at Snack Kougny!'
     }
   },
   {
@@ -142,6 +181,9 @@ export const COMPARISON_FACTORS: ComparisonFactor[] = [
     },
     westCoast: {
       text: 'Medium-High: Bourail Dive takes divers to outer reef faults and passes.'
+    },
+    bestOfBoth: {
+      text: 'High: Access to Boulari Pass and Nouméa barrier drop-offs via Abyss Plongée.'
     }
   },
   {
@@ -157,6 +199,9 @@ export const COMPARISON_FACTORS: ComparisonFactor[] = [
     },
     westCoast: {
       text: '~442,500 XPF (~$6,055 AUD) — ~$1,210 AUD per person'
+    },
+    bestOfBoth: {
+      text: '~589,600 XPF (~$8,075 AUD) — ~$1,615 AUD per person (includes domestic flights & lobster feast)'
     }
   },
   {
@@ -170,6 +215,9 @@ export const COMPARISON_FACTORS: ComparisonFactor[] = [
     },
     westCoast: {
       text: 'Medium-High: Bush exploration, caves, Fort Teremba, and Nouméa base options.'
+    },
+    bestOfBoth: {
+      text: 'High: Mainland base provides cultural, aquarium, and shopping wet-weather backup; flight day can be shifted if needed.'
     }
   },
   {
@@ -183,6 +231,11 @@ export const COMPARISON_FACTORS: ComparisonFactor[] = [
     },
     westCoast: {
       text: 'Best for independent adventurers who love road-tripping and uncrowded nature.'
+    },
+    bestOfBoth: {
+      highlight: true,
+      badge: 'RECOMMENDED',
+      text: 'Best for families who prioritize gourmet French dining and great accommodation, but insist on experiencing the iconic wonders of Isle of Pines.'
     }
   }
 ];
@@ -214,5 +267,14 @@ export const DISTANCE_METRICS = [
     hotelMoves: '1 move (Poé → Nouméa)',
     effortRating: 'Active: Scenic highways, wide lagoons, no flights',
     highlight: false
+  },
+  {
+    name: 'Option 4: Best of Both Worlds',
+    reach: 'Nouméa Southern Lagoon + 25-Min Isle of Pines Express Flight',
+    totalDriving: '~150 km + 2 flights (25m)',
+    avgDailyDriving: '~20 mins (+ 2 flights)',
+    hotelMoves: '0 moves (or 1 optional overnight)',
+    effortRating: 'PERFECT BALANCE — Gourmet comfort & iconic wonder',
+    highlight: true
   }
 ];

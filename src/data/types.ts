@@ -1,4 +1,4 @@
-export type ItineraryId = 'islet' | 'isle-of-pines' | 'west-coast' | 'compare';
+export type ItineraryId = 'islet' | 'isle-of-pines' | 'west-coast' | 'best-of-both' | 'compare';
 
 export interface Activity {
   time: string;
@@ -89,7 +89,7 @@ export interface ChecklistItem {
 }
 
 export interface ItineraryOption {
-  id: 'islet' | 'isle-of-pines' | 'west-coast';
+  id: 'islet' | 'isle-of-pines' | 'west-coast' | 'best-of-both';
   optionNumber: number;
   title: string;
   tagline: string;
@@ -126,7 +126,7 @@ export interface LocationMarker {
   pinClass: 'pin-blue' | 'pin-emerald' | 'pin-amber' | 'pin-purple' | 'pin-rose';
   emoji: string;
   info: string;
-  itineraries: ('islet' | 'isle-of-pines' | 'west-coast')[];
+  itineraries: ('islet' | 'isle-of-pines' | 'west-coast' | 'best-of-both')[];
 }
 
 export interface ComparisonFactor {
@@ -147,10 +147,15 @@ export interface ComparisonFactor {
     badge?: string;
     text: string;
   };
+  bestOfBoth?: {
+    highlight?: boolean;
+    badge?: string;
+    text: string;
+  };
 }
 
 export interface QuizOption {
-  id: 'islet' | 'isle-of-pines' | 'west-coast';
+  id: 'islet' | 'isle-of-pines' | 'west-coast' | 'best-of-both';
   icon: string;
   title: string;
   description: string;
