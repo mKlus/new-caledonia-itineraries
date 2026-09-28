@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Option 2: The Island Split (Nouméa + Isle of Pines) | New Caledonia Family Holiday</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="header">
+    <div class="nav-container">
+      <a href="index.html" class="brand">🌴 <span>New Caledonia</span> Explorer</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Option 1: Islet Explorer</a></li>
+          <li><a href="option2-isle-of-pines.html" class="active">Option 2: Isle of Pines</a></li>
+          <li><a href="option3-west-coast.html">Option 3: West Coast & Poé</a></li>
+          <li><a href="comparison.html" class="btn-compare">⚖️ Compare All 3</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero hero-opt2">
+    <div class="hero-content">
+      <div class="hero-badge">Option 2 — The Iconic Pacific Dream</div>
+      <h1>The Island Split: Nouméa + Isle of Pines</h1>
+      <p>Combine urban French coastal charm in Nouméa with 3 unforgettable nights on the Isle of Pines (Île des Pins). Experience traditional outrigger pirogue sailing across turquoise bays and snorkel in the world-famous Natural Aquarium.</p>
+      
+      <div class="hero-stats">
+        <div class="stat-pill">📅 8 – 14 Nov 2026 (6 Nights)</div>
+        <div class="stat-pill">👥 4 Adults + 1 Child (9 yo)</div>
+        <div class="stat-pill">✈️ Flight: 25-min Air Calédonie Hopper</div>
+        <div class="stat-pill">🏝️ Bases: 3N Isle of Pines + 3N Nouméa</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="container">
+    <div class="grid-2">
+      
+      <!-- Left Column: Daily Schedule & Deep Dive -->
+      <section>
+        
+        <div class="card">
+          <h2>Overview & Family Suitability</h2>
+          <p>If your family prioritizes unforgettable tropical landscapes and off-the-beach snorkeling, this is the premier option. The Isle of Pines is renowned for its towering endemic columnar pine trees, fine white silica sands, and calm, current-free tidal pools that are safe and mesmerizing for a 9-year-old child.</p>
+          
+          <div class="callout callout-tip">
+            <strong>The Highlight for Kids:</strong> Gliding in a silent wooden Kanak sailing pirogue across Upi Bay past coral mushroom rocks, followed by floating in the waist-deep, crystal-clear <em>Piscine Naturelle</em> surrounded by friendly parrotfish and blue starfish.
+          </div>
+
+          <div class="callout callout-kid">
+            <strong>Off-the-Beach Freedom:</strong> Unlike mainland Nouméa where swimming is restricted to netted zones, the Isle of Pines has pristine off-the-beach swimming and snorkeling at Kanumera and Kuto with no barriers or nets needed.
+          </div>
+        </div>
+
+        <!-- Interactive Map -->
+        <div class="card">
+          <h2>Interactive Isle of Pines & Route Map</h2>
+          <p style="font-size: 0.9rem; color: var(--gray); margin-bottom: 0.75rem;">Explore the flight route from Magenta (Nouméa) to Isle of Pines, plus all key bays and lagoons.</p>
+          <div id="opt2-map" class="map-container"></div>
+          <div style="font-size: 0.85rem; color: var(--gray-dark);">
+            Direct Links: 
+            <a href="https://maps.google.com/?q=Baie+de+Kanumera+Ile+des+Pins" target="_blank" rel="noopener">Kanumera Bay</a> | 
+            <a href="https://maps.google.com/?q=Piscine+Naturelle+Baie+d+Oro" target="_blank" rel="noopener">Piscine Naturelle</a> | 
+            <a href="https://maps.google.com/?q=Baie+d+Upi+Ile+des+Pins" target="_blank" rel="noopener">Upi Bay</a> | 
+            <a href="https://maps.google.com/?q=Ilot+Nokanhui" target="_blank" rel="noopener">Îlot Nokanhui</a>
+          </div>
+        </div>
+
+        <!-- Day by Day -->
+        <div class="card">
+          <h2>Detailed Day-by-Day Schedule</h2>
+          
+          <div class="timeline">
+            
+            <!-- Day 1 -->
+            <div class="day-block">
+              <div class="day-header">
+                <div class="day-title">Day 1: Sunday, 8 Nov — Arrival & Nouméa Overnight</div>
+                <span class="day-tag">Arrival</span>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">☀️ Afternoon (12:35 PM – 4:00 PM)</div>
+                <p>Arrive at La Tontouta Airport (QF91 at 12:35 PM). Take an Arc-en-Ciel pre-booked private transfer van directly to your apartment at Baie des Citrons in Nouméa (50 min drive). Settle in and unpack your initial gear.</p>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">🌊 Late Afternoon & Evening</div>
+                <p>Enjoy a relaxed swim at the netted Baie des Citrons beach. Grab fresh pastries and have a casual welcome dinner on the beachfront deck at <em>Le Bilboquet Plage</em>.</p>
+              </div>
+            </div>
+
+            <!-- Day 2 -->
+            <div class="day-block">
+              <div class="day-header">
+                <div class="day-title">Day 2: Monday, 9 Nov — Fly to Isle of Pines & Kanumera Sunset</div>
+                <span class="day-tag">Domestic Flight</span>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">☀️ Morning (8:30 AM – 12:00 PM)</div>
+                <p>Pick up fresh croissants from <em>L'Atelier Gourmand</em>. Stroll Anse Vata or take a quick 5-minute boat hop to Duck Island for an introductory snorkel.</p>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">✈️ Early Afternoon (12:30 PM – 2:45 PM)</div>
+                <p>Transfer 15 minutes to Nouméa’s domestic airport, <strong>Magenta (GEA)</strong>. Board your 25-minute Air Calédonie flight to the Isle of Pines (ILP). The aerial views over the reef patterns and tiny sand cays are extraordinary.</p>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">🌅 Late Afternoon & Evening</div>
+                <p>Collect your island rental car at Isle of Pines Airport. Drive 15 minutes south to <strong>Kanumera Bay</strong> and check into your family bungalow at <a href="https://www.newcaledonia.travel/offers/gite-nataiwatch-ile-des-pins-en-3915597/" target="_blank" rel="noopener">Gîte Nataïwatch</a> or <a href="https://www.booking.com/hotel/nc/oure-tera-beach-resort.html" target="_blank" rel="noopener">Oure Lodge</a>. Watch the sunset illuminate the sacred rock of Kanumera. Beachfront dinner featuring local spiny lobster or fresh catch of the day.</p>
+              </div>
+            </div>
+
+            <!-- Day 3 -->
+            <div class="day-block">
+              <div class="day-header">
+                <div class="day-title">Day 3: Tuesday, 10 Nov — Traditional Pirogue Sailing & Piscine Naturelle</div>
+                <span class="day-tag">Bucket List Day</span>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">⛵ Morning (8:00 AM – 11:30 AM)</div>
+                <p>Drive to St. Joseph Bay. Board a traditional wooden Kanak sailing pirogue (*pirogue traditionnelle*) with a local captain. Glide in peaceful silence across the mirror-like turquoise waters of <strong>Upi Bay</strong>, tacking past immense coral limestone mushroom rocks and native pine groves.</p>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">🐠 Afternoon (11:30 AM – 3:30 PM)</div>
+                <p>Disembark at Oro Bay. Take the flat 40-minute bushwalk along the riverbank path through tropical pine forest to the <a href="https://www.newcaledonia.travel/offers/natural-pool-of-oro-ile-des-pins-en-5900000/" target="_blank" rel="noopener">Piscine Naturelle (Natural Aquarium)</a>. Snorkel in this protected, current-free tidal basin teeming with thousands of colorful reef fish. Lunch at nearby <em>Le Kou-Gny</em> open-air beach restaurant.</p>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">🌙 Evening</div>
+                <p>Return to Kanumera for a twilight swim in the calm bay. Dinner at your lodge.</p>
+              </div>
+            </div>
+
+            <!-- Day 4 -->
+            <div class="day-block">
+              <div class="day-header">
+                <div class="day-title">Day 4: Wednesday, 11 Nov (Armistice Day) — Nokanhui Atoll & Îlot Brosse</div>
+                <span class="day-tag">Offshore Excursion</span>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">🏝️ Morning (8:30 AM – 1:00 PM)</div>
+                <p>Join a local speedboat charter out to <strong>Îlot Nokanhui</strong>, a pure white sandbar encircled by fluorescent neon-blue water. The 9-year-old can safely wade in ankle-deep crystal water.</p>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">🦞 Afternoon (1:00 PM – 3:30 PM)</div>
+                <p>Speedboat over to <strong>Îlot Brosse</strong> for a legendary Robinson Crusoe-style beach barbecue. Feast on freshly grilled rock lobster, fish, and baked sweet potatoes under the shade of coastal trees.</p>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">🌅 Late Afternoon (4:00 PM – 6:30 PM)</div>
+                <p>Stroll 5 minutes across the narrow isthmus to <strong>Kuto Bay</strong>. Its deep, powder-fine white sand is perfect for body-surfing gentle waves and watching the golden hour sunset.</p>
+              </div>
+            </div>
+
+            <!-- Day 5 -->
+            <div class="day-block">
+              <div class="day-header">
+                <div class="day-title">Day 5: Thursday, 12 Nov — Caves, Lookouts & Return to Nouméa</div>
+                <span class="day-tag">Scenic Transition</span>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">🌿 Morning (8:30 AM – 12:00 PM)</div>
+                <p>Visit <strong>Queen Hortense’s Cave (Grotte de la Reine Hortense)</strong>, surrounded by gigantic prehistoric ferns, stalactites, and trickling subterranean streams. Afterwards, walk up to <em>Pic N'Ga</em> (262m elevation, 1 hr return) for a 360-degree panorama of the entire reef barrier.</p>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">✈️ Afternoon (1:30 PM – 4:00 PM)</div>
+                <p>Drop your rental car at Isle of Pines Airport and board the ~2:30 PM flight back to Magenta Airport in Nouméa. Transfer back to your Baie des Citrons apartment.</p>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">🌙 Evening</div>
+                <p>Celebratory dinner in Nouméa at <em>Chez Toto</em> in the Latin Quarter or fresh seafood at <em>Le Miretti-Gascon</em>.</p>
+              </div>
+            </div>
+
+            <!-- Day 6 -->
+            <div class="day-block">
+              <div class="day-header">
+                <div class="day-title">Day 6: Friday, 13 Nov — Îlot Signal Turtle Expedition</div>
+                <span class="day-tag">Marine Sanctuary</span>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">🐢 Morning & Early Afternoon (8:45 AM – 2:30 PM)</div>
+                <p>Take a 35-minute water taxi from Port Moselle to <a href="https://www.newcaledonia.travel/offers/signal-islet-noumea-en-5872095/" target="_blank" rel="noopener">Îlot Signal</a>. Spend the morning snorkeling with wild green sea turtles and rays along the reef wall. Picnic under the shaded shelters.</p>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">🏛️ Late Afternoon</div>
+                <p>Return to Port Moselle. Visit the renowned <em>Tchibaou Cultural Centre</em> to experience Renzo Piano’s iconic Kanak-inspired architecture set within coastal mangroves.</p>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">🌙 Evening</div>
+                <p>Farewell dinner at <em>L'Échappée Belle</em> overlooking the bay.</p>
+              </div>
+            </div>
+
+            <!-- Day 7 -->
+            <div class="day-block">
+              <div class="day-header">
+                <div class="day-title">Day 7: Saturday, 14 Nov — French Bakery Breakfast & Airport Run</div>
+                <span class="day-tag">Departure</span>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">☀️ Morning (8:00 AM – 10:45 AM)</div>
+                <p>Final morning croissants and coffee at <em>L'Atelier Gourmand</em>. Pack luggage and check out by 10:30 AM.</p>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">🛫 Midday Departure</div>
+                <p>Pre-booked transfer van takes you directly from Nouméa to La Tontouta International Airport (45 min drive). Arrive at 11:30 AM to check in for QF92 departing at 1:50 PM for Sydney.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Right Column: Stays, Flights, Snorkel Intel, Costs -->
+      <aside>
+
+        <!-- Isle of Pines Lodging -->
+        <div class="card">
+          <h2>Isle of Pines Lodging</h2>
+          
+          <div class="hotel-card">
+            <div class="hotel-info">
+              <div class="hotel-title"><a href="https://www.newcaledonia.travel/offers/gite-nataiwatch-ile-des-pins-en-3915597/" target="_blank" rel="noopener">Gîte Nataïwatch</a></div>
+              <div class="hotel-rating">★★★★☆ (4.3/5 on Google Reviews — Kanumera Bay)</div>
+              <div class="badge-list">
+                <span class="badge">Kanumera Bay</span>
+                <span class="badge">Traditional Bungalows</span>
+                <span class="badge">Kitchenette Options</span>
+                <span class="badge">2 Min Walk to Beach</span>
+              </div>
+              <p style="font-size: 0.88rem; color: var(--gray-dark); margin-top: 0.5rem;">
+                Authentic Kanak-style family bungalows set within lush tropical gardens and banyan trees. Located 150m from Kanumera beach, ideal for families seeking peace, local warmth, and great food.
+              </p>
+            </div>
+          </div>
+
+          <div class="hotel-card">
+            <div class="hotel-info">
+              <div class="hotel-title"><a href="https://www.booking.com/hotel/nc/oure-tera-beach-resort.html" target="_blank" rel="noopener">Oure Lodge Beach Resort</a></div>
+              <div class="hotel-rating">★★★★☆ (8.1/10 on Booking.com)</div>
+              <div class="badge-list">
+                <span class="badge">Direct Beachfront</span>
+                <span class="badge">Family Bungalows</span>
+                <span class="badge">Pool & Kayaks</span>
+                <span class="badge">Sunset Views</span>
+              </div>
+              <p style="font-size: 0.88rem; color: var(--gray-dark); margin-top: 0.5rem;">
+                Beachfront bungalows sitting right on Kanumera Bay with immediate walk-in snorkeling around the sacred rock, outdoor swimming pool, and open-air beachfront restaurant.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Domestic Flight Logistics -->
+        <div class="card">
+          <h2>Air Calédonie Flights</h2>
+          <ul style="padding-left: 1.2rem; font-size: 0.9rem; color: var(--gray-dark);">
+            <li><strong>Route:</strong> Nouméa Magenta (GEA) ⇄ Isle of Pines (ILP).</li>
+            <li><strong>Duration:</strong> 25–30 minutes on ATR-72 turboprop.</li>
+            <li><strong>Luggage:</strong> 20 kg checked baggage per ticket + 5 kg cabin bag.</li>
+            <li><strong>Frequency:</strong> 3–5 daily flights. Advance booking essential for November holiday dates!</li>
+          </ul>
+        </div>
+
+        <!-- Snorkeling Highlights -->
+        <div class="card">
+          <h2>Snorkeling Intel</h2>
+          <ul style="padding-left: 1.2rem; font-size: 0.9rem; color: var(--gray-dark);">
+            <li><strong>Piscine Naturelle:</strong> The best family snorkel spot in the Pacific. Clear, shallow, sheltered from waves, swarming with fish.</li>
+            <li><strong>Rocher de Kanumera:</strong> Coral garden drop-offs on the edges of the sacred rock (respect local taboo: do not climb on the rock).</li>
+            <li><strong>Îlot Nokanhui:</strong> Pristine offshore sandbars with nursery reef sharks and rays in shallows.</li>
+          </ul>
+        </div>
+
+        <!-- Estimated Budget -->
+        <div class="card">
+          <h2>Estimated Budget (5 Pax)</h2>
+          <table class="styled-table">
+            <thead>
+              <tr><th>Item</th><th>XPF</th><th>AUD (~1:73)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Air Calédonie (5 Ret. Tix)</td><td>115,000</td><td>~$1,575</td></tr>
+              <tr><td>Nouméa Apt (3 nights)</td><td>82,500</td><td>~$1,130</td></tr>
+              <tr><td>Isle of Pines Gîte (3 nights)</td><td>105,000</td><td>~$1,440</td></tr>
+              <tr><td>Isle of Pines Car (3 days)</td><td>36,000</td><td>~$490</td></tr>
+              <tr><td>Upi Pirogues + Nokanhui</td><td>75,000</td><td>~$1,025</td></tr>
+              <tr><td>Food, Lobster & Dining</td><td>145,000</td><td>~$1,985</td></tr>
+              <tr><td>Nouméa Transfers & Speedboat</td><td>55,000</td><td>~$755</td></tr>
+              <tr><td><strong>Estimated Total</strong></td><td><strong>613,500</strong></td><td><strong>~$8,400 AUD</strong></td></tr>
+            </tbody>
+          </table>
+          <p style="font-size: 0.8rem; color: var(--gray);">Excludes international flights. Approx. $1,680 AUD per person for 6 nights.</p>
+        </div>
+
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div>
+        <h4 style="color: var(--white); margin-bottom: 0.5rem;">New Caledonia Travel Planner</h4>
+        <p>Realistic 6-night family itineraries (8–14 Nov 2026).</p>
+      </div>
+      <div>
+        <h4 style="color: var(--white); margin-bottom: 0.5rem;">Explore Options</h4>
+        <p><a href="index.html">Option 1: Islet Explorer</a></p>
+        <p><a href="option2-isle-of-pines.html">Option 2: Isle of Pines</a></p>
+        <p><a href="option3-west-coast.html">Option 3: West Coast & Poé</a></p>
+        <p><a href="comparison.html">Comparison Matrix</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Leaflet Map Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var map = L.map('opt2-map').setView([-22.50, 167.00], 9);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+      }).addTo(map);
+
+      var locations = [
+        { name: "Nouméa Magenta Airport (GEA)", lat: -22.2592, lng: 166.4719, info: "Domestic terminal for 25-min flight to Isle of Pines." },
+        { name: "Isle of Pines Airport (ILP)", lat: -22.5992, lng: 167.4564, info: "Arrival runway on Isle of Pines; car rental pickup." },
+        { name: "Kanumera Bay & Sacred Rock", lat: -22.6625, lng: 167.4475, info: "Bungalow base; walk-in coral reef snorkeling." },
+        { name: "Kuto Bay", lat: -22.6583, lng: 167.4428, info: "Powder-soft white sand, calm sunset swimming." },
+        { name: "Baie d'Upi (Pirogue Pier)", lat: -22.6167, lng: 167.5167, info: "Board traditional wooden Kanak sailing outriggers." },
+        { name: "Piscine Naturelle (Natural Aquarium)", lat: -22.5894, lng: 167.5147, info: "World-famous sheltered tidal pool filled with reef fish." },
+        { name: "Îlot Nokanhui (Sandbank)", lat: -22.7233, lng: 167.5683, info: "Pristine offshore sandbank day trip." },
+        { name: "Queen Hortense's Cave", lat: -22.6167, lng: 167.4667, info: "Lush limestone cave with giant prehistoric ferns." },
+        { name: "Vao Village", lat: -22.6644, lng: 167.4811, info: "Main island village, historic mission church, market." }
+      ];
+
+      locations.forEach(function(loc) {
+        L.marker([loc.lat, loc.lng]).addTo(map)
+          .bindPopup("<strong>" + loc.name + "</strong><br>" + loc.info + 
+                     "<br><a href='https://maps.google.com/?q=" + loc.lat + "," + loc.lng + "' target='_blank'>Open in Google Maps</a>");
+      });
+
+      // Flight line between Magenta and ILP
+      var flightPath = [
+        [-22.2592, 166.4719],
+        [-22.5992, 167.4564]
+      ];
+      L.polyline(flightPath, {color: '#0f766e', weight: 3, dashArray: '6, 8'}).addTo(map);
+    });
+  </script>
+
+</body>
+</html>

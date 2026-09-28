@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Option 3: The West Coast Reef & Bush Road Trip | New Caledonia Family Holiday</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="header">
+    <div class="nav-container">
+      <a href="index.html" class="brand">🌴 <span>New Caledonia</span> Explorer</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Option 1: Islet Explorer</a></li>
+          <li><a href="option2-isle-of-pines.html">Option 2: Isle of Pines</a></li>
+          <li><a href="option3-west-coast.html" class="active">Option 3: West Coast & Poé</a></li>
+          <li><a href="comparison.html" class="btn-compare">⚖️ Compare All 3</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero hero-opt3">
+    <div class="hero-content">
+      <div class="hero-badge">Option 3 — Coastal Road Trip & Bush Heritage</div>
+      <h1>The West Coast Reef & Bush Road Trip</h1>
+      <p>Drive north along the scenic Route Territoriale 1 (RT1) to the UNESCO World Heritage barrier reef lagoon at Poé Beach. Snorkel the green turtle sanctuary at the Shark Fault, hike the dramatic Three Bays coastal trail, and experience authentic Caldoche bush country.</p>
+      
+      <div class="hero-stats">
+        <div class="stat-pill">📅 8 – 14 Nov 2026 (6 Nights)</div>
+        <div class="stat-pill">👥 4 Adults + 1 Child (9 yo)</div>
+        <div class="stat-pill">🚗 Road Trip: RT1 Highway (Airport Pickup)</div>
+        <div class="stat-pill">🏡 Bases: 3N Poé Beach + 3N Nouméa</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="container">
+    <div class="grid-2">
+      
+      <!-- Left Column: Daily Schedule & Deep Dive -->
+      <section>
+        
+        <div class="card">
+          <h2>Overview & Family Suitability</h2>
+          <p>This itinerary eliminates domestic flight schedules while giving your family total self-drive freedom. Because La Tontouta Airport is already located 50 km north of Nouméa, you land and head directly north to Bourail/Poé (a smooth 1h45m drive on sealed highway), saving backtracking on Day 1.</p>
+          
+          <div class="callout callout-tip">
+            <strong>Unique Geographic Advantage:</strong> Poé Beach features 17 kilometers of continuous, shallow white sand lagoon backed by tranquil ironwood trees. The barrier reef is easily reached by local glass-bottom boat taxis to snorkel with sea turtles in crystal-clear water.
+          </div>
+
+          <div class="callout callout-kid">
+            <strong>Active Adventures for the 9-Year-Old:</strong> Stand-up paddleboarding in the flat, calm lagoon right in front of your chalet, spotting sea turtles at Turtle Bay from dramatic cliffs, and riding mountain bikes along the wide trails of Domaine de Deva.
+          </div>
+        </div>
+
+        <!-- Interactive Map -->
+        <div class="card">
+          <h2>Interactive West Coast Drive & Route Map</h2>
+          <p style="font-size: 0.9rem; color: var(--gray); margin-bottom: 0.75rem;">Follow the RT1 road trip route from La Tontouta up to Poé/Bourail, plus the return to Nouméa.</p>
+          <div id="opt3-map" class="map-container"></div>
+          <div style="font-size: 0.85rem; color: var(--gray-dark);">
+            Direct Links: 
+            <a href="https://maps.google.com/?q=Plage+de+Poe+Bourail" target="_blank" rel="noopener">Poé Beach</a> | 
+            <a href="https://maps.google.com/?q=La+Roche+Percee+Bourail" target="_blank" rel="noopener">Roche Percée</a> | 
+            <a href="https://maps.google.com/?q=Domaine+de+Deva+Bourail" target="_blank" rel="noopener">Domaine de Deva</a> | 
+            <a href="https://maps.google.com/?q=Fort+Teremba+Moindou" target="_blank" rel="noopener">Fort Teremba</a>
+          </div>
+        </div>
+
+        <!-- Day by Day -->
+        <div class="card">
+          <h2>Detailed Day-by-Day Schedule</h2>
+          
+          <div class="timeline">
+            
+            <!-- Day 1 -->
+            <div class="day-block">
+              <div class="day-header">
+                <div class="day-title">Day 1: Sunday, 8 Nov — Direct Drive North to Poé Beach</div>
+                <span class="day-tag">Road Trip Start</span>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">🚗 Afternoon (12:35 PM – 3:30 PM)</div>
+                <p>Touch down at La Tontouta Airport (QF91 at 12:35 PM). Pick up your 7-seater SUV from the terminal counter. Head directly north on Route Territoriale 1 (RT1) through the rolling green hills and niaouli savannah of the West Coast. Stop in Bourail town to pick up evening essentials, then continue 15 minutes to Poé Beach. Check into your beachfront chalet.</p>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">🌊 Late Afternoon (4:00 PM – 6:30 PM)</div>
+                <p>Step directly onto the soft white sand of Poé Beach. The water is warm, shallow, and completely wave-free inside the lagoon barrier. Enjoy a sunset beach swim.</p>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">🌙 Evening</div>
+                <p>Casual dinner on the beach at <em>L'Alizé</em> restaurant or enjoy a self-catered meal on your private veranda listening to the breeze in the ironwood trees.</p>
+              </div>
+            </div>
+
+            <!-- Day 2 -->
+            <div class="day-block">
+              <div class="day-header">
+                <div class="day-title">Day 2: Monday, 9 Nov — Glass-Bottom Boat & Shark Fault Snorkel</div>
+                <span class="day-tag">Reef Highlight</span>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">🐢 Morning (8:30 AM – 12:30 PM)</div>
+                <p>Board the <em>Bateau Taxi Nautile</em> or local glass-bottom boat directly from Poé Beach. Cruise across the turquoise lagoon to the outer barrier reef and the famous <strong>Shark Fault (La Faille aux Requins)</strong>. Snorkel in this protected deep underwater canyon where dozens of green sea turtles feed alongside harmless white-tip reef sharks, eagle rays, and giant trevally.</p>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">🏄 Afternoon (1:30 PM – 5:00 PM)</div>
+                <p>Rent stand-up paddleboards or double kayaks right off the sand at Poé. Paddle in the turquoise shallows. Relax under the shaded ironwood trees with cold drinks.</p>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">🍖 Evening</div>
+                <p>Fire up the outdoor barbecue at your chalet. Grill famous local Bourail beef steaks or wild venison (*cerf*) from Bourail’s local butchery, paired with fresh French bread.</p>
+              </div>
+            </div>
+
+            <!-- Day 3 -->
+            <div class="day-block">
+              <div class="day-header">
+                <div class="day-title">Day 3: Tuesday, 10 Nov — Three Bays Coastal Hike & Domaine de Deva</div>
+                <span class="day-tag">Scenic Nature</span>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">🥾 Morning (8:00 AM – 11:30 AM)</div>
+                <p>Hike the renowned <a href="https://wanderboat.ai/attractions/france/bourail/pr2-%3A-le-sentier-des-trois-baies/Vc1FdXe3T0S3Qf9cNX_amw" target="_blank" rel="noopener">Sentier des Trois Baies (Three Bays Trail)</a>. Start at the landmark <strong>Roche Percée</strong> (Pierced Rock) and walk under the canopy of towering ancient columnar pine trees. Ascend to panoramic clifftops overlooking <strong>Turtle Bay (Baie des Tortues)</strong> and <strong>Lovers' Bay (Baie des Amoureux)</strong>. Watch loggerhead turtles surfacing in the turquoise waves below.</p>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">🚵 Afternoon (1:00 PM – 4:30 PM)</div>
+                <p>Head into the protected <strong>Domaine de Deva</strong> estate. Rent mountain bikes or take an easy walking track up to the <em>Oua Koué</em> lookout for sweeping views across the UNESCO-listed lagoon and barrier reef passes.</p>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">🛒 Evening (Holiday Prep)</div>
+                <p><strong>Stocking Up for Wednesday:</strong> Purchase groceries and breakfast supplies at <em>Supermarché Match</em> in Bourail before shops close for the Armistice Day holiday tomorrow.</p>
+              </div>
+            </div>
+
+            <!-- Day 4 -->
+            <div class="day-block">
+              <div class="day-header">
+                <div class="day-title">Day 4: Wednesday, 11 Nov (Armistice Day) — Scenic Drive South to Nouméa</div>
+                <span class="day-tag">Heritage Road Trip</span>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">🚗 Morning & Midday (9:30 AM – 1:30 PM)</div>
+                <p>Final morning beach stroll at Poé. Check out and drive south along RT1 (approx. 2 hours). Stop at the historic 19th-century penal colony fort of <strong>Fort Teremba</strong> in Moindou. Picnic lunch under the shady trees.</p>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">🌊 Afternoon (2:30 PM – 6:00 PM)</div>
+                <p>Arrive in Nouméa and check into your ocean-view apartment at Baie des Citrons. Put on your swimsuits and head straight to the safe, netted beach across the street for an afternoon swim and beach games.</p>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">🌙 Evening</div>
+                <p>Stroll the lively Baie des Citrons boardwalk for tapas and dinner at <em>Le Bilboquet Plage</em> or <em>La Bodega del Mar</em>.</p>
+              </div>
+            </div>
+
+            <!-- Day 5 -->
+            <div class="day-block">
+              <div class="day-header">
+                <div class="day-title">Day 5: Thursday, 12 Nov — Speedboat to Îlot Signal Sanctuary</div>
+                <span class="day-tag">Marine Reserve</span>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">🐢 Morning & Early Afternoon (8:45 AM – 2:30 PM)</div>
+                <p>Board your pre-booked water taxi from Port Moselle to <a href="https://www.newcaledonia.travel/offers/signal-islet-noumea-en-5872095/" target="_blank" rel="noopener">Îlot Signal</a>. Spend the morning snorkeling with wild green sea turtles and eagle rays along the outer reef drop-off. Walk the shaded 1.6 km nature trail.</p>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">🌆 Late Afternoon & Evening</div>
+                <p>Return to Port Moselle. Drive up to the Ouen Toro lookout to watch kite-surfers in the sunset. Dinner at <em>Le Bout du Monde</em> marina bistro.</p>
+              </div>
+            </div>
+
+            <!-- Day 6 -->
+            <div class="day-block">
+              <div class="day-header">
+                <div class="day-title">Day 6: Friday, 13 Nov — Duck Island & Cultural Nouméa</div>
+                <span class="day-tag">City & Marine</span>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">☀️ Morning (8:30 AM – 12:30 PM)</div>
+                <p>Take a 5-minute water taxi to <strong>Îlot Canard (Duck Island)</strong> for easy, shallow reef snorkeling along the marked underwater trail. Visit the open-air sculpture garden on the island.</p>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">🏛️ Afternoon (1:30 PM – 4:30 PM)</div>
+                <p>Visit the <em>Marché de Port Moselle</em> and explore the world-renowned <em>Tchibaou Cultural Centre</em> to learn about Kanak traditions and contemporary South Pacific art.</p>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">🌙 Evening</div>
+                <p>Celebration farewell dinner at <em>L'Échappée Belle</em> or an authentic French crêperie.</p>
+              </div>
+            </div>
+
+            <!-- Day 7 -->
+            <div class="day-block">
+              <div class="day-header">
+                <div class="day-title">Day 7: Saturday, 14 Nov — Bakery Run & Terminal Return</div>
+                <span class="day-tag">Flight Home</span>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">☀️ Morning (8:00 AM – 10:45 AM)</div>
+                <p>Pick up fresh croissants and baguettes from <em>L'Atelier Gourmand</em>. Pack bags and check out of your Nouméa apartment by 10:30 AM.</p>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">🛫 Midday Departure</div>
+                <p>Drive 45 minutes north on RT1 back to La Tontouta International Airport. Return your 7-seater rental vehicle directly to the airport depot at 11:45 AM. Check in for QF92 departing at 1:50 PM.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Right Column: Stays, Snorkel Intel, Food, Costs -->
+      <aside>
+
+        <!-- Bourail / Poé Lodging -->
+        <div class="card">
+          <h2>Where to Stay in Poé</h2>
+          
+          <div class="hotel-card">
+            <div class="hotel-info">
+              <div class="hotel-title"><a href="https://www.newcaledonia.travel/offers/hotel-de-poe-bourail-en-5527418/" target="_blank" rel="noopener">Hôtel de Poé</a></div>
+              <div class="hotel-rating">★★★★☆ (4.2/5 on Google Reviews — Poé Beach)</div>
+              <div class="badge-list">
+                <span class="badge">Poé Beach</span>
+                <span class="badge">Family Bungalows</span>
+                <span class="badge">Kitchenettes</span>
+                <span class="badge">100m to Lagoon</span>
+              </div>
+              <p style="font-size: 0.88rem; color: var(--gray-dark); margin-top: 0.5rem;">
+                Spacious standalone family bungalows equipped with kitchenettes, outdoor terraces, and barbecue facilities. Located just a 2-minute walk from the turquoise waters of Poé lagoon.
+              </p>
+            </div>
+          </div>
+
+          <div class="hotel-card">
+            <div class="hotel-info">
+              <div class="hotel-title"><a href="https://www.booking.com/hotel/nc/poe-cote-lagon-bourail.html" target="_blank" rel="noopener">Poé Côté Lagon</a></div>
+              <div class="hotel-rating">★★★★☆ (4.8/5 on Booking.com — Beachfront)</div>
+              <div class="badge-list">
+                <span class="badge">Absolute Beachfront</span>
+                <span class="badge">Private Chalets</span>
+                <span class="badge">Full Kitchen</span>
+                <span class="badge">Lagoon Views</span>
+              </div>
+              <p style="font-size: 0.88rem; color: var(--gray-dark); margin-top: 0.5rem;">
+                Private self-contained chalets situated directly on the white sand facing the lagoon. Fully equipped kitchens, private deck, barbecue, and immediate walk-in swimming.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Driving Logistics -->
+        <div class="card">
+          <h2>Road Trip Driving Intel</h2>
+          <ul style="padding-left: 1.2rem; font-size: 0.9rem; color: var(--gray-dark);">
+            <li><strong>Route:</strong> Route Territoriale 1 (RT1) is fully sealed, wide, and well signposted.</li>
+            <li><strong>Drive Times:</strong> La Tontouta Airport to Poé Beach is approx. 135 km (1h45m – 2h). Poé to Nouméa is approx. 165 km (2h15m).</li>
+            <li><strong>Vehicle:</strong> A 7-seater SUV (e.g. Mitsubishi Outlander / Peugeot 5008) comfortably accommodates 5 passengers plus all luggage.</li>
+          </ul>
+        </div>
+
+        <!-- Snorkeling & Marine Life -->
+        <div class="card">
+          <h2>Snorkeling Intel</h2>
+          <ul style="padding-left: 1.2rem; font-size: 0.9rem; color: var(--gray-dark);">
+            <li><strong>La Faille aux Requins (Shark Fault):</strong> World Heritage marine reserve inside the outer reef pass; dense concentrations of green turtles and harmless reef sharks.</li>
+            <li><strong>Turtle Bay (Baie des Tortues):</strong> High chance of seeing loggerhead turtles surfacing in the surf from the cliffs.</li>
+            <li><strong>Poé Lagoon:</strong> Extremely calm, shallow water ideal for children to paddleboard and snorkel small coral bommies.</li>
+          </ul>
+        </div>
+
+        <!-- Estimated Budget -->
+        <div class="card">
+          <h2>Estimated Budget (5 Pax)</h2>
+          <table class="styled-table">
+            <thead>
+              <tr><th>Item</th><th>XPF</th><th>AUD (~1:73)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Poé Beach Bungalow (3 nights)</td><td>90,000</td><td>~$1,230</td></tr>
+              <tr><td>Nouméa Apt (3 nights)</td><td>82,500</td><td>~$1,130</td></tr>
+              <tr><td>7-Seater Car Rental (6 days)</td><td>68,000</td><td>~$930</td></tr>
+              <tr><td>Fuel & Highway Costs</td><td>15,000</td><td>~$205</td></tr>
+              <tr><td>Poé Boat Tour + Îlot Signal</td><td>62,000</td><td>~$850</td></tr>
+              <tr><td>Food, Barbecues & Dining</td><td>125,000</td><td>~$1,710</td></tr>
+              <tr><td><strong>Estimated Total</strong></td><td><strong>442,500</strong></td><td><strong>~$6,055 AUD</strong></td></tr>
+            </tbody>
+          </table>
+          <p style="font-size: 0.8rem; color: var(--gray);">Excludes international flights. Approx. $1,210 AUD per person for 6 nights.</p>
+        </div>
+
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div>
+        <h4 style="color: var(--white); margin-bottom: 0.5rem;">New Caledonia Travel Planner</h4>
+        <p>Realistic 6-night family itineraries (8–14 Nov 2026).</p>
+      </div>
+      <div>
+        <h4 style="color: var(--white); margin-bottom: 0.5rem;">Explore Options</h4>
+        <p><a href="index.html">Option 1: Islet Explorer</a></p>
+        <p><a href="option2-isle-of-pines.html">Option 2: Isle of Pines</a></p>
+        <p><a href="option3-west-coast.html">Option 3: West Coast & Poé</a></p>
+        <p><a href="comparison.html">Comparison Matrix</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Leaflet Map Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var map = L.map('opt3-map').setView([-21.90, 165.90], 8);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+      }).addTo(map);
+
+      var locations = [
+        { name: "La Tontouta Airport (NOU)", lat: -22.0147, lng: 166.2131, info: "Arrival pickup & departure return for 7-seater car." },
+        { name: "Bourail Town", lat: -21.5700, lng: 165.4950, info: "Rural service hub, bakery, local butchery, supermarket." },
+        { name: "Plage de Poé (Bungalow Base)", lat: -21.6167, lng: 165.3833, info: "17 km white sand beach, warm shallow lagoon, kayaking." },
+        { name: "La Faille aux Requins (Shark Fault)", lat: -21.6250, lng: 165.3400, info: "Outer reef pass; turtle feeding grounds & glass-bottom boat." },
+        { name: "Sentier des Trois Baies / Roche Percée", lat: -21.6050, lng: 165.4520, info: "Iconic pine cliff walk, Turtle Bay, Lovers' Bay." },
+        { name: "Domaine de Deva", lat: -21.5600, lng: 165.3600, info: "Protected nature reserve, hiking trails, Oua Koué lookout." },
+        { name: "Fort Teremba (Moindou)", lat: -21.7250, lng: 165.7150, info: "Historic 19th-century military fort and museum on RT1." },
+        { name: "Nouméa (Baie des Citrons)", lat: -22.2986, lng: 166.4357, info: "South base for final 3 nights; netted beach & restaurants." }
+      ];
+
+      locations.forEach(function(loc) {
+        L.marker([loc.lat, loc.lng]).addTo(map)
+          .bindPopup("<strong>" + loc.name + "</strong><br>" + loc.info + 
+                     "<br><a href='https://maps.google.com/?q=" + loc.lat + "," + loc.lng + "' target='_blank'>Open in Google Maps</a>");
+      });
+
+      // Driving route polyline along RT1
+      var roadTripRoute = [
+        [-22.0147, 166.2131], // La Tontouta
+        [-21.7250, 165.7150], // Moindou
+        [-21.5700, 165.4950], // Bourail
+        [-21.6167, 165.3833]  // Poé Beach
+      ];
+      L.polyline(roadTripRoute, {color: '#d97706', weight: 4}).addTo(map);
+    });
+  </script>
+
+</body>
+</html>

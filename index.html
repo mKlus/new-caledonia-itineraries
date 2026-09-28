@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Option 1: The Islet Explorer & Mainland Base | New Caledonia Family Holiday</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="header">
+    <div class="nav-container">
+      <a href="index.html" class="brand">🌴 <span>New Caledonia</span> Explorer</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Option 1: Islet Explorer</a></li>
+          <li><a href="option2-isle-of-pines.html">Option 2: Isle of Pines</a></li>
+          <li><a href="option3-west-coast.html">Option 3: West Coast & Poé</a></li>
+          <li><a href="comparison.html" class="btn-compare">⚖️ Compare All 3</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero hero-opt1">
+    <div class="hero-content">
+      <div class="hero-badge">Option 1 — Single Base Convenience</div>
+      <h1>The Islet Explorer & Mainland Base</h1>
+      <p>Base in Nouméa’s southern bays with private self-contained apartments. Spend your days hopping by speedboat to uninhabited marine sanctuaries, hiking ancient rainforests, and enjoying French bakeries.</p>
+      
+      <div class="hero-stats">
+        <div class="stat-pill">📅 8 – 14 Nov 2026 (6 Nights)</div>
+        <div class="stat-pill">👥 4 Adults + 1 Child (9 yo)</div>
+        <div class="stat-pill">📍 Base: Baie des Citrons / Anse Vata</div>
+        <div class="stat-pill">🧳 Pack/Unpack: Once Only</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="container">
+    <div class="grid-2">
+      
+      <!-- Left Column: Daily Schedule & Deep Dive -->
+      <section>
+        
+        <div class="card">
+          <h2>Overview & Family Suitability</h2>
+          <p>This itinerary delivers maximum flexibility and zero accommodation relocations. Mainland Nouméa features safe, shark-netted swimming directly across from your apartment at Baie des Citrons, while world-class coral reef snorkeling is accessed via quick 5-to-35-minute water-taxi trips to protected outer marine reserves.</p>
+          
+          <div class="callout callout-tip">
+            <strong>Family Pros:</strong> No unpacking and repacking mid-trip. The 9-year-old has calm, netted beach swimming every afternoon right outside your doorstep, combined with thrilling speedboat hops to snorkel with sea turtles.
+          </div>
+          
+          <div class="callout callout-alert">
+            <strong>Public Holiday Note (Wed 11 Nov — Armistice Day):</strong> Supermarkets and downtown stores close in Nouméa, but natural provincial parks and boat charters operate. Day 4 is specifically planned for the wilderness of Parc de la Rivière Bleue.
+          </div>
+        </div>
+
+        <!-- Interactive Map -->
+        <div class="card">
+          <h2>Interactive Route & Location Map</h2>
+          <p style="font-size: 0.9rem; color: var(--gray); margin-bottom: 0.75rem;">Click any pin on the map to view site details, activity tips, and Google Maps directions.</p>
+          <div id="opt1-map" class="map-container"></div>
+          <div style="font-size: 0.85rem; color: var(--gray-dark);">
+            Direct Links: 
+            <a href="https://maps.google.com/?q=Baie+des+Citrons+Noumea" target="_blank" rel="noopener">Baie des Citrons</a> | 
+            <a href="https://maps.google.com/?q=Ilot+Signal+Noumea" target="_blank" rel="noopener">Îlot Signal</a> | 
+            <a href="https://maps.google.com/?q=Ilot+Canard+Noumea" target="_blank" rel="noopener">Duck Island</a> | 
+            <a href="https://maps.google.com/?q=Parc+Provincial+de+la+Riviere+Bleue" target="_blank" rel="noopener">Rivière Bleue</a>
+          </div>
+        </div>
+
+        <!-- Day by Day -->
+        <div class="card">
+          <h2>Detailed Day-by-Day Schedule</h2>
+          
+          <div class="timeline">
+            
+            <!-- Day 1 -->
+            <div class="day-block">
+              <div class="day-header">
+                <div class="day-title">Day 1: Sunday, 8 Nov — Arrival & Settling In</div>
+                <span class="day-tag">Arrival Day</span>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">☀️ Afternoon (12:35 PM – 4:00 PM)</div>
+                <p>Land at La Tontouta International Airport (QF91 at 12:35 PM). Clear customs, collect your 7-seater rental vehicle at the terminal counter, and take the scenic 45-minute drive south along Route Territoriale 1 (RT1) to Nouméa. Check into your 2-bedroom oceanfront apartment at Baie des Citrons.</p>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">🌊 Late Afternoon (4:30 PM – 6:30 PM)</div>
+                <p>Walk across the street to the calm, shark-netted swimming zone at Baie des Citrons for a post-flight swim. Let the 9-year-old stretch their legs while adults enjoy iced coffee on the beach.</p>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">🌙 Evening (7:00 PM)</div>
+                <p>Casual waterfront dinner at <em>Le Bilboquet Plage</em> or <em>L'Olympe</em> overlooking the bay. Pick up initial milk, water, and pantry staples from <em>Alimentation Michel-Ange</em> (open 7 days until 8:00 PM).</p>
+              </div>
+            </div>
+
+            <!-- Day 2 -->
+            <div class="day-block">
+              <div class="day-header">
+                <div class="day-title">Day 2: Monday, 9 Nov — Duck Island Snorkeling Trail & Ouen Toro</div>
+                <span class="day-tag">Marine Reserve</span>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">☀️ Morning (8:30 AM – 12:30 PM)</div>
+                <p>Fresh croissant run to <em>L'Atelier Gourmand</em>. Stroll to Anse Vata beach and take a 5-minute water taxi with <a href="https://www.newcaledonia.travel/offers/taxi-boat-ile-aux-canards-noumea-en-3913547/" target="_blank" rel="noopener">Plage Loisirs</a> out to <strong>Îlot Canard (Duck Island)</strong>. Follow the underwater educational trail (sentier sous-marin) with numbered buoys identifying staghorn corals, clownfish, and sea anemones.</p>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">🌴 Afternoon (1:00 PM – 4:30 PM)</div>
+                <p>Water taxi return to Anse Vata. Casual French lunch at <em>Le Roof</em> or grab savory paninis. Drive 5 minutes up to <strong>Ouen Toro lookout</strong> for 360-degree views of the southern barrier reef. Visit the <em>Aquarium des Lagons</em> to see the fluorescent corals and sea turtles.</p>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">🌙 Evening</div>
+                <p>Home-cooked dinner in your apartment kitchen with sunset drinks from your private balcony.</p>
+              </div>
+            </div>
+
+            <!-- Day 3 -->
+            <div class="day-block">
+              <div class="day-header">
+                <div class="day-title">Day 3: Tuesday, 10 Nov — Îlot Signal Turtle Sanctuary</div>
+                <span class="day-tag">Wildlife Highlight</span>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">☀️ Morning (8:45 AM – 1:30 PM)</div>
+                <p>Board your pre-booked speedboat taxi with <a href="https://www.taxi-boat-noumea.nc/en/product/signal-islet-9-15-3-00-1325/" target="_blank" rel="noopener">Nautica Taxi-Boat</a> at Port Moselle (pontoon K). Enjoy a 35-minute cruise across the turquoise lagoon to <strong>Îlot Signal</strong>. Snorkel along the reef drop-off where green turtles (<em>Chelonia mydas</em>) and eagle rays feed in shallow, clear water.</p>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">🌿 Afternoon (1:30 PM – 4:00 PM)</div>
+                <p>Walk the 1.6 km shaded perimeter trail around the island to observe nesting seabirds and the 1883 stone signal beacon. Speedboat returns to Port Moselle by 3:30 PM.</p>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">🛒 Crucial Evening Prep</div>
+                <p><strong>Armistice Day Pre-Stocking:</strong> Stop at <em>Super U Magenta</em> or <em>Carrefour Market</em> to buy all groceries and supplies for Wednesday, when all mainland supermarkets close for the public holiday.</p>
+              </div>
+            </div>
+
+            <!-- Day 4 -->
+            <div class="day-block">
+              <div class="day-header">
+                <div class="day-title">Day 4: Wednesday, 11 Nov (Armistice Day) — Rivière Bleue Wilderness</div>
+                <span class="day-tag">Rainforest Adventure</span>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">☀️ Morning (7:30 AM – 12:30 PM)</div>
+                <p>Pack a gourmet picnic with Tuesday's provisions. Drive 1h15 into the Grand Sud to <a href="https://www.province-sud.nc/decouvrir-et-visiter/pprb/" target="_blank" rel="noopener">Parc Provincial de la Rivière Bleue</a> (open Wednesday through Sunday from 7:00 AM). Rent mountain bikes or take the park shuttle to spot New Caledonia’s national bird—the rare, flightless <strong>Kagu (Cagou)</strong>.</p>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">🛶 Afternoon (1:00 PM – 4:00 PM)</div>
+                <p>Visit the ancient <strong>Grand Kaori</strong> tree (over 1,000 years old). Rent kayaks to glide through the eerie, mystical <em>Forêt Noyée (Drowned Forest)</em> on the artificial lake. Swim in the natural freshwater river pools before driving back to Nouméa.</p>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">🌙 Evening</div>
+                <p>Relaxed dinner at Baie des Citrons. The child can have an early night after an active day outdoors.</p>
+              </div>
+            </div>
+
+            <!-- Day 5 -->
+            <div class="day-block">
+              <div class="day-header">
+                <div class="day-title">Day 5: Thursday, 12 Nov — Phare Amédée (Lighthouse & Reef Day)</div>
+                <span class="day-tag">Iconic Landmark</span>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">☀️ All-Day Excursion (8:30 AM – 4:30 PM)</div>
+                <p>Board the <em>Mary D</em> catamaran from Port Moselle out to the famous <strong>Amédée Lighthouse Island</strong>. Climb the 247 cast-iron spiral steps for breathtaking views across the barrier reef pass. Join the glass-bottom boat tour to view giant clam beds and banded sea kraits (<em>tricot rayé</em>). Snorkel the outer coral gardens.</p>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">🌙 Evening</div>
+                <p>Dinner at <em>La Marmite du Pêcheur</em> or <em>Le Bout du Monde</em> overlooking the yachts at Port Moselle Marina.</p>
+              </div>
+            </div>
+
+            <!-- Day 6 -->
+            <div class="day-block">
+              <div class="day-header">
+                <div class="day-title">Day 6: Friday, 13 Nov — Market & Stand-Up Paddleboarding</div>
+                <span class="day-tag">Local Culture</span>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">☀️ Morning (7:00 AM – 11:30 AM)</div>
+                <p>Visit the vibrant hexagonal pavilions of the <strong>Marché de Port Moselle</strong>. Sample tropical papaya, passionfruit, fresh coconut water, and browse artisanal Kanak woodcarvings and vanilla pods.</p>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">🏄 Afternoon (1:00 PM – 4:30 PM)</div>
+                <p>Rent stand-up paddleboards or kayaks within the protected waters of Baie des Citrons. Optional afternoon scuba dive for certified adults with <em>Abyss Plongée</em> at the Boulari Barrier Reef Pass.</p>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">🌙 Evening</div>
+                <p>Celebration farewell dinner at <em>L'Échappée Belle</em> or <em>Chez Toto</em> in the historic Quartier Latin.</p>
+              </div>
+            </div>
+
+            <!-- Day 7 -->
+            <div class="day-block">
+              <div class="day-header">
+                <div class="day-title">Day 7: Saturday, 14 Nov — Bakery Breakfast & Departure</div>
+                <span class="day-tag">Flight Home</span>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">☀️ Morning (8:00 AM – 11:00 AM)</div>
+                <p>Final morning bakery stop at <em>L’Atelier Gourmand</em> for fresh baguettes, chouquettes, and coffee. Pack suitcases and check out of the apartment by 10:30 AM.</p>
+              </div>
+              <div class="day-part">
+                <div class="day-part-title">🛫 Midday Departure</div>
+                <p>Drive 45 minutes north along the RT1 to La Tontouta International Airport. Return your rental car by 11:45 AM. Check in for QF92 departing at 1:50 PM for Sydney.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Right Column: Stays, Snorkel Intel, Food, Costs -->
+      <aside>
+
+        <!-- Accommodations -->
+        <div class="card">
+          <h2>Where to Stay</h2>
+          
+          <div class="hotel-card">
+            <div class="hotel-info">
+              <div class="hotel-title"><a href="https://www.booking.com/hotel/nc/casa-del-sole.en-gb.html" target="_blank" rel="noopener">Casa Del Sole Apartments</a></div>
+              <div class="hotel-rating">★★★★☆ (8.2/10 on Booking.com — 750+ reviews)</div>
+              <div class="badge-list">
+                <span class="badge">Baie des Citrons</span>
+                <span class="badge">2-Bedroom Suites</span>
+                <span class="badge">Full Kitchen</span>
+                <span class="badge">Beachfront</span>
+              </div>
+              <p style="font-size: 0.88rem; color: var(--gray-dark); margin-top: 0.5rem;">
+                Spacious 75 m² self-catering apartments with private sea-view balconies directly opposite the shark-netted swimming beach. Outdoor pool, laundry in-room, steps from 10+ casual restaurants.
+              </p>
+            </div>
+          </div>
+
+          <div class="hotel-card">
+            <div class="hotel-info">
+              <div class="hotel-title"><a href="https://ramadanoumea.com/2-bedroom-eglish/" target="_blank" rel="noopener">Ramada Hotel & Suites Nouméa</a></div>
+              <div class="hotel-rating">★★★★☆ (8.0/10 on TripAdvisor)</div>
+              <div class="badge-list">
+                <span class="badge">Anse Vata</span>
+                <span class="badge">83 m² 2-Bed Apartment</span>
+                <span class="badge">24 m² Terrace</span>
+                <span class="badge">Pool</span>
+              </div>
+              <p style="font-size: 0.88rem; color: var(--gray-dark); margin-top: 0.5rem;">
+                Large 2-bedroom apartment with full oven, dishwasher, washer/dryer, and a 24 m² terrace. A 5-minute stroll to Anse Vata beach and the water-taxi departure jetties.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Snorkeling & Marine Life -->
+        <div class="card">
+          <h2>Snorkeling Intel</h2>
+          <ul style="padding-left: 1.2rem; font-size: 0.9rem; color: var(--gray-dark);">
+            <li><strong>Îlot Signal:</strong> Top spot for green turtles, spotted eagle rays, and vibrant drop-offs (4–8m visibility).</li>
+            <li><strong>Duck Island:</strong> Great shallow coral trail for the 9yo; marked buoys with clownfish and sea anemones.</li>
+            <li><strong>Phare Amédée:</strong> Giant clams, banded sea kraits (<em>tricot rayé</em>), and coral gardens.</li>
+            <li><strong>Baie des Citrons (Mainland):</strong> Safe netted swimming zone; sandy bottom with occasional goatfish and juvenile rays.</li>
+          </ul>
+        </div>
+
+        <!-- Bakeries & Dining -->
+        <div class="card">
+          <h2>Food & Bakery Strategy</h2>
+          <p style="font-size: 0.9rem; margin-bottom: 0.5rem;"><strong>Top Bakeries:</strong></p>
+          <ul style="padding-left: 1.2rem; font-size: 0.88rem; color: var(--gray-dark); margin-bottom: 0.75rem;">
+            <li><em>L'Atelier Gourmand</em> (Anse Vata): Artisanal croissants, pain au chocolat, sourdough baguettes.</li>
+            <li><em>Boulangerie du Faubourg</em>: Authentic traditional French baguettes.</li>
+          </ul>
+          <p style="font-size: 0.9rem; margin-bottom: 0.5rem;"><strong>Recommended Dinners:</strong></p>
+          <ul style="padding-left: 1.2rem; font-size: 0.88rem; color: var(--gray-dark);">
+            <li><em>Le Bilboquet Plage:</em> Family-friendly lagoon seafood and stone-baked pizzas.</li>
+            <li><em>Le Bout du Monde:</em> Casual marina-side tapas and grilled local mahi-mahi.</li>
+          </ul>
+        </div>
+
+        <!-- Estimated Budget -->
+        <div class="card">
+          <h2>Estimated Budget (5 Pax)</h2>
+          <table class="styled-table">
+            <thead>
+              <tr><th>Item</th><th>XPF</th><th>AUD (~1:73)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>2-Bed Apt (6 nights)</td><td>165,000</td><td>~$2,260</td></tr>
+              <tr><td>7-Seater Car Rental</td><td>62,000</td><td>~$850</td></tr>
+              <tr><td>Speedboats (Signal+Canard)</td><td>45,000</td><td>~$615</td></tr>
+              <tr><td>Rivière Bleue Entry & Kayaks</td><td>16,000</td><td>~$220</td></tr>
+              <tr><td>Food, Bakeries & Dining</td><td>130,000</td><td>~$1,780</td></tr>
+              <tr><td><strong>Estimated Total</strong></td><td><strong>418,000</strong></td><td><strong>~$5,725 AUD</strong></td></tr>
+            </tbody>
+          </table>
+          <p style="font-size: 0.8rem; color: var(--gray);">Excludes international flights. Approx. $1,145 AUD per person for 6 nights.</p>
+        </div>
+
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div>
+        <h4 style="color: var(--white); margin-bottom: 0.5rem;">New Caledonia Travel Planner</h4>
+        <p>Realistic 6-night family itineraries (8–14 Nov 2026).</p>
+      </div>
+      <div>
+        <h4 style="color: var(--white); margin-bottom: 0.5rem;">Explore Options</h4>
+        <p><a href="index.html">Option 1: Islet Explorer</a></p>
+        <p><a href="option2-isle-of-pines.html">Option 2: Isle of Pines</a></p>
+        <p><a href="option3-west-coast.html">Option 3: West Coast & Poé</a></p>
+        <p><a href="comparison.html">Comparison Matrix</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Leaflet Map Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var map = L.map('opt1-map').setView([-22.28, 166.42], 10);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+      }).addTo(map);
+
+      var locations = [
+        { name: "Baie des Citrons (Apartment Base & Netted Beach)", lat: -22.2986, lng: 166.4357, info: "Safe netted swimming, oceanfront apartments, restaurants." },
+        { name: "Anse Vata Beach (Water Taxi Pier)", lat: -22.3042, lng: 166.4468, info: "Speedboat departures to Duck Island and marine reserves." },
+        { name: "Îlot Canard (Duck Island)", lat: -22.3135, lng: 166.4368, info: "5 min boat ride; marked underwater trail for kids." },
+        { name: "Îlot Signal", lat: -22.2961, lng: 166.2922, info: "35 min boat ride; pristine marine reserve with green turtles." },
+        { name: "Phare Amédée (Lighthouse)", lat: -22.4764, lng: 166.4678, info: "Historic 1865 lighthouse, giant clams, coral reef." },
+        { name: "Parc Provincial de la Rivière Bleue", lat: -22.1039, lng: 166.6578, info: "Ancient kauri trees, drowned forest kayaking, cagou birds." },
+        { name: "Port Moselle Market", lat: -22.2745, lng: 166.4411, info: "Morning fresh produce, fruits, crafts, boat marina." },
+        { name: "La Tontouta Airport (NOU)", lat: -22.0147, lng: 166.2131, info: "International airport (QF91 arrival / QF92 departure)." }
+      ];
+
+      locations.forEach(function(loc) {
+        L.marker([loc.lat, loc.lng]).addTo(map)
+          .bindPopup("<strong>" + loc.name + "</strong><br>" + loc.info + 
+                     "<br><a href='https://maps.google.com/?q=" + loc.lat + "," + loc.lng + "' target='_blank'>Open in Google Maps</a>");
+      });
+    });
+  </script>
+
+</body>
+</html>
