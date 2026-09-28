@@ -88,6 +88,11 @@
           </div>
           <p>This itinerary completely avoids domestic flight check-ins and strict luggage weight limits while providing total independence. Because La Tontouta International Airport is situated 50 km north of Nouméa, you land, collect your 7-seater SUV, and head directly north to Bourail/Poé (a smooth 1h45m drive on sealed highway), saving backtracking on Day 1.</p>
           
+          <div class="callout callout-info" style="margin-top: 1rem;">
+            <strong>🗺️ Geographic Footprint Context (West Coast & Central Grande Terre):</strong>
+            Option 3 covers <strong>over 40% of the entire 400 km length of Grande Terre</strong>, reaching up to Bourail and Domaine de Deva (170 km north of Nouméa). Total driving over 6 days is <strong>~380 km</strong> (approx. 50 min/day). Landing at La Tontouta and heading directly north saves 50 km of highway driving. This delivers wide-open barrier reef lagoons, pine cliff ocean lookouts, and outback heritage while keeping car travel comfortable for a 9-year-old child.
+          </div>
+
           <div class="callout callout-tip">
             <strong>Unique Geographic Advantage:</strong>
             Poé Beach features 17 kilometers of continuous, shallow white-sand lagoon protected by the UNESCO barrier reef and shaded by ironwood trees. The barrier reef is easily reached by local glass-bottom boats to snorkel with sea turtles in crystal-clear water.
@@ -103,24 +108,74 @@
         <div id="map-section" class="card">
           <div class="card-header">
             <h2>Interactive West Coast Drive & Route Map</h2>
-            <span class="day-tag">9 Locations & RT1 Route</span>
+            <span class="day-tag">14 Plotted Destinations & Routes</span>
           </div>
-          <p class="card-subtext">Click any pin or chip below to zoom to that spot and see the highway road-trip route, trailheads, and reef passes.</p>
+          <p class="card-subtext">Click any pin or chip below to zoom to that spot. Follow the RT1 scenic highway route from La Tontouta to Bourail, Poé lagoon, and the return drive to Nouméa.</p>
           
           <div class="map-wrapper">
             <div id="opt3-map" class="map-container"></div>
           </div>
 
+          <!-- Map Actions Bar & Legend -->
+          <div class="map-actions-bar">
+            <div class="map-legend">
+              <span class="legend-item"><span class="legend-dot" style="background:#d97706;"></span> 🏖️ Poé & Beach Base</span>
+              <span class="legend-item"><span class="legend-dot" style="background:#0284c7;"></span> 🏙️ Nouméa Base & Islets</span>
+              <span class="legend-item"><span class="legend-dot" style="background:#16a34a;"></span> 🥾 Hikes & Lookouts</span>
+              <span class="legend-item"><span class="legend-dot" style="background:#7c3aed;"></span> 🏰 Heritage & Airport</span>
+            </div>
+            <a href="https://www.google.com/maps/dir/La+Tontouta+Airport/Bourail/Plage+de+Poe/La+Roche+Percee/Fort+Teremba/Baie+des+Citrons,+Noumea/" target="_blank" rel="noopener" class="btn-gmaps">
+              🗺️ Open Route in Google Maps &rarr;
+            </a>
+          </div>
+
+          <!-- Location Chips -->
           <div class="location-chips-bar">
-            <button class="location-chip active" data-loc="poe">🏖️ Poé Beachfront Chalet Base</button>
-            <button class="location-chip" data-loc="faille">🐢 Shark Fault (La Faille aux Requins)</button>
-            <button class="location-chip" data-loc="roche">🥾 Roche Percée & Three Bays Trail</button>
-            <button class="location-chip" data-loc="deva">🚵 Domaine de Deva & Lookouts</button>
+            <button class="location-chip active" data-loc="poe">🏖️ Poé Beachfront Chalets Base</button>
+            <button class="location-chip" data-loc="faille">🐢 Shark Fault (Reef Canyon)</button>
+            <button class="location-chip" data-loc="roche">🪨 Roche Percée Landmark</button>
+            <button class="location-chip" data-loc="turtlebay">🐢 Turtle Bay (Baie des Tortues)</button>
+            <button class="location-chip" data-loc="loversbay">🌲 Lovers' Bay (Baie des Amoureux)</button>
+            <button class="location-chip" data-loc="deva">🚵 Domaine de Deva (Oua Koué)</button>
             <button class="location-chip" data-loc="bourail">🛒 Bourail Town & Supermarket</button>
-            <button class="location-chip" data-loc="teremba">🏰 Fort Teremba Penal Colony</button>
-            <button class="location-chip" data-loc="airport">✈️ La Tontouta Airport (NOU)</button>
-            <button class="location-chip" data-loc="noumea">🏙️ Nouméa Apartment Base</button>
+            <button class="location-chip" data-loc="teremba">🏰 Fort Teremba (Moindou)</button>
+            <button class="location-chip" data-loc="noumea">🏙️ Nouméa Base (Baie des Citrons)</button>
             <button class="location-chip" data-loc="signal">🐢 Îlot Signal Turtle Reserve</button>
+            <button class="location-chip" data-loc="canard">🦆 Îlot Canard (Duck Island)</button>
+            <button class="location-chip" data-loc="tjibaou">🏛️ Tjibaou Cultural Centre</button>
+            <button class="location-chip" data-loc="market">🥐 Port Moselle Market</button>
+            <button class="location-chip" data-loc="airport">✈️ La Tontouta Airport (NOU)</button>
+          </div>
+
+          <!-- Distance & Travel Time Matrix -->
+          <div class="distance-matrix">
+            <h4>⏱️ Distance & Travel Time Matrix</h4>
+            <div class="distance-matrix-grid">
+              <div class="distance-stat-card">
+                <strong>La Tontouta Airport &rarr; Poé Beach</strong>
+                <span>115 km | ~1h 45m drive north on RT1 highway</span>
+              </div>
+              <div class="distance-stat-card">
+                <strong>Poé Chalets ⇄ Bourail Town (Match)</strong>
+                <span>16 km | ~15 min drive on sealed local road</span>
+              </div>
+              <div class="distance-stat-card">
+                <strong>Poé Chalets ⇄ Roche Percée Trailhead</strong>
+                <span>14 km | ~12 min drive</span>
+              </div>
+              <div class="distance-stat-card">
+                <strong>Poé Beach ⇄ Shark Fault (Barrier Reef)</strong>
+                <span>3.5 km | 15 min glass-bottom boat taxi</span>
+              </div>
+              <div class="distance-stat-card">
+                <strong>Poé Beach &rarr; Fort Teremba (Moindou)</strong>
+                <span>42 km | ~35 min drive south on RT1</span>
+              </div>
+              <div class="distance-stat-card">
+                <strong>Fort Teremba &rarr; Nouméa Base</strong>
+                <span>125 km | ~1h 35m drive south on RT1</span>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -668,33 +723,51 @@
   <!-- Leaflet Map Setup -->
   <script>
     document.addEventListener("DOMContentLoaded", function() {
-      var map = L.map('opt3-map').setView([-21.90, 165.80], 8);
+      var map = L.map('opt3-map').setView([-21.90, 165.90], 8);
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; OpenStreetMap contributors'
       }).addTo(map);
 
+      // Helper function to create custom pins
+      function createPin(colorClass, emoji) {
+        return L.divIcon({
+          className: 'custom-map-icon',
+          html: '<div class="custom-pin ' + colorClass + '"><span>' + emoji + '</span></div>',
+          iconSize: [32, 32],
+          iconAnchor: [16, 32],
+          popupAnchor: [0, -28]
+        });
+      }
+
       var locations = {
-        poe:     { name: "Poé Beachfront Chalets Base", lat: -21.6167, lng: 165.3833, info: "17 km calm lagoon; stand-up paddleboarding & beachfront chalets." },
-        faille:  { name: "The Shark Fault (Faille aux Requins)", lat: -21.6333, lng: 165.3333, info: "Protected outer barrier reef canyon with green turtles & rays." },
-        roche:   { name: "Roche Percée & Three Bays Trail", lat: -21.6083, lng: 165.4542, info: "Landmark rock and scenic coastal pine cliff hike over Turtle Bay." },
-        deva:    { name: "Domaine de Deva & Lookouts", lat: -21.5750, lng: 165.3417, info: "Protected nature reserve with mountain biking and UNESCO reef views." },
-        bourail: { name: "Bourail Town & Supermarket", lat: -21.5706, lng: 165.4981, info: "Town center, bakery, butchery, and Supermarché Match." },
-        teremba: { name: "Fort Teremba (Moindou)", lat: -21.7233, lng: 165.7167, info: "Historic 19th-century military fort and penal colony." },
-        airport: { name: "La Tontouta Airport (NOU)", lat: -22.0147, lng: 166.2131, info: "Airport SUV pickup; direct start of RT1 drive north." },
-        noumea:  { name: "Nouméa Apartment Base (Baie des Citrons)", lat: -22.2986, lng: 166.4357, info: "Base for nights 4, 5, 6; netted swimming and dining." },
-        signal:  { name: "Îlot Signal Turtle Reserve", lat: -22.2961, lng: 166.2922, info: "Day 5 speedboat excursion to snorkel with wild green turtles." }
+        poe:       { name: "Poé Beachfront Chalets Base", lat: -21.6167, lng: 165.3833, pin: 'pin-amber', emoji: '🏖️', info: "Your beachfront chalet base on 17 km of calm, shallow lagoon. Step directly into wave-free water." },
+        faille:    { name: "The Shark Fault (Faille aux Requins)", lat: -21.6333, lng: 165.3333, pin: 'pin-blue', emoji: '🐢', info: "Underwater canyon cutting through outer barrier reef. Snorkel with green turtles and rays via glass-bottom boat." },
+        roche:     { name: "Roche Percée & Bonhomme Landmark", lat: -21.6083, lng: 165.4542, pin: 'pin-amber', emoji: '🪨', info: "Iconic pierced rock and wave-carved monolith; trailhead for the scenic Sentier des Trois Baies." },
+        turtlebay: { name: "Turtle Bay (Baie des Tortues)", lat: -21.6150, lng: 165.4450, pin: 'pin-emerald', emoji: '🐢', info: "Spectacular amphitheater of native columnar pines. Watch sea turtles surface in the turquoise surf below." },
+        loversbay: { name: "Lovers' Bay (Baie des Amoureux)", lat: -21.6180, lng: 165.4410, pin: 'pin-emerald', emoji: '🌲', info: "Secluded cliff-sheltered cove along the Three Bays walking track." },
+        deva:      { name: "Domaine de Deva & Oua Koué Lookout", lat: -21.5750, lng: 165.3417, pin: 'pin-emerald', emoji: '🚵', info: "8,000-hectare protected dry forest estate. Mountain bike tracks and panoramic UNESCO lagoon lookouts." },
+        bourail:   { name: "Bourail Town (Supermarché Match & Bakery)", lat: -21.5706, lng: 165.4981, pin: 'pin-amber', emoji: '🛒', info: "Historic Caldoche rural hub; butchery with local beef, bakery, and pharmacy." },
+        teremba:   { name: "Fort Teremba (Moindou)", lat: -21.7233, lng: 165.7167, pin: 'pin-purple', emoji: '🏰', info: "19th-century military fortress and penal settlement overlooking Mara Bay. Visited on Wednesday drive south." },
+        noumea:    { name: "Nouméa Base (Baie des Citrons)", lat: -22.2986, lng: 166.4357, pin: 'pin-blue', emoji: '🏙️', info: "Base for nights 4, 5, 6. Netted beach swimming, oceanfront apartments, and restaurants." },
+        signal:    { name: "Îlot Signal Turtle Reserve", lat: -22.2961, lng: 166.2922, pin: 'pin-blue', emoji: '🐢', info: "Day 5 speedboat excursion from Nouméa to snorkel with wild green turtles." },
+        canard:    { name: "Îlot Canard (Duck Island)", lat: -22.3135, lng: 166.4368, pin: 'pin-blue', emoji: '🦆', info: "Day 6 water-taxi hop from Anse Vata for the underwater coral trail." },
+        tjibaou:   { name: "Tjibaou Cultural Centre", lat: -22.2561, lng: 166.4831, pin: 'pin-emerald', emoji: '🏛️', info: "Renzo Piano’s world-renowned Kanak architectural pavilions set in coastal mangroves." },
+        market:    { name: "Marché de Port Moselle", lat: -22.2745, lng: 166.4411, pin: 'pin-amber', emoji: '🥐', info: "Nouméa morning market with tropical fruits, local crafts, and marina." },
+        airport:   { name: "La Tontouta Airport (NOU)", lat: -22.0147, lng: 166.2131, pin: 'pin-purple', emoji: '✈️', info: "SUV collection on arrival; head directly north on RT1 without driving through Nouméa." }
       };
 
       var markersMap = {};
 
       Object.keys(locations).forEach(function(key) {
         var loc = locations[key];
-        var marker = L.marker([loc.lat, loc.lng]).addTo(map)
-          .bindPopup("<div style='font-family: var(--font-body); font-size: 0.9rem;'>" +
-                     "<strong style='color: #b45309; font-size: 0.95rem;'>" + loc.name + "</strong><br>" + 
-                     loc.info + 
-                     "<div style='margin-top: 0.5rem;'><a href='https://maps.google.com/?q=" + loc.lat + "," + loc.lng + "' target='_blank' style='color: #d97706; font-weight: 600;'>Open in Google Maps &rarr;</a></div>" +
-                     "</div>");
+        var icon = createPin(loc.pin, loc.emoji);
+        var marker = L.marker([loc.lat, loc.lng], { icon: icon }).addTo(map)
+          .bindPopup("<div style='font-family: var(--font-body); font-size: 0.9rem; min-width: 200px;'>" +
+                     "<strong style='color: #b45309; font-size: 0.95rem; display: block; margin-bottom: 0.25rem;'>" + loc.emoji + " " + loc.name + "</strong>" + 
+                     "<p style='margin: 0.35rem 0; color: #334155; font-size: 0.85rem; line-height: 1.4;'>" + loc.info + "</p>" +
+                     "<div style='margin-top: 0.5rem; padding-top: 0.4rem; border-top: 1px solid #e2e8f0;'>" +
+                     "<a href='https://maps.google.com/?q=" + loc.lat + "," + loc.lng + "' target='_blank' style='color: #d97706; font-weight: 700; font-size: 0.82rem;'>📍 Open in Google Maps &rarr;</a>" +
+                     "</div></div>");
         
         markersMap[key] = {
           marker: marker,
@@ -702,14 +775,37 @@
         };
       });
 
-      // Route line along RT1 from Airport to Bourail to Poé
-      var drivePath = [
+      // Driving Path: Airport to Bourail to Poé Beach (RT1 North)
+      L.polyline([
         [-22.0147, 166.2131], // Airport
-        [-21.7233, 165.7167], // Fort Teremba
+        [-21.8700, 166.0400], // Bouloupari
+        [-21.7100, 165.8300], // La Foa
+        [-21.7233, 165.7167], // Moindou / Fort Teremba
         [-21.5706, 165.4981], // Bourail
         [-21.6167, 165.3833]  // Poé Beach
-      ];
-      L.polyline(drivePath, {color: '#d97706', weight: 4, opacity: 0.8}).addTo(map);
+      ], { color: '#d97706', weight: 4, opacity: 0.85 }).addTo(map);
+
+      // Driving Path: Poé to Nouméa Base (RT1 South)
+      L.polyline([
+        [-21.6167, 165.3833], // Poé Beach
+        [-21.5706, 165.4981], // Bourail
+        [-21.7233, 165.7167], // Fort Teremba
+        [-22.0147, 166.2131], // Airport pass
+        [-22.2500, 166.4200], // Nouméa
+        [-22.2986, 166.4357]  // Baie des Citrons
+      ], { color: '#0284c7', weight: 4, opacity: 0.85 }).addTo(map);
+
+      // Glass-bottom boat path: Poé Beach to Shark Fault
+      L.polyline([
+        [-21.6167, 165.3833],
+        [-21.6333, 165.3333]
+      ], { color: '#0d9488', weight: 3, dashArray: '5, 8' }).addTo(map);
+
+      // Speedboat path: Nouméa to Îlot Signal
+      L.polyline([
+        [-22.2745, 166.4411],
+        [-22.2961, 166.2922]
+      ], { color: '#0284c7', weight: 3, dashArray: '6, 8' }).addTo(map);
 
       // Hook up map location chips
       if (typeof initMapChips === 'function') {

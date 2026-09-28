@@ -88,6 +88,11 @@
           </div>
           <p>If your family prioritizes iconic South Pacific natural beauty and walk-in off-the-beach snorkeling, this is the gold standard itinerary. The Isle of Pines is world-renowned for its soaring native columnar pines, pristine white silica beaches, and wave-free tidal pools that are safe and magical for a 9-year-old child.</p>
           
+          <div class="callout callout-info" style="margin-top: 1rem;">
+            <strong>🗺️ Geographic Footprint Context (Nouméa & Isle of Pines):</strong>
+            Option 2 bridges mainland Nouméa with the <strong>Isle of Pines (Île des Pins)</strong>, located 50 km off the southeastern tip of Grande Terre. This itinerary captures the crown jewel of New Caledonia’s UNESCO World Heritage marine reserves. Fast domestic flights (25 min on modern ATR-72 turboprops) eliminate the fatigue of driving hundreds of kilometers on mainland roads, allowing 3 full days of walk-in reef snorkeling.
+          </div>
+
           <div class="callout callout-tip">
             <strong>The Highlight for Kids:</strong>
             Sailing silently in a traditional wooden Kanak outrigger pirogue through turquoise Upi Bay past coral mushroom rocks, followed by floating in the waist-deep, crystal-clear <em>Piscine Naturelle</em> surrounded by hundreds of friendly parrotfish and blue sea stars.
@@ -103,24 +108,74 @@
         <div id="map-section" class="card">
           <div class="card-header">
             <h2>Interactive Isle of Pines & Route Map</h2>
-            <span class="day-tag">9 Locations & Flight Path</span>
+            <span class="day-tag">14 Plotted Destinations & Routes</span>
           </div>
-          <p class="card-subtext">Click any pin or chip below to zoom to that spot and see flight lines, bay details, and Google Maps directions.</p>
+          <p class="card-subtext">Click any pin or chip below to zoom to that spot. Includes the flight corridor between Nouméa and Isle of Pines, traditional pirogue sailing route, and island road network.</p>
           
           <div class="map-wrapper">
             <div id="opt2-map" class="map-container"></div>
           </div>
 
+          <!-- Map Actions Bar & Legend -->
+          <div class="map-actions-bar">
+            <div class="map-legend">
+              <span class="legend-item"><span class="legend-dot" style="background:#0d9488;"></span> 🏖️ Base & Bays</span>
+              <span class="legend-item"><span class="legend-dot" style="background:#0284c7;"></span> ⛵ Pirogues & Atolls</span>
+              <span class="legend-item"><span class="legend-dot" style="background:#16a34a;"></span> 🌿 Caves & Peaks</span>
+              <span class="legend-item"><span class="legend-dot" style="background:#7c3aed;"></span> ✈️ Airports & Flight</span>
+            </div>
+            <a href="https://www.google.com/maps/dir/Isle+of+Pines+Airport/Baie+de+Kanumera/Baie+d'Upi/Piscine+Naturelle+Baie+d'Oro/Ilot+Nokanhui/" target="_blank" rel="noopener" class="btn-gmaps">
+              🗺️ Open Route in Google Maps &rarr;
+            </a>
+          </div>
+
+          <!-- Location Chips -->
           <div class="location-chips-bar">
             <button class="location-chip active" data-loc="kanumera">🏖️ Kanumera Bay & Sacred Rock</button>
-            <button class="location-chip" data-loc="piscine">🐠 Piscine Naturelle (Natural Pool)</button>
-            <button class="location-chip" data-loc="upi">⛵ Baie d'Upi (Pirogue Pier)</button>
             <button class="location-chip" data-loc="kuto">🌅 Kuto Bay Sunset Beach</button>
+            <button class="location-chip" data-loc="stjoseph">⛵ St. Joseph Bay (Pirogue Departure)</button>
+            <button class="location-chip" data-loc="upi">🌊 Baie d'Upi (Pirogue Sailing)</button>
+            <button class="location-chip" data-loc="piscine">🐠 Piscine Naturelle (Natural Pool)</button>
+            <button class="location-chip" data-loc="kougny">🦞 Le Kou-Gny Beach Lunch</button>
             <button class="location-chip" data-loc="nokanhui">🏝️ Îlot Nokanhui Sandbar</button>
+            <button class="location-chip" data-loc="brosse">🍖 Îlot Brosse BBQ</button>
             <button class="location-chip" data-loc="cave">🌿 Queen Hortense Cave</button>
+            <button class="location-chip" data-loc="picnga">⛰️ Pic N'Ga (262m Peak)</button>
+            <button class="location-chip" data-loc="vao">⛪ Vao Village Mission</button>
             <button class="location-chip" data-loc="ilp">✈️ Isle of Pines Airport (ILP)</button>
             <button class="location-chip" data-loc="gea">🛫 Magenta Airport Nouméa (GEA)</button>
             <button class="location-chip" data-loc="signal">🐢 Îlot Signal Turtle Reserve</button>
+          </div>
+
+          <!-- Distance & Travel Time Matrix -->
+          <div class="distance-matrix">
+            <h4>⏱️ Distance & Travel Time Matrix</h4>
+            <div class="distance-matrix-grid">
+              <div class="distance-stat-card">
+                <strong>Magenta (GEA) ⇄ Isle of Pines (ILP)</strong>
+                <span>110 km | 25 min scenic flight (Air Calédonie)</span>
+              </div>
+              <div class="distance-stat-card">
+                <strong>ILP Airport ⇄ Kanumera Bay Base</strong>
+                <span>8 km | 12 min drive on quiet paved road</span>
+              </div>
+              <div class="distance-stat-card">
+                <strong>Kanumera Base ⇄ St. Joseph Bay</strong>
+                <span>7 km | 10 min drive to pirogue pier</span>
+              </div>
+              <div class="distance-stat-card">
+                <strong>St. Joseph Bay &rarr; Oro Bay via Pirogue</strong>
+                <span>~2 hours peaceful silent wooden sailing</span>
+              </div>
+              <div class="distance-stat-card">
+                <strong>Oro Landing ⇄ Piscine Naturelle</strong>
+                <span>1.8 km | 40 min shaded flat pine walk</span>
+              </div>
+              <div class="distance-stat-card">
+                <strong>Kanumera ⇄ Îlot Nokanhui Atoll</strong>
+                <span>16 km | 35 min speedboat cruise</span>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -658,33 +713,51 @@
   <!-- Leaflet Map Setup -->
   <script>
     document.addEventListener("DOMContentLoaded", function() {
-      var map = L.map('opt2-map').setView([-22.50, 167.00], 9);
+      var map = L.map('opt2-map').setView([-22.52, 167.15], 9);
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; OpenStreetMap contributors'
       }).addTo(map);
 
+      // Helper function to create custom pins
+      function createPin(colorClass, emoji) {
+        return L.divIcon({
+          className: 'custom-map-icon',
+          html: '<div class="custom-pin ' + colorClass + '"><span>' + emoji + '</span></div>',
+          iconSize: [32, 32],
+          iconAnchor: [16, 32],
+          popupAnchor: [0, -28]
+        });
+      }
+
       var locations = {
-        kanumera: { name: "Kanumera Bay & Sacred Rock", lat: -22.6625, lng: 167.4475, info: "Bungalow base; walk-in coral reef snorkeling." },
-        piscine:  { name: "Piscine Naturelle (Natural Aquarium)", lat: -22.5894, lng: 167.5147, info: "World-famous sheltered tidal pool filled with reef fish." },
-        upi:      { name: "Baie d'Upi (Pirogue Pier)", lat: -22.6167, lng: 167.5167, info: "Board traditional wooden Kanak sailing outriggers." },
-        kuto:     { name: "Kuto Bay Sunset Beach", lat: -22.6583, lng: 167.4428, info: "Powder-soft white sand, calm sunset swimming." },
-        nokanhui: { name: "Îlot Nokanhui Sandbar", lat: -22.7233, lng: 167.5683, info: "Pristine offshore sandbank day trip." },
-        cave:     { name: "Queen Hortense's Cave", lat: -22.6167, lng: 167.4667, info: "Lush limestone cave with giant prehistoric ferns." },
-        ilp:      { name: "Isle of Pines Airport (ILP)", lat: -22.5992, lng: 167.4564, info: "Arrival runway on Isle of Pines; car rental pickup." },
-        gea:      { name: "Nouméa Magenta Airport (GEA)", lat: -22.2592, lng: 166.4719, info: "Domestic terminal for 25-min flight to Isle of Pines." },
-        signal:   { name: "Îlot Signal Turtle Reserve (Nouméa)", lat: -22.2961, lng: 166.2922, info: "Snorkel with wild green sea turtles on Day 6." }
+        kanumera: { name: "Kanumera Bay & Sacred Rock", lat: -22.6625, lng: 167.4475, pin: 'pin-emerald', emoji: '🏖️', info: "Your island bungalow base (Nataïwatch / Oure Lodge). Walk-in coral reef snorkeling right off the sand." },
+        kuto:     { name: "Kuto Bay Sunset Beach", lat: -22.6583, lng: 167.4428, pin: 'pin-emerald', emoji: '🌅', info: "Powder-fine white silica sand beach, 5 min walk from Kanumera. Spectacular sunset spot." },
+        stjoseph: { name: "St. Joseph Bay (Pirogue Pier)", lat: -22.6289, lng: 167.5097, pin: 'pin-blue', emoji: '⛵', info: "Board traditional wooden Kanak sailing pirogues with local captains for the Upi Bay crossing." },
+        upi:      { name: "Baie d'Upi (Turquoise Lagoon)", lat: -22.6167, lng: 167.5167, pin: 'pin-blue', emoji: '🌊', info: "Mirror-flat turquoise lagoon studded with majestic ancient limestone coral mushroom rocks." },
+        piscine:  { name: "Piscine Naturelle (Natural Aquarium)", lat: -22.5894, lng: 167.5147, pin: 'pin-emerald', emoji: '🐠', info: "World-famous wave-free natural tidal basin teeming with friendly reef fish and blue sea stars." },
+        kougny:   { name: "Le Kou-Gny Beach Restaurant", lat: -22.5850, lng: 167.5120, pin: 'pin-amber', emoji: '🦞', info: "Open-air beachfront lunch restaurant next to Oro Bay; famous for grilled spiny lobster." },
+        nokanhui: { name: "Îlot Nokanhui Sandbar Atoll", lat: -22.7233, lng: 167.5683, pin: 'pin-blue', emoji: '🏝️', info: "Pristine offshore sandbank surrounded by fluorescent turquoise lagoon. Wading in crystal water." },
+        brosse:   { name: "Îlot Brosse (Beach Barbecue)", lat: -22.7083, lng: 167.4667, pin: 'pin-amber', emoji: '🍖', info: "Robinson Crusoe island day trip stop for freshly grilled rock lobster and sweet potatoes." },
+        cave:     { name: "Queen Hortense's Cave", lat: -22.6167, lng: 167.4667, pin: 'pin-emerald', emoji: '🌿', info: "Lush limestone grotto covered in prehistoric giant ferns, stalactites, and streams." },
+        picnga:   { name: "Pic N'Ga Summit (262m)", lat: -22.6542, lng: 167.4608, pin: 'pin-emerald', emoji: '⛰️', info: "Highest peak on the island. 1-hour return hike with 360° views across the barrier reef." },
+        vao:      { name: "Vao Village Mission & Market", lat: -22.6644, lng: 167.4811, pin: 'pin-amber', emoji: '⛪', info: "Main island settlement; historic 1860 mission church, local bakery, and fruit stalls." },
+        ilp:      { name: "Isle of Pines Airport (ILP)", lat: -22.5992, lng: 167.4564, pin: 'pin-purple', emoji: '✈️', info: "Island arrival runway. Collect rental car for the 12-min drive to Kanumera." },
+        gea:      { name: "Nouméa Magenta Airport (GEA)", lat: -22.2592, lng: 166.4719, pin: 'pin-purple', emoji: '🛫', info: "Domestic terminal in Nouméa for 25-minute Air Calédonie flight to Isle of Pines." },
+        signal:   { name: "Îlot Signal Turtle Reserve (Nouméa)", lat: -22.2961, lng: 166.2922, pin: 'pin-emerald', emoji: '🐢', info: "Visited on Day 6 in Nouméa. Snorkel along reef drop-offs with wild green sea turtles." }
       };
 
       var markersMap = {};
 
       Object.keys(locations).forEach(function(key) {
         var loc = locations[key];
-        var marker = L.marker([loc.lat, loc.lng]).addTo(map)
-          .bindPopup("<div style='font-family: var(--font-body); font-size: 0.9rem;'>" +
-                     "<strong style='color: #0f766e; font-size: 0.95rem;'>" + loc.name + "</strong><br>" + 
-                     loc.info + 
-                     "<div style='margin-top: 0.5rem;'><a href='https://maps.google.com/?q=" + loc.lat + "," + loc.lng + "' target='_blank' style='color: #0d9488; font-weight: 600;'>Open in Google Maps &rarr;</a></div>" +
-                     "</div>");
+        var icon = createPin(loc.pin, loc.emoji);
+        var marker = L.marker([loc.lat, loc.lng], { icon: icon }).addTo(map)
+          .bindPopup("<div style='font-family: var(--font-body); font-size: 0.9rem; min-width: 200px;'>" +
+                     "<strong style='color: #0f766e; font-size: 0.95rem; display: block; margin-bottom: 0.25rem;'>" + loc.emoji + " " + loc.name + "</strong>" + 
+                     "<p style='margin: 0.35rem 0; color: #334155; font-size: 0.85rem; line-height: 1.4;'>" + loc.info + "</p>" +
+                     "<div style='margin-top: 0.5rem; padding-top: 0.4rem; border-top: 1px solid #e2e8f0;'>" +
+                     "<a href='https://maps.google.com/?q=" + loc.lat + "," + loc.lng + "' target='_blank' style='color: #0d9488; font-weight: 700; font-size: 0.82rem;'>📍 Open in Google Maps &rarr;</a>" +
+                     "</div></div>");
         
         markersMap[key] = {
           marker: marker,
@@ -692,12 +765,36 @@
         };
       });
 
-      // Flight line between Magenta and ILP
-      var flightPath = [
+      // Domestic Flight Path: Magenta (GEA) to Isle of Pines (ILP)
+      L.polyline([
         [-22.2592, 166.4719],
         [-22.5992, 167.4564]
-      ];
-      L.polyline(flightPath, {color: '#0f766e', weight: 3, dashArray: '6, 8'}).addTo(map);
+      ], { color: '#0f766e', weight: 4, dashArray: '6, 8' }).addTo(map);
+
+      // Pirogue Sailing Path: St. Joseph to Upi Bay to Oro Bay
+      L.polyline([
+        [-22.6289, 167.5097],
+        [-22.6167, 167.5167],
+        [-22.5950, 167.5180]
+      ], { color: '#0284c7', weight: 3, dashArray: '4, 6' }).addTo(map);
+
+      // Speedboat Path: Kuto to Nokanhui to Brosse
+      L.polyline([
+        [-22.6583, 167.4428],
+        [-22.7233, 167.5683],
+        [-22.7083, 167.4667],
+        [-22.6583, 167.4428]
+      ], { color: '#d97706', weight: 3, dashArray: '5, 8' }).addTo(map);
+
+      // Isle of Pines Road Network
+      L.polyline([
+        [-22.5992, 167.4564], // Airport
+        [-22.6167, 167.4667], // Cave
+        [-22.6542, 167.4608], // Pic N'Ga
+        [-22.6644, 167.4811], // Vao
+        [-22.6625, 167.4475], // Kanumera
+        [-22.6583, 167.4428]  // Kuto
+      ], { color: '#10b981', weight: 3, opacity: 0.8 }).addTo(map);
 
       // Hook up map location chips
       if (typeof initMapChips === 'function') {

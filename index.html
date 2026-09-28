@@ -88,6 +88,11 @@
           </div>
           <p>This itinerary delivers maximum family convenience and zero packing fatigue. Mainland Nouméa features calm, shark-netted swimming directly across the road from your apartment at Baie des Citrons, while pristine coral reefs are reached via effortless 5-to-35-minute water-taxi trips to protected offshore marine reserves.</p>
           
+          <div class="callout callout-info" style="margin-top: 1rem;">
+            <strong>🗺️ Geographic Footprint Context (South Province):</strong>
+            Option 1 focuses on the <strong>Southern Lagoon & Grand Sud Rainforest</strong> (~70 km radius from Nouméa). Total driving over 6 days is only <strong>~160 km</strong> (approx. 25 min/day). While Grande Terre extends 400 km to the north, concentrating on the south gives your family the highest ratio of active swimming, snorkeling, and relaxing time with zero packing stress.
+          </div>
+
           <div class="callout callout-tip">
             <strong>Family Advantage for the 9-Year-Old:</strong>
             Unpack your bags once. The 9-year-old enjoys calm, protected beach swimming every afternoon right across the street, alongside exhilarating speedboat rides to snorkel with wild green sea turtles at Îlot Signal.
@@ -103,23 +108,73 @@
         <div id="map-section" class="card">
           <div class="card-header">
             <h2>Interactive Route & Location Map</h2>
-            <span class="day-tag">8 Key Locations</span>
+            <span class="day-tag">13 Plotted Destinations & Routes</span>
           </div>
-          <p class="card-subtext">Click any pin or location chip below to zoom directly to that spot and view activity tips and Google Maps links.</p>
+          <p class="card-subtext">Click any pin or location chip below to zoom directly to that spot. Driving roads and marine speedboat corridors are plotted directly on the map.</p>
           
           <div class="map-wrapper">
             <div id="opt1-map" class="map-container"></div>
           </div>
 
+          <!-- Map Actions Bar & Legend -->
+          <div class="map-actions-bar">
+            <div class="map-legend">
+              <span class="legend-item"><span class="legend-dot" style="background:#0284c7;"></span> 🏖️ Base & Beach</span>
+              <span class="legend-item"><span class="legend-dot" style="background:#0d9488;"></span> 🚤 Boat & Islets</span>
+              <span class="legend-item"><span class="legend-dot" style="background:#16a34a;"></span> 🌲 Nature & Parks</span>
+              <span class="legend-item"><span class="legend-dot" style="background:#7c3aed;"></span> ✈️ Airport & Transport</span>
+            </div>
+            <a href="https://www.google.com/maps/dir/-22.0147,166.2131/-22.2986,166.4357/-22.1039,166.6578/" target="_blank" rel="noopener" class="btn-gmaps">
+              🗺️ Open Route in Google Maps &rarr;
+            </a>
+          </div>
+
+          <!-- Location Chips -->
           <div class="location-chips-bar">
             <button class="location-chip active" data-loc="citrons">🏖️ Baie des Citrons Base</button>
             <button class="location-chip" data-loc="vatanav">🚤 Anse Vata Taxi Pier</button>
             <button class="location-chip" data-loc="canard">🦆 Îlot Canard (Duck Island)</button>
+            <button class="location-chip" data-loc="ouentoro">🔭 Ouen Toro Lookout</button>
+            <button class="location-chip" data-loc="aquarium">🐠 Aquarium des Lagons</button>
+            <button class="location-chip" data-loc="portmoselle">⛵ Port Moselle Marina & Market</button>
             <button class="location-chip" data-loc="signal">🐢 Îlot Signal Turtle Sanctuary</button>
             <button class="location-chip" data-loc="amedee">🗼 Phare Amédée Lighthouse</button>
-            <button class="location-chip" data-loc="riviere">🌲 Rivière Bleue Rainforest</button>
-            <button class="location-chip" data-loc="market">🥐 Port Moselle Market</button>
+            <button class="location-chip" data-loc="riviere">🌲 Rivière Bleue Park Entrance</button>
+            <button class="location-chip" data-loc="kaori">🌳 Grand Kaori (1000 yo)</button>
+            <button class="location-chip" data-loc="foret">🛶 Drowned Forest Kayak</button>
+            <button class="location-chip" data-loc="latin">🍷 Quartier Latin Dining</button>
             <button class="location-chip" data-loc="airport">✈️ La Tontouta Airport (NOU)</button>
+          </div>
+
+          <!-- Distance & Drive Time Matrix -->
+          <div class="distance-matrix">
+            <h4>⏱️ Distance & Travel Time Matrix</h4>
+            <div class="distance-matrix-grid">
+              <div class="distance-stat-card">
+                <strong>La Tontouta Airport ⇄ Nouméa</strong>
+                <span>45 km | ~45 min drive on sealed RT1 highway</span>
+              </div>
+              <div class="distance-stat-card">
+                <strong>Baie des Citrons ⇄ Anse Vata</strong>
+                <span>1.8 km | 4 min drive / 15 min waterfront stroll</span>
+              </div>
+              <div class="distance-stat-card">
+                <strong>Nouméa ⇄ Rivière Bleue Park</strong>
+                <span>65 km | ~1h 15m scenic mountain drive</span>
+              </div>
+              <div class="distance-stat-card">
+                <strong>Anse Vata ⇄ Duck Island</strong>
+                <span>1.2 km | 5 min water-taxi boat ride</span>
+              </div>
+              <div class="distance-stat-card">
+                <strong>Port Moselle ⇄ Îlot Signal</strong>
+                <span>15 km | ~35 min high-speed taxi boat</span>
+              </div>
+              <div class="distance-stat-card">
+                <strong>Port Moselle ⇄ Phare Amédée</strong>
+                <span>24 km | ~45 min catamaran cruise</span>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -660,38 +715,93 @@
   <!-- Leaflet Map Setup -->
   <script>
     document.addEventListener("DOMContentLoaded", function() {
-      var map = L.map('opt1-map').setView([-22.28, 166.42], 10);
+      var map = L.map('opt1-map').setView([-22.25, 166.45], 10);
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; OpenStreetMap contributors'
       }).addTo(map);
 
+      // Helper function to create custom pins
+      function createPin(colorClass, emoji) {
+        return L.divIcon({
+          className: 'custom-map-icon',
+          html: '<div class="custom-pin ' + colorClass + '"><span>' + emoji + '</span></div>',
+          iconSize: [32, 32],
+          iconAnchor: [16, 32],
+          popupAnchor: [0, -28]
+        });
+      }
+
       var locations = {
-        citrons: { name: "Baie des Citrons (Apartment Base & Netted Beach)", lat: -22.2986, lng: 166.4357, info: "Safe netted swimming, oceanfront apartments, restaurants." },
-        vatanav: { name: "Anse Vata Beach (Water Taxi Pier)", lat: -22.3042, lng: 166.4468, info: "Speedboat departures to Duck Island and marine reserves." },
-        canard:  { name: "Îlot Canard (Duck Island)", lat: -22.3135, lng: 166.4368, info: "5 min boat ride; marked underwater trail for kids." },
-        signal:  { name: "Îlot Signal Turtle Sanctuary", lat: -22.2961, lng: 166.2922, info: "35 min boat ride; pristine marine reserve with green turtles." },
-        amedee:  { name: "Phare Amédée (Lighthouse)", lat: -22.4764, lng: 166.4678, info: "Historic 1865 lighthouse, giant clams, coral reef." },
-        riviere: { name: "Parc Provincial de la Rivière Bleue", lat: -22.1039, lng: 166.6578, info: "Ancient kauri trees, drowned forest kayaking, cagou birds." },
-        market:  { name: "Port Moselle Market", lat: -22.2745, lng: 166.4411, info: "Morning fresh produce, fruits, crafts, boat marina." },
-        airport: { name: "La Tontouta Airport (NOU)", lat: -22.0147, lng: 166.2131, info: "International airport (QF91 arrival / QF92 departure)." }
+        citrons: { name: "Baie des Citrons Base & Netted Beach", lat: -22.2986, lng: 166.4357, pin: 'pin-blue', emoji: '🏖️', info: "Your apartment base. Safe netted swimming beach directly opposite; casual French bistros." },
+        vatanav: { name: "Anse Vata Beach (Water Taxi Pier)", lat: -22.3042, lng: 166.4468, pin: 'pin-emerald', emoji: '🚤', info: "5 min boat hop to Duck Island; waterfront promenade, ice creams and bakeries." },
+        canard:  { name: "Îlot Canard (Duck Island)", lat: -22.3135, lng: 166.4368, pin: 'pin-emerald', emoji: '🦆', info: "Underwater marine nature trail with marked buoys. Ideal kid snorkeling." },
+        ouentoro: { name: "Ouen Toro Lookout", lat: -22.3117, lng: 166.4533, pin: 'pin-blue', emoji: '🔭', info: "Panoramic 360° lookout over the southern lagoon barrier reef and WWII cannons." },
+        aquarium: { name: "Aquarium des Lagons", lat: -22.3015, lng: 166.4431, pin: 'pin-blue', emoji: '🐠', info: "Living coral exhibits, fluorescent corals, nautilus, and rescued sea turtles." },
+        portmoselle: { name: "Port Moselle Marina & Pontoon K", lat: -22.2745, lng: 166.4411, pin: 'pin-emerald', emoji: '⛵', info: "Board high-speed water taxis to Îlot Signal; morning market with fresh tropical fruit." },
+        signal:  { name: "Îlot Signal Turtle Sanctuary", lat: -22.2961, lng: 166.2922, pin: 'pin-emerald', emoji: '🐢', info: "Pristine marine sanctuary. Snorkel along the reef drop-off with wild green turtles." },
+        amedee:  { name: "Phare Amédée Lighthouse & Outer Reef", lat: -22.4764, lng: 166.4678, pin: 'pin-rose', emoji: '🗼', info: "Historic 1865 cast-iron lighthouse, giant clams, sea kraits, glass-bottom boat tour." },
+        riviere: { name: "Parc Provincial de la Rivière Bleue", lat: -22.1039, lng: 166.6578, pin: 'pin-emerald', emoji: '🌲', info: "Grand Sud rainforest reserve. Spot national flightless Cagou birds; mountain bike trails." },
+        kaori:   { name: "Grand Kaori Ancient Tree", lat: -22.1080, lng: 166.6620, pin: 'pin-emerald', emoji: '🌳', info: "Over 1,000 years old! Giant rainforest tree in the heart of Rivière Bleue." },
+        foret:   { name: "Forêt Noyée (Drowned Forest Kayak)", lat: -22.1480, lng: 166.6980, pin: 'pin-emerald', emoji: '🛶', info: "Paddle kayaks through bleached paperbark trees submerged in the calm lake." },
+        latin:   { name: "Quartier Latin Dining District", lat: -22.2725, lng: 166.4440, pin: 'pin-amber', emoji: '🍷', info: "Historic French quarter with classic bistros (Chez Toto, L'Échappée Belle)." },
+        airport: { name: "La Tontouta International Airport (NOU)", lat: -22.0147, lng: 166.2131, pin: 'pin-purple', emoji: '✈️', info: "International flight arrival (QF91 at 12:35 PM) & departure (QF92 at 1:50 PM)." }
       };
 
       var markersMap = {};
 
       Object.keys(locations).forEach(function(key) {
         var loc = locations[key];
-        var marker = L.marker([loc.lat, loc.lng]).addTo(map)
-          .bindPopup("<div style='font-family: var(--font-body); font-size: 0.9rem;'>" +
-                     "<strong style='color: #0369a1; font-size: 0.95rem;'>" + loc.name + "</strong><br>" + 
-                     loc.info + 
-                     "<div style='margin-top: 0.5rem;'><a href='https://maps.google.com/?q=" + loc.lat + "," + loc.lng + "' target='_blank' style='color: #0284c7; font-weight: 600;'>Open in Google Maps &rarr;</a></div>" +
-                     "</div>");
+        var icon = createPin(loc.pin, loc.emoji);
+        var marker = L.marker([loc.lat, loc.lng], { icon: icon }).addTo(map)
+          .bindPopup("<div style='font-family: var(--font-body); font-size: 0.9rem; min-width: 200px;'>" +
+                     "<strong style='color: #0369a1; font-size: 0.95rem; display: block; margin-bottom: 0.25rem;'>" + loc.emoji + " " + loc.name + "</strong>" + 
+                     "<p style='margin: 0.35rem 0; color: #334155; font-size: 0.85rem; line-height: 1.4;'>" + loc.info + "</p>" +
+                     "<div style='margin-top: 0.5rem; padding-top: 0.4rem; border-top: 1px solid #e2e8f0;'>" +
+                     "<a href='https://maps.google.com/?q=" + loc.lat + "," + loc.lng + "' target='_blank' style='color: #0284c7; font-weight: 700; font-size: 0.82rem;'>📍 Open in Google Maps &rarr;</a>" +
+                     "</div></div>");
         
         markersMap[key] = {
           marker: marker,
           latlng: [loc.lat, loc.lng]
         };
       });
+
+      // Driving route: Airport to Nouméa
+      L.polyline([
+        [-22.0147, 166.2131], // Airport
+        [-22.0800, 166.2400], // Païta
+        [-22.2500, 166.4200], // Nouméa entrance
+        [-22.2986, 166.4357]  // Baie des Citrons
+      ], { color: '#0284c7', weight: 4, opacity: 0.8 }).addTo(map);
+
+      // Driving route: Nouméa to Rivière Bleue
+      L.polyline([
+        [-22.2986, 166.4357], // Baie des Citrons
+        [-22.2300, 166.5200], // Mont-Dore
+        [-22.1800, 166.6000], // Col de Plum
+        [-22.1480, 166.6980], // Lake & Drowned Forest
+        [-22.1039, 166.6578]  // Park HQ
+      ], { color: '#16a34a', weight: 4, opacity: 0.8 }).addTo(map);
+
+      // Marine water-taxi route: Anse Vata to Duck Island
+      L.polyline([
+        [-22.3042, 166.4468],
+        [-22.3135, 166.4368]
+      ], { color: '#0d9488', weight: 3, dashArray: '5, 8' }).addTo(map);
+
+      // Marine speedboat route: Port Moselle to Îlot Signal
+      L.polyline([
+        [-22.2745, 166.4411],
+        [-22.2850, 166.3800],
+        [-22.2961, 166.2922]
+      ], { color: '#0284c7', weight: 3, dashArray: '6, 8' }).addTo(map);
+
+      // Marine catamaran route: Port Moselle to Phare Amédée
+      L.polyline([
+        [-22.2745, 166.4411],
+        [-22.3500, 166.4500],
+        [-22.4764, 166.4678]
+      ], { color: '#d97706', weight: 3, dashArray: '6, 8' }).addTo(map);
 
       // Hook up map location chips
       if (typeof initMapChips === 'function') {

@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Itinerary Comparison & Decision Guide | New Caledonia Family Holiday</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script src="app.js" defer></script>
 </head>
 <body>
@@ -39,6 +41,7 @@
     <div class="subnav-container">
       <span class="subnav-title">Quick Jump:</span>
       <a href="#quiz" class="subnav-link active">Decision Quiz</a>
+      <a href="#master-map-section" class="subnav-link">Archipelago Map & Scale</a>
       <a href="#matrix" class="subnav-link">Comparison Matrix</a>
       <a href="#schedule-matrix" class="subnav-link">Day-by-Day Matrix</a>
       <a href="#checklist" class="subnav-link">Action Checklist</a>
@@ -61,8 +64,8 @@
 
       <div class="hero-actions">
         <a href="#quiz" class="btn btn-white">🎯 Take Priority Quiz</a>
+        <a href="#master-map-section" class="btn btn-outline-white">🗺️ Master Archipelago Map</a>
         <a href="#matrix" class="btn btn-outline-white">📊 View 12-Factor Matrix</a>
-        <a href="#schedule-matrix" class="btn btn-outline-white">📅 Compare Day-by-Day</a>
       </div>
     </div>
   </section>
@@ -106,6 +109,137 @@
         <p id="result-desc" style="font-size: 0.95rem; color: var(--slate-700); line-height: 1.6;"></p>
         <div style="margin-top: 1.25rem;">
           <a id="result-link" href="#" class="btn">Explore Detailed Itinerary &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Master Archipelago Map & Geographic Scale Section -->
+    <div id="master-map-section" class="card">
+      <div class="card-header">
+        <h2>🗺️ New Caledonia Archipelago Footprint & Island Scale</h2>
+        <span class="day-tag highlight">Archipelago Perspective</span>
+      </div>
+
+      <!-- Geographic Scale & Reality Check Banner -->
+      <div class="island-scale-banner">
+        <h3>🔍 Geographic Reality: How Much of New Caledonia Do We Explore?</h3>
+        <p style="font-size: 0.95rem; color: var(--slate-700); line-height: 1.6;">
+          At first glance on a map of New Caledonia, it might seem that these itineraries focus primarily on the southern and central sections. <strong>This is intentional and strategic for a 6-night family trip.</strong> Here is why:
+        </p>
+
+        <div class="island-scale-grid">
+          <div class="island-scale-card">
+            <h4>📏 The Island Scale</h4>
+            <p><strong>Grande Terre</strong> is over <strong>400 km long</strong> and 50 km wide, with a rugged central mountain cordillera. Driving from Nouméa to the Far North (Poum) is 420 km (6.5 hours one way). Driving to Hienghène on the East Coast is 380 km (5.5 hours over winding mountain passes).</p>
+          </div>
+
+          <div class="island-scale-card">
+            <h4>⏱️ 6 Nights vs. Highway Fatigue</h4>
+            <p>Your trip is <strong>6 nights</strong> (Sunday midday to Saturday midday). Attempting a "Full Island Loop" means spending <strong>3.5 to 5 hours in the car almost every day</strong>, packing and unpacking at 4–5 different hotels. For 4 adults and a 9-year-old child, that turns a tropical holiday into a grueling windshield marathon.</p>
+          </div>
+
+          <div class="island-scale-card">
+            <h4>✨ Where Each Option Reaches</h4>
+            <p>
+              • <strong>Option 1:</strong> Southern Lagoon & Rainforest (~70 km radius, ~160 km total driving, 0 hotel moves).<br>
+              • <strong>Option 2:</strong> Reaches <strong>Isle of Pines</strong> (50 km offshore; the #1 scenic jewel of the South Pacific via 25 min flight).<br>
+              • <strong>Option 3:</strong> Explores <strong>over 40% of Grande Terre</strong> up to Bourail/Poé (170 km north, ~380 km total driving).
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Master Archipelago Map -->
+      <div class="card-header" style="border-bottom: none; padding-bottom: 0;">
+        <h3 style="font-size: 1.25rem;">Interactive Master Archipelago Map</h3>
+        <p class="card-subtext" style="margin-bottom: 0;">Toggle itinerary layers to compare geographic footprints across all of Grande Terre and the Isle of Pines.</p>
+      </div>
+
+      <div class="comp-toolbar" style="margin-top: 0.75rem;">
+        <div class="toolbar-group">
+          <span class="toolbar-label">Show Footprint:</span>
+          <button class="cat-filter-btn active" id="btn-show-all-map">Show All 3 Options</button>
+          <button class="cat-filter-btn" id="btn-show-opt1-map">🏖️ Option 1: Nouméa & Grand Sud (Blue)</button>
+          <button class="cat-filter-btn" id="btn-show-opt2-map">🏝️ Option 2: Isle of Pines (Emerald)</button>
+          <button class="cat-filter-btn" id="btn-show-opt3-map">🚙 Option 3: West Coast & Poé (Amber)</button>
+        </div>
+      </div>
+
+      <div class="map-wrapper">
+        <div id="master-archipelago-map" class="map-container" style="height: 520px;"></div>
+      </div>
+
+      <!-- Quick Route Direct Google Maps Links -->
+      <div class="map-actions-bar">
+        <div class="map-legend">
+          <span class="legend-item"><span class="legend-dot" style="background:#0284c7;"></span> Option 1 (Nouméa & Islets)</span>
+          <span class="legend-item"><span class="legend-dot" style="background:#0d9488;"></span> Option 2 (Isle of Pines)</span>
+          <span class="legend-item"><span class="legend-dot" style="background:#d97706;"></span> Option 3 (West Coast RT1)</span>
+          <span class="legend-item"><span class="legend-dot" style="background:#94a3b8;"></span> North Province (10+ Days Reference)</span>
+        </div>
+        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+          <a href="https://www.google.com/maps/dir/-22.0147,166.2131/-22.2986,166.4357/-22.1039,166.6578/" target="_blank" rel="noopener" class="btn-gmaps" style="background: #0284c7;">
+            Route 1 in Google Maps &rarr;
+          </a>
+          <a href="https://www.google.com/maps/dir/Isle+of+Pines+Airport/Baie+de+Kanumera/Piscine+Naturelle+Baie+d'Oro/" target="_blank" rel="noopener" class="btn-gmaps" style="background: #0d9488;">
+            Route 2 in Google Maps &rarr;
+          </a>
+          <a href="https://www.google.com/maps/dir/La+Tontouta+Airport/Bourail/Plage+de+Poe/La+Roche+Percee/Fort+Teremba/Baie+des+Citrons,+Noumea/" target="_blank" rel="noopener" class="btn-gmaps" style="background: #d97706;">
+            Route 3 in Google Maps &rarr;
+          </a>
+        </div>
+      </div>
+
+      <!-- Travel Distance & Effort Comparison Table -->
+      <div class="distance-matrix" style="margin-top: 1.5rem;">
+        <h4>🚗 Travel Distance & Family Effort Comparison</h4>
+        <div class="comparison-table-wrapper" style="margin: 0.5rem 0 0;">
+          <table class="styled-table" style="margin: 0;">
+            <thead>
+              <tr>
+                <th>Itinerary</th>
+                <th>Geographic Reach</th>
+                <th>Total Driving</th>
+                <th>Avg. Driving / Day</th>
+                <th>Hotel Moves</th>
+                <th>Family Effort Rating</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Option 1: Islet Explorer</strong></td>
+                <td>Southern Lagoon & Grand Sud Rainforest (~70 km radius)</td>
+                <td>~160 km</td>
+                <td>~25 mins</td>
+                <td><strong>0 moves</strong> (Unpack once)</td>
+                <td><span class="winner-badge">EASIEST</span> Maximum leisure & beach time</td>
+              </tr>
+              <tr>
+                <td><strong>Option 2: Isle of Pines</strong></td>
+                <td>Nouméa + Isle of Pines (50 km offshore tropical gem)</td>
+                <td>~110 km + 2 flights (25m)</td>
+                <td>~20 mins (plus 2 flights)</td>
+                <td><strong>2 moves</strong> (Nouméa &rarr; Island &rarr; Nouméa)</td>
+                <td><strong>Balanced:</strong> Fast flights, supreme reef rewards</td>
+              </tr>
+              <tr>
+                <td><strong>Option 3: West Coast & Poé</strong></td>
+                <td>Over 40% of Grande Terre (170 km north along RT1)</td>
+                <td>~380 km</td>
+                <td>~50 mins</td>
+                <td><strong>1 move</strong> (Poé &rarr; Nouméa)</td>
+                <td><strong>Active:</strong> Scenic highways, wide lagoons, no flights</td>
+              </tr>
+              <tr style="background: #f8fafc; color: #64748b; font-style: italic;">
+                <td><em>Full Island Loop (Reference)</em></td>
+                <td><em>All of Grande Terre (Nouméa &rarr; Poé &rarr; Hienghène &rarr; Nouméa)</em></td>
+                <td><em>~950 km</em></td>
+                <td><em>~3.5 hours</em></td>
+                <td><em>4–5 moves</em></td>
+                <td><em>Too exhausting for 6 nights with a 9yo (best for 12+ nights)</em></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
@@ -441,6 +575,164 @@
 
       resultBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
+
+    // Master Archipelago Map Setup
+    document.addEventListener("DOMContentLoaded", function() {
+      var mapEl = document.getElementById('master-archipelago-map');
+      if (!mapEl) return;
+
+      var masterMap = L.map('master-archipelago-map').setView([-21.4, 165.8], 7);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+      }).addTo(masterMap);
+
+      function createPin(colorClass, emoji) {
+        return L.divIcon({
+          className: 'custom-map-icon',
+          html: '<div class="custom-pin ' + colorClass + '"><span>' + emoji + '</span></div>',
+          iconSize: [32, 32],
+          iconAnchor: [16, 32],
+          popupAnchor: [0, -28]
+        });
+      }
+
+      // Feature Groups
+      var groupOpt1 = L.featureGroup();
+      var groupOpt2 = L.featureGroup();
+      var groupOpt3 = L.featureGroup();
+      var groupRef  = L.featureGroup();
+
+      // --- OPTION 1 DESTINATIONS & PATHS ---
+      var opt1Locs = [
+        { name: "Option 1 Base: Baie des Citrons", lat: -22.2986, lng: 166.4357, emoji: "🏖️", pin: "pin-blue", info: "Nouméa 6-night oceanfront base; safe netted swimming directly opposite." },
+        { name: "Option 1: Îlot Signal Marine Reserve", lat: -22.2961, lng: 166.2922, emoji: "🐢", pin: "pin-blue", info: "35 min speedboat hop. Wild green sea turtles feeding along the reef." },
+        { name: "Option 1: Phare Amédée Lighthouse", lat: -22.4764, lng: 166.4678, emoji: "🗼", pin: "pin-blue", info: "Outer barrier reef pass day trip; giant clam beds." },
+        { name: "Option 1: Rivière Bleue Rainforest", lat: -22.1039, lng: 166.6578, emoji: "🌲", pin: "pin-blue", info: "65 km drive into Grand Sud. 1,000-yr Kaori tree & drowned forest kayaks." }
+      ];
+      opt1Locs.forEach(function(l) {
+        L.marker([l.lat, l.lng], { icon: createPin(l.pin, l.emoji) })
+          .bindPopup("<strong>" + l.name + "</strong><br>" + l.info + "<br><a href='index.html'>View Option 1 Details &rarr;</a>")
+          .addTo(groupOpt1);
+      });
+      L.circle([-22.28, 166.45], { radius: 28000, color: '#0284c7', fillColor: '#0284c7', fillOpacity: 0.12 }).addTo(groupOpt1);
+
+      // --- OPTION 2 DESTINATIONS & PATHS ---
+      var opt2Locs = [
+        { name: "Option 2 Base: Isle of Pines (Kanumera)", lat: -22.6625, lng: 167.4475, emoji: "🏖️", pin: "pin-emerald", info: "3 nights bungalow stay; walk-in coral reef snorkeling off beach." },
+        { name: "Option 2: Piscine Naturelle (Oro Bay)", lat: -22.5894, lng: 167.5147, emoji: "🐠", pin: "pin-emerald", info: "Wave-free tidal basin filled with friendly parrotfish and blue stars." },
+        { name: "Option 2: Baie d'Upi Pirogues", lat: -22.6167, lng: 167.5167, emoji: "⛵", pin: "pin-emerald", info: "Traditional Kanak outrigger sailing across mirror-turquoise lagoon." },
+        { name: "Option 2: Îlot Nokanhui Sandbar", lat: -22.7233, lng: 167.5683, emoji: "🏝️", pin: "pin-emerald", info: "Pristine offshore white sandbank day trip." }
+      ];
+      opt2Locs.forEach(function(l) {
+        L.marker([l.lat, l.lng], { icon: createPin(l.pin, l.emoji) })
+          .bindPopup("<strong>" + l.name + "</strong><br>" + l.info + "<br><a href='option2-isle-of-pines.html'>View Option 2 Details &rarr;</a>")
+          .addTo(groupOpt2);
+      });
+      // Flight line Magenta to ILP
+      L.polyline([[-22.2592, 166.4719], [-22.5992, 167.4564]], { color: '#0d9488', weight: 4, dashArray: '6, 8' }).addTo(groupOpt2);
+      L.circle([-22.62, 167.48], { radius: 18000, color: '#0d9488', fillColor: '#0d9488', fillOpacity: 0.15 }).addTo(groupOpt2);
+
+      // --- OPTION 3 DESTINATIONS & PATHS ---
+      var opt3Locs = [
+        { name: "Option 3 Base: Poé Beach Chalets", lat: -21.6167, lng: 165.3833, emoji: "🏖️", pin: "pin-amber", info: "3 nights beachfront chalets; 17 km shallow calm lagoon." },
+        { name: "Option 3: Shark Fault (Outer Barrier Reef)", lat: -21.6333, lng: 165.3333, emoji: "🐢", pin: "pin-amber", info: "Glass-bottom boat excursion to snorkel with green sea turtles." },
+        { name: "Option 3: Three Bays & Turtle Bay", lat: -21.6120, lng: 165.4500, emoji: "🥾", pin: "pin-amber", info: "Pine-fringed coastal cliff hike overlooking wild surf bays." },
+        { name: "Option 3: Fort Teremba (Moindou)", lat: -21.7233, lng: 165.7167, emoji: "🏰", pin: "pin-amber", info: "Historic 19th-century military fort and penal settlement." }
+      ];
+      opt3Locs.forEach(function(l) {
+        L.marker([l.lat, l.lng], { icon: createPin(l.pin, l.emoji) })
+          .bindPopup("<strong>" + l.name + "</strong><br>" + l.info + "<br><a href='option3-west-coast.html'>View Option 3 Details &rarr;</a>")
+          .addTo(groupOpt3);
+      });
+      // RT1 highway drive line
+      L.polyline([
+        [-22.0147, 166.2131], // Airport
+        [-21.7233, 165.7167], // Moindou
+        [-21.5706, 165.4981], // Bourail
+        [-21.6167, 165.3833]  // Poé
+      ], { color: '#d97706', weight: 4, opacity: 0.85 }).addTo(groupOpt3);
+
+      // --- NORTH PROVINCE REFERENCE MARKERS ---
+      var refLocs = [
+        { name: "Hienghène (East Coast - 10+ Day Trip)", lat: -20.6833, 164.9333, info: "380 km from Nouméa (5.5 hrs drive over mountain passes). Famous Lindéralique black limestone cliffs. Best for 10-14+ day trips." },
+        { name: "Cœur de Voh (North West - 10+ Day Trip)", lat: -20.9333, 164.6833, info: "310 km from Nouméa (4.5 hrs drive). Famous natural heart-shaped mangrove made famous by Yann Arthus-Bertrand." }
+      ];
+      refLocs.forEach(function(l) {
+        var grayPin = L.divIcon({
+          className: 'custom-map-icon',
+          html: '<div class="custom-pin" style="background:#94a3b8;"><span>📍</span></div>',
+          iconSize: [32, 32],
+          iconAnchor: [16, 32],
+          popupAnchor: [0, -28]
+        });
+        L.marker([l.lat, l.lng], { icon: grayPin })
+          .bindPopup("<strong style='color:#475569;'>" + l.name + "</strong><br>" + l.info)
+          .addTo(groupRef);
+      });
+
+      // Add all to map initially
+      groupOpt1.addTo(masterMap);
+      groupOpt2.addTo(masterMap);
+      groupOpt3.addTo(masterMap);
+      groupRef.addTo(masterMap);
+
+      // Layer Filter Buttons
+      var btnAll  = document.getElementById('btn-show-all-map');
+      var btnOpt1 = document.getElementById('btn-show-opt1-map');
+      var btnOpt2 = document.getElementById('btn-show-opt2-map');
+      var btnOpt3 = document.getElementById('btn-show-opt3-map');
+
+      function setActiveBtn(btn) {
+        [btnAll, btnOpt1, btnOpt2, btnOpt3].forEach(function(b) {
+          if (b) b.classList.remove('active');
+        });
+        if (btn) btn.classList.add('active');
+      }
+
+      if (btnAll) {
+        btnAll.addEventListener('click', function() {
+          setActiveBtn(btnAll);
+          masterMap.addLayer(groupOpt1);
+          masterMap.addLayer(groupOpt2);
+          masterMap.addLayer(groupOpt3);
+          masterMap.addLayer(groupRef);
+          masterMap.flyTo([-21.4, 165.8], 7, { duration: 1.2 });
+        });
+      }
+
+      if (btnOpt1) {
+        btnOpt1.addEventListener('click', function() {
+          setActiveBtn(btnOpt1);
+          masterMap.addLayer(groupOpt1);
+          masterMap.removeLayer(groupOpt2);
+          masterMap.removeLayer(groupOpt3);
+          masterMap.removeLayer(groupRef);
+          masterMap.flyTo([-22.25, 166.45], 9, { duration: 1.2 });
+        });
+      }
+
+      if (btnOpt2) {
+        btnOpt2.addEventListener('click', function() {
+          setActiveBtn(btnOpt2);
+          masterMap.removeLayer(groupOpt1);
+          masterMap.addLayer(groupOpt2);
+          masterMap.removeLayer(groupOpt3);
+          masterMap.removeLayer(groupRef);
+          masterMap.flyTo([-22.50, 167.10], 8, { duration: 1.2 });
+        });
+      }
+
+      if (btnOpt3) {
+        btnOpt3.addEventListener('click', function() {
+          setActiveBtn(btnOpt3);
+          masterMap.removeLayer(groupOpt1);
+          masterMap.removeLayer(groupOpt2);
+          masterMap.addLayer(groupOpt3);
+          masterMap.removeLayer(groupRef);
+          masterMap.flyTo([-21.85, 165.90], 8, { duration: 1.2 });
+        });
+      }
+    });
   </script>
 
 </body>
