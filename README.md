@@ -1,5 +1,8 @@
 # New Caledonia 6-Night Family Adventure Itineraries
 
+**Live Website:** [https://mklus.github.io/new-caledonia-itineraries/](https://mklus.github.io/new-caledonia-itineraries/)  
+**GitHub Repository:** [https://github.com/mKlus/new-caledonia-itineraries](https://github.com/mKlus/new-caledonia-itineraries)
+
 Realistic, active 6-night family holiday itineraries for New Caledonia (Sunday, 8 November – Saturday, 14 November 2026), customized for **4 adults and 1 active 9-year-old child** arriving on QF91 (12:35 PM) and departing on QF92 (1:50 PM).
 
 ## 🌴 Website Architecture

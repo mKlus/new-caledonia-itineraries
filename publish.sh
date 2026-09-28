@@ -30,7 +30,8 @@ if command -v gh &> /dev/null; then
         gh repo create new-caledonia-itineraries --public --source=. --remote=origin --push || true
         echo ""
         echo "Configuring GitHub Pages..."
-        gh repo edit --enable-pages --pages-branch main || true
+        gh api --method POST /repos/:owner/:repo/pages -F "source[branch]=main" -F "source[path]=/" 2>/dev/null || true
+        gh repo edit --homepage "https://$(gh api user -q .login).github.io/new-caledonia-itineraries/" || true
         echo ""
         echo "✅ Successfully published to GitHub!"
         gh repo view --web || true
