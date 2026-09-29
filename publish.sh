@@ -4,7 +4,7 @@
 # ==============================================================================
 set -e
 
-REPO_DIR="/Users/hitch/.gemini/users/user1/new-caledonia-itineraries"
+REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$REPO_DIR"
 
 echo "========================================================"

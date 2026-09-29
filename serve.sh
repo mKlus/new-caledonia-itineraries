@@ -2,7 +2,8 @@
 # ==============================================================================
 # Local Preview Server for New Caledonia Family Itineraries Website
 # ==============================================================================
-cd "/Users/hitch/.gemini/users/user1/new-caledonia-itineraries"
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd "$DIR"
 
 PORT=8080
 echo "========================================================"
