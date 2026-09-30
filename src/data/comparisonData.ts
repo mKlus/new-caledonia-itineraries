@@ -32,6 +32,33 @@ export const QUIZ_OPTIONS: QuizOption[] = [
     description: 'We want the French bistros and apartment comfort of Nouméa, but want to fly 25 mins to see Piscine Naturelle and sail Upi Bay.',
     recommendationTitle: '⭐ Recommended: Option 4 — The Best of Both Worlds',
     recommendationBody: 'Base in Nouméa with an Isle of Pines express hop! You avoid dated, overpriced island resort rooms and mediocre food by keeping a prime Baie des Citrons apartment, while taking an easy 25-minute flight to experience the miraculous Piscine Naturelle, Upi Bay pirogues, and grilled rock lobster.'
+  },
+  {
+    id: 'relax-resort',
+    category: 'relaxing',
+    icon: '🌺',
+    title: 'Wife wants pure resort relaxation & gardens',
+    description: 'We want 6 nights in one luxury beachfront resort suite, lush 3-hectare gardens, heated lagoon pool, Aquatonic spa, daily buffet breakfast, and quick boat hops to Duck Island.',
+    recommendationTitle: '⭐ Recommended: Option 5 — The Grand Lagoon Resort & Spa Base',
+    recommendationBody: 'Château Royal Beach Resort on Anse Vata is your answer! Unpack once in a 2-bedroom suite with 2 bathrooms and kitchen. Your wife steps straight out into 3 hectares of gardens, heated pools, and thalassotherapy spa, while Dad and the 9yo take 5-minute boat trips to Duck Island and Amédée.'
+  },
+  {
+    id: 'relax-island',
+    category: 'relaxing',
+    icon: '🏝️',
+    title: 'We want a private coral island sanctuary',
+    description: 'We want to step out of our bungalow onto white sand, swim with wild green turtles off the beach every day, and lounge by a lagoon infinity pool with zero cars or city noise.',
+    recommendationTitle: '⭐ Recommended: Option 6 — The Private Coral Island Sanctuary',
+    recommendationBody: 'DoubleTree by Hilton Îlot Maître is the ultimate South Pacific island dream! Located on a 200-hectare marine reserve only 20 minutes from town, you stay in beachfront or overwater bungalows with turtles grazing right off the beach and daily breakfast included.'
+  },
+  {
+    id: 'relax-retreat',
+    category: 'relaxing',
+    icon: '🌿',
+    title: 'We want luxury nature, wellness spa & golf',
+    description: 'We want a 5-star nature retreat in a UNESCO biosphere with Deep Nature Spa, calm Poé beach, and golf, blended with a second leg at Château Royal in Nouméa.',
+    recommendationTitle: '⭐ Recommended: Option 7 — The Gentle Nature & Wellness Retreat',
+    recommendationBody: 'Split your stay between the 5-star Sheraton Deva Spa & Golf Resort (3 nights in a traditional Melanesian bungalow) and Château Royal in Nouméa (3 nights). You get untamed UNESCO nature, world-class wellness, Poé lagoon paddling, and gourmet dining.'
   }
 ];
 
@@ -54,6 +81,21 @@ export const COMPARISON_FACTORS: ComparisonFactor[] = [
       highlight: true,
       badge: 'PERFECT BALANCE',
       text: 'Gourmet French mainland apartment hub paired with an iconic 25-minute flight to Isle of Pines.'
+    },
+    relaxResort: {
+      highlight: true,
+      badge: 'RESORT LUXURY',
+      text: 'Premier 3-hectare tropical garden resort with heated lagoon pool, Aquatonic seawater spa, and direct beach.'
+    },
+    relaxIsland: {
+      highlight: true,
+      badge: 'ISLAND SANCTUARY',
+      text: 'Robinson Crusoe tropical island escape on a 200-ha marine reserve with turtles swimming right off the sand.'
+    },
+    relaxRetreat: {
+      highlight: true,
+      badge: 'WELLNESS & NATURE',
+      text: 'Serene 5-star nature retreat in UNESCO biosphere (Deva) combined with a luxury lagoon spa base in Nouméa.'
     }
   },
   {
@@ -74,6 +116,19 @@ export const COMPARISON_FACTORS: ComparisonFactor[] = [
       highlight: true,
       badge: 'FLEXIBLE',
       text: '1 Primary Base: 6 nights in Baie des Citrons. 0 moves for day trip, or 1 optional overnight (leave luggage safe).'
+    },
+    relaxResort: {
+      highlight: true,
+      badge: 'ZERO MOVES',
+      text: '1 Base: 6 nights in a 2-bedroom suite at Château Royal (Anse Vata). Unpack once, absolute relaxation.'
+    },
+    relaxIsland: {
+      highlight: true,
+      badge: 'ZERO MOVES',
+      text: '1 Base: 6 nights on Îlot Maître in beachfront/garden bungalows (or optional 4N island + 2N mainland split).'
+    },
+    relaxRetreat: {
+      text: '2 Luxury Bases: 3 nights Sheraton Deva + 3 nights Château Royal (1 easy paved highway move).'
     }
   },
   {
@@ -94,6 +149,17 @@ export const COMPARISON_FACTORS: ComparisonFactor[] = [
       highlight: true,
       badge: 'BEST OF BOTH',
       text: 'Waist-deep natural aquarium at Piscine Naturelle, plus wild sea turtles at Îlot Signal and outer reef at Phare Amédée.'
+    },
+    relaxResort: {
+      text: '5-minute beach walk to Duck Island boat taxi; Phare Amédée day cruise & Îlot Signal turtle charter.'
+    },
+    relaxIsland: {
+      highlight: true,
+      badge: 'TURTLES OFF BEACH',
+      text: 'Unmatched: Wild green sea turtles feed in shallow seagrass 15m from the beach and under overwater walkways.'
+    },
+    relaxRetreat: {
+      text: 'Wave-free paddleboarding at 17 km Poé lagoon + Shark Fault turtle boat safari + Duck Island in Nouméa.'
     }
   },
   {
@@ -114,6 +180,19 @@ export const COMPARISON_FACTORS: ComparisonFactor[] = [
       highlight: true,
       badge: 'HIGH ADVENTURE',
       text: 'Safe netted beach across from apartment every afternoon; scenic 25-min flight; traditional sailing pirogues; tame reef fish.'
+    },
+    relaxResort: {
+      highlight: true,
+      badge: 'FAMILY RESORT',
+      text: 'Heated lagoon swimming pool, beachfront ice creams, safe netted beach, and 5-min boat to Duck Island.'
+    },
+    relaxIsland: {
+      highlight: true,
+      badge: 'UNFORGETTABLE',
+      text: 'Safe shallow lagoon for swimming with wild turtles, infinity pool, transparent kayaks, and zero traffic.'
+    },
+    relaxRetreat: {
+      text: 'Giant infinity pool, stand-up paddleboarding in calm shallows, horse riding, and glass-bottom reef boat.'
     }
   },
   {
@@ -132,6 +211,17 @@ export const COMPARISON_FACTORS: ComparisonFactor[] = [
     },
     bestOfBoth: {
       text: '7-seater rental SUV for mainland + 25-minute domestic flight (GEA ⇄ ILP). Leave heavy suitcases safely at apartment.'
+    },
+    relaxResort: {
+      highlight: true,
+      badge: 'EASIEST',
+      text: '7-seater rental SUV directly from airport. Smooth 45-min highway drive. No domestic flights, no boat luggage limits.'
+    },
+    relaxIsland: {
+      text: 'Private minivan from airport to marina + 20-minute resort catamaran transfer to Îlot Maître.'
+    },
+    relaxRetreat: {
+      text: '7-seater rental SUV. 1h45m highway drive north to Deva; 2h scenic drive south to Nouméa on paved RT1.'
     }
   },
   {
@@ -148,6 +238,17 @@ export const COMPARISON_FACTORS: ComparisonFactor[] = [
     },
     bestOfBoth: {
       text: 'Escape mainland retail closures with an offshore speedboat charter to Îlot Signal turtle sanctuary (or return from island stay).'
+    },
+    relaxResort: {
+      text: 'Zero impact: Mum enjoys Aquatonic seawater spa; Dad & 9yo take morning speedboat to Îlot Signal.'
+    },
+    relaxIsland: {
+      highlight: true,
+      badge: 'UNAFFECTED',
+      text: 'Completely insulated from mainland closures: infinity pool, beach bar, and turtles operate normally.'
+    },
+    relaxRetreat: {
+      text: 'Scenic, quiet highway drive from Deva south to Nouméa stopping at historic Fort Teremba.'
     }
   },
   {
@@ -168,6 +269,19 @@ export const COMPARISON_FACTORS: ComparisonFactor[] = [
       highlight: true,
       badge: 'GOURMET STANDARD',
       text: 'Daily hot croissants, French bistros & wine every evening in Nouméa, plus fresh grilled lobster feast at Snack Kougny!'
+    },
+    relaxResort: {
+      highlight: true,
+      badge: 'PROVIDED BREAKFAST + BISTROS',
+      text: 'Included hot & cold resort buffet breakfast daily + full suite kitchen + walk to 15+ top French bistros.'
+    },
+    relaxIsland: {
+      text: 'Included daily buffet breakfast at L’Atelier; poolside bar & seafood buffets; evening boat to Nouméa for Chez Toto.'
+    },
+    relaxRetreat: {
+      highlight: true,
+      badge: '5-STAR BUFFETS',
+      text: 'Included 5-star buffet breakfasts at Reef Restaurant (Deva) and Le Taom (Nouméa); fine dining on both legs.'
     }
   },
   {
@@ -184,6 +298,15 @@ export const COMPARISON_FACTORS: ComparisonFactor[] = [
     },
     bestOfBoth: {
       text: 'High: Access to Boulari Pass and Nouméa barrier drop-offs via Abyss Plongée.'
+    },
+    relaxResort: {
+      text: 'High: Easy departures to Boulari Pass and outer barrier reef shipwrecks via Abyss Plongée.'
+    },
+    relaxIsland: {
+      text: 'Medium-High: Resort dive center arranges charters to outer barrier reef drop-offs.'
+    },
+    relaxRetreat: {
+      text: 'Medium-High: Bourail Dive takes divers to outer reef faults; Abyss Plongée in Nouméa.'
     }
   },
   {
@@ -202,6 +325,15 @@ export const COMPARISON_FACTORS: ComparisonFactor[] = [
     },
     bestOfBoth: {
       text: '~589,600 XPF (~$8,075 AUD) — ~$1,615 AUD per person (includes domestic flights & lobster feast)'
+    },
+    relaxResort: {
+      text: '~512,000 XPF (~$7,010 AUD) — ~$1,402 AUD per person (includes 2-bed suite, SUV & breakfasts)'
+    },
+    relaxIsland: {
+      text: '~625,000 XPF (~$8,560 AUD) — ~$1,712 AUD per person (includes 2 island bungalows & catamaran)'
+    },
+    relaxRetreat: {
+      text: '~520,000 XPF (~$7,125 AUD) — ~$1,425 AUD per person (includes 5-star bungalow & suite)'
     }
   },
   {
@@ -218,6 +350,17 @@ export const COMPARISON_FACTORS: ComparisonFactor[] = [
     },
     bestOfBoth: {
       text: 'High: Mainland base provides cultural, aquarium, and shopping wet-weather backup; flight day can be shifted if needed.'
+    },
+    relaxResort: {
+      highlight: true,
+      badge: 'HIGHEST RESILIENCE',
+      text: 'Exceptional: Heated indoor seawater Aquatonic spa, covered resort dining, aquarium, cinema, shopping.'
+    },
+    relaxIsland: {
+      text: 'Medium: Island is outdoor-focused; overwater bungalow decks and resort restaurants are very cozy in rain.'
+    },
+    relaxRetreat: {
+      text: 'High: Deep Nature Spa pavilion, indoor lounges, Fort Teremba, and Nouméa museums on second leg.'
     }
   },
   {
@@ -236,6 +379,21 @@ export const COMPARISON_FACTORS: ComparisonFactor[] = [
       highlight: true,
       badge: 'RECOMMENDED',
       text: 'Best for families who prioritize gourmet French dining and great accommodation, but insist on experiencing the iconic wonders of Isle of Pines.'
+    },
+    relaxResort: {
+      highlight: true,
+      badge: 'WIFE’S CHOICE: TOP PICK',
+      text: 'Best for families where mum/wife wants real relaxation (gardens, heated pool, spa, breakfast) with easy reef access.'
+    },
+    relaxIsland: {
+      highlight: true,
+      badge: 'PURE ISLAND ESCAPE',
+      text: 'Best for families wanting a dreamy tropical island sanctuary with wild turtles feeding 15 meters off the sand.'
+    },
+    relaxRetreat: {
+      highlight: true,
+      badge: 'WELLNESS & WILD UNESCO',
+      text: 'Best for travelers seeking world-class golf, secluded biosphere wellness, and empty white sand beaches.'
     }
   }
 ];
@@ -276,5 +434,32 @@ export const DISTANCE_METRICS = [
     hotelMoves: '0 moves (or 1 optional overnight)',
     effortRating: 'PERFECT BALANCE — Gourmet comfort & iconic wonder',
     highlight: true
+  },
+  {
+    name: 'Option 5: Lagoon Resort & Spa',
+    reach: 'Nouméa Anse Vata Peninsula & Southern Islets (5–15 km radius)',
+    totalDriving: '~110 km (only airport transfers & city drives)',
+    avgDailyDriving: '~15 mins',
+    hotelMoves: '0 moves (Unpack once for 6 nights)',
+    effortRating: 'MOST RELAXING — 100% Resort luxury, heated pool & spa',
+    highlight: true
+  },
+  {
+    name: 'Option 6: Island Sanctuary',
+    reach: 'Private 200-ha Coral Marine Reserve Islet (Îlot Maître)',
+    totalDriving: '~90 km (airport to marina transfers)',
+    avgDailyDriving: '~10 mins (+ 20m catamaran)',
+    hotelMoves: '0 moves (Pure island immersion)',
+    effortRating: 'MAXIMUM ZEN — Zero traffic, turtles off the beach',
+    highlight: true
+  },
+  {
+    name: 'Option 7: Nature & Wellness Retreat',
+    reach: 'Domaine de Deva UNESCO Biosphere + Nouméa Anse Vata',
+    totalDriving: '~360 km (smooth highway cruise)',
+    avgDailyDriving: '~40 mins',
+    hotelMoves: '1 gentle move (Deva → Nouméa)',
+    effortRating: 'SERENE & BALANCED — 5-star spa, golf & lagoon',
+    highlight: false
   }
 ];

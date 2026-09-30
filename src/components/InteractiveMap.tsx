@@ -96,7 +96,7 @@ export const InteractiveMap: React.FC<InteractiveMapProps> = ({ itineraryId, loc
       L.polyline(line.points, {
         color: line.color,
         weight: line.weight || 4,
-        opacity: line.opacity || 0.8,
+        opacity: (line as any).opacity || 0.8,
         dashArray: (line as any).dashArray,
       }).addTo(map);
     });

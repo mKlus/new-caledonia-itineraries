@@ -1,6 +1,6 @@
 import { ItineraryOption } from './types';
 
-export const ITINERARIES: Record<'islet' | 'isle-of-pines' | 'west-coast' | 'best-of-both', ItineraryOption> = {
+export const ITINERARIES: Record<'islet' | 'isle-of-pines' | 'west-coast' | 'best-of-both' | 'relax-resort' | 'relax-island' | 'relax-retreat', ItineraryOption> = {
   islet: {
     id: 'islet',
     optionNumber: 1,
@@ -1683,5 +1683,1472 @@ export const ITINERARIES: Record<'islet' | 'isle-of-pines' | 'west-coast' | 'bes
       { id: 'c5', task: 'Reserve Îlot Signal Water Taxi for Wednesday morning', deadline: '1 Month Prior', category: 'booking', notes: 'Escape public holiday closures on the mainland' },
       { id: 'c6', task: 'Reserve Chez Toto & Le Roof for evening celebrations', deadline: '2–3 Weeks Prior', category: 'booking', notes: 'Nouméa’s most popular French dining spots' }
     ]
+  },
+
+  'relax-resort': {
+    id: 'relax-resort',
+    optionNumber: 5,
+    category: 'relaxing',
+    title: 'The Grand Lagoon Resort & Spa Base',
+    tagline: '6 Nights in Tropical Gardens & Heated Seawater Pools at Anse Vata',
+    badge: '🌺 Option 5 — Premier Resort & Spa',
+    heroImageGradient: 'from-teal-800 via-emerald-800 to-cyan-950',
+    baseLocation: 'Pointe Magnin / Anse Vata, Nouméa (100% Single Base, 0 moves)',
+    hotelMoves: 0,
+    totalDrivingKm: 110,
+    avgDailyDrivingMins: 15,
+    cost5PaxXPF: 512000,
+    cost5PaxAUD: 7010,
+    costPerPersonAUD: 1402,
+    idealFor: 'Couples and families where wife/mum wants true relaxation—sprawling tropical gardens, heated swimming pools, beach strolls, daily included breakfast buffet, and thalassotherapy spa treatments—while dad and the 9yo can take effortless 5-to-15-minute boat trips to Duck Island and Îlot Signal.',
+    overviewSummary: 'The quintessential relaxing holiday. Unpack once for the entire 6 nights in a premier 2-bedroom oceanfront or garden suite. Every morning starts effortlessly with an included hot & cold tropical breakfast buffet overlooking the lagoon. Spend unhurried days lounging on poolside sunbeds, enjoying the heated seawater Aquatonic spa labyrinth, or strolling the Anse Vata beach promenade. When adventure calls, Duck Island’s coral trail is just a 5-minute beach walk to the water taxi, and Phare Amédée offers a hassle-free catamaran day cruise. In the evenings, stroll directly from your room to fine French bistros or dine beachfront under the palms.',
+    keyHighlights: [
+      'Zero packing stress: 6 nights in a spacious 2-bedroom suite with 2 bathrooms and private kitchen',
+      'Lush 3-hectare park & heated pools: Step straight out of your suite into tropical gardens, heated lagoon pool, and beach loungers',
+      'Provided resort breakfast daily: Lavish buffet with fresh croissants, tropical fruits, juices, and made-to-order eggs',
+      'Aquatonic Seawater Spa & Thalassotherapy: Heated indoor seawater hydro-massage pools, massages, and wellness treatments',
+      'Effortless kid & dad snorkeling: 5-minute beach walk to Duck Island boat taxi; Phare Amédée barrier reef day cruise',
+      'Waterfront promenade dining: Stroll to 15+ authentic French bistros, wine bars, and beach cafes along Anse Vata'
+    ],
+    flightInfo: {
+      arrival: 'Sun 8 Nov: QF91 arrives La Tontouta (NOU) at 12:35 PM',
+      departure: 'Sat 14 Nov: QF92 departs NOU at 1:50 PM'
+    },
+    days: [
+      {
+        dayNumber: 1,
+        date: 'Sunday, 8 Nov 2026',
+        title: 'Arrival in Paradise & Settle into Resort Luxury',
+        subtitle: 'Airport Pickup, Château Royal Check-in, Garden & Pool Settle-in',
+        summary: 'Touch down at La Tontouta on QF91, pick up your 7-seater SUV, and drive scenic RT1 to Château Royal Resort on Anse Vata. Unpack once for the week, step out into the 3-hectare tropical gardens, and sip cocktails by the heated pool.',
+        morning: {
+          time: '12:35 PM – 2:00 PM',
+          title: 'Arrival & Seamless 7-Seater Pickup',
+          description: 'Touch down at La Tontouta Airport. Collect duty-free champagne and chocolates, pick up your 7-seater SUV directly at the terminal arrivals hall.',
+          tips: 'Pick up an OPT tourist SIM at the arrivals counter for smooth Google Maps navigation.'
+        },
+        lunch: {
+          place: 'Airport Café / Roadside Boulangerie',
+          description: 'Crusty Parisian ham-and-brie baguettes and cold drinks on the drive south.',
+          estCostAUD: 55,
+          estCostXPF: 4000
+        },
+        afternoon: {
+          time: '3:00 PM – 5:30 PM',
+          title: 'Suite Settle-in & Garden Walk to Pool',
+          description: 'Check into your 2-bedroom suite at Château Royal Beach Resort & Spa. Unpack suitcases once for the entire 6 nights. Walk through the private 3-hectare coconut park to the heated lagoon pool overlooking the ocean.',
+          tips: 'Ground-floor and terrace suites allow stepping directly out onto lush lawns.'
+        },
+        evening: {
+          time: '6:00 PM – 8:30 PM',
+          title: 'Sunset Cocktails at Le Deck & Waterfront Dinner',
+          description: 'Watch the sunset over the lagoon with a cold glass of French rosé at Le Deck poolside bar, followed by casual dining overlooking the palm trees.',
+          tips: 'Sunset is around 6:15 PM in November.'
+        },
+        dinner: {
+          place: 'Le Deck Pool Bar & Grill (Château Royal)',
+          description: 'Beachside dining with fresh grilled coral trout, gourmet burgers, and French wines.',
+          estCostAUD: 170,
+          estCostXPF: 12400
+        },
+        dayEstCostAUD: 225,
+        dayEstCostXPF: 16400
+      },
+      {
+        dayNumber: 2,
+        date: 'Monday, 9 Nov 2026',
+        title: 'Lazy Resort Morning & Duck Island Snorkel Safari',
+        subtitle: 'Buffet Breakfast, 5-Min Beach Hop, Heated Pool & Spa Relaxation',
+        summary: 'Start with a lavish resort breakfast buffet at Le Taom. Mum lounges poolside with a book, while Dad and the 9yo take an easy 5-minute beach walk to the water taxi for 2 hours of snorkeling at Duck Island.',
+        morning: {
+          time: '8:00 AM – 12:00 PM',
+          title: 'Resort Breakfast & Duck Island Hop (Dad & 9yo)',
+          description: 'Enjoy tropical fruits, hot pastries, and barista coffee at the included resort breakfast. Dad & 9yo stroll 5 minutes down the sand to Anse Vata pier for a 5-min boat to Duck Island to snorkel the marked coral trail. Mum relaxes undisturbed on poolside sun loungers.',
+          tips: 'Duck Island has calm, wave-free waters with clownfish and sea turtles.'
+        },
+        lunch: {
+          place: 'Le Taom Terrace / Poolside Burgers',
+          description: 'Reunite by the resort pool for Poisson Cru (Tahitian tuna) and woodfired snacks.',
+          estCostAUD: 110,
+          estCostXPF: 8000
+        },
+        afternoon: {
+          time: '2:30 PM – 5:30 PM',
+          title: 'Aquatonic Seawater Spa & Beachfront Stroll',
+          description: 'Mum indulges in the 300 m² indoor heated seawater labyrinth pool with hydro-massage beds and geysers. The family gathers for an afternoon swim in the calm sea directly in front of the resort.',
+          tips: 'Aquatonic is on-site at Château Royal; entry tokens are easily booked at reception.'
+        },
+        evening: {
+          time: '6:30 PM – 9:00 PM',
+          title: 'Authentic French Bistro in Quartier Latin',
+          description: 'Take a short 8-minute taxi into Quartier Latin for an unforgettable French dinner at Chez Toto.',
+          tips: 'Book 2 days ahead; don’t miss the homemade tarte tatin.'
+        },
+        dinner: {
+          place: 'Chez Toto (Quartier Latin)',
+          description: 'Nouméa’s favorite French bistro: duck confit, steak frites, and fine Bordeaux.',
+          estCostAUD: 190,
+          estCostXPF: 13900
+        },
+        dayEstCostAUD: 300,
+        dayEstCostXPF: 21900
+      },
+      {
+        dayNumber: 3,
+        date: 'Tuesday, 10 Nov 2026',
+        title: 'Effortless Phare Amédée Lighthouse Lagoon Cruise',
+        subtitle: 'Catamaran Day Trip, Glass-Bottom Boat, Polynesian Buffet & Show',
+        summary: 'A completely hassle-free day excursion. Board the Mary D catamaran for Amédée Island: glass-bottom boat coral viewing, lighthouse climb, lavish island buffet feast with Tahitian dance, and sun loungers under thatched umbrellas.',
+        morning: {
+          time: '8:15 AM – 12:30 PM',
+          title: 'Mary D Catamaran to Phare Amédée Marine Reserve',
+          description: 'Short 8-minute drive to Port Moselle. Cruise 45 mins on the luxury catamaran to Amédée Island. Take the glass-bottom boat to see giant clams and turtles, or climb the 247 steps of the 1865 lighthouse for panoramic 360° reef views.',
+          tips: 'Glass-bottom boat requires zero swimming—perfect for pure relaxation.'
+        },
+        lunch: {
+          place: 'Amédée Island Tropical Buffet Feast',
+          description: 'Lavish island lunch buffet included with roasted meats, fresh fish, salads, and live Tahitian dance show.',
+          estCostAUD: 0,
+          estCostXPF: 0
+        },
+        afternoon: {
+          time: '1:30 PM – 4:30 PM',
+          title: 'Shaded Thatched Gazebos & Reef Snorkeling',
+          description: 'Mum naps on beach loungers under shaded palm umbrellas with a cool sea breeze. Dad & 9yo snorkel the pier drop-off with docile banded sea kraits and parrotfish. Cruise back to Nouméa at 4:30 PM.',
+          tips: 'All snorkel gear and deckchairs are included in the day pass.'
+        },
+        evening: {
+          time: '6:30 PM – 8:30 PM',
+          title: 'Casual Waterfront Dinner at Anse Vata',
+          description: 'Stroll along the Anse Vata promenade for a relaxed Italian dinner overlooking the bay.',
+          tips: 'Aperol spritz for adults and gelato for the 9-year-old.'
+        },
+        dinner: {
+          place: 'La Barca / Le Bilboquet Plage',
+          description: 'Fresh local calamari, woodfired pizzas, and lagoon fish carpaccio.',
+          estCostAUD: 160,
+          estCostXPF: 11700
+        },
+        dayEstCostAUD: 160,
+        dayEstCostXPF: 11700
+      },
+      {
+        dayNumber: 4,
+        date: 'Wednesday, 11 Nov 2026 (Armistice Day)',
+        title: 'Spa Day for Mum & Wild Green Turtle Morning',
+        subtitle: 'Thalassotherapy Pampering, Îlot Signal Turtle Charter, Pool Sunsets',
+        summary: 'Shops on the mainland close for Armistice Day, creating a quiet holiday vibe. Mum enjoys a luxury spa treatment and pool day; Dad & 9yo take a high-speed speedboat out to swim with green turtles at Îlot Signal.',
+        morning: {
+          time: '8:30 AM – 1:00 PM',
+          title: 'Spa Circuit (Mum) & Îlot Signal Turtles (Dad & 9yo)',
+          description: 'Mum enjoys a tranquil morning at Château Royal’s Aquatonic spa with massage and facial treatments. Dad & 9yo take a 25-min speedboat charter from Port Moselle to Îlot Signal to swim alongside wild green turtles in waist-deep water.',
+          tips: 'Îlot Signal is an uninhabited nature reserve—turtles feed on seagrass 20m from the sand.'
+        },
+        lunch: {
+          place: 'Island Picnic / Poolside Terrace',
+          description: 'Fresh baguettes and French cheeses packed Tuesday, enjoyed poolside.',
+          estCostAUD: 60,
+          estCostXPF: 4400
+        },
+        afternoon: {
+          time: '2:30 PM – 5:30 PM',
+          title: 'Heated Pool, Tropical Gardens & Gelato',
+          description: 'The whole family reunites at Château Royal’s heated lagoon pool. Relax on daybeds under palm fronds, stroll down to Amorino for artisan French gelato, and take a sunset dip.',
+          tips: 'The heated pool remains comfortable and warm in the late afternoon breeze.'
+        },
+        evening: {
+          time: '6:30 PM – 9:00 PM',
+          title: 'Hot Stone Cooking at Baie des Citrons',
+          description: 'Short 3-minute drive to Baie des Citrons for a fun waterfront dinner cooking fresh seafood and beef on hot volcanic stones.',
+          tips: 'Fun, interactive dining experience that kids love.'
+        },
+        dinner: {
+          place: 'Stone Grill / L’Oustalet',
+          description: 'Hot volcanic stone cooking with fresh tuna steaks, prawns, and prime French beef.',
+          estCostAUD: 180,
+          estCostXPF: 13100
+        },
+        dayEstCostAUD: 240,
+        dayEstCostXPF: 17500
+      },
+      {
+        dayNumber: 5,
+        date: 'Thursday, 12 Nov 2026',
+        title: 'Gentle Coastal Culture & Overwater Dining',
+        subtitle: 'Aquarium des Lagons, Ouen Toro Lookouts, Le Roof Overwater Dinner',
+        summary: 'A slow-paced morning visiting the world-renowned Aquarium des Lagons and panoramic Ouen Toro lookouts, an afternoon of poolside relaxation and stand-up paddleboarding, and overwater dining at Le Roof.',
+        morning: {
+          time: '9:30 AM – 12:30 PM',
+          title: 'Aquarium des Lagons & Ouen Toro Panoramas',
+          description: 'A 5-minute drive to the Aquarium des Lagons to see fluorescent deep-sea corals, nautilus, and sea turtles up close in air-conditioned comfort. Drive up the headland of Ouen Toro for 360° panoramas across the barrier reef.',
+          tips: 'Very relaxed and peaceful morning visit with zero walking fatigue.'
+        },
+        lunch: {
+          place: 'Crêperie Le Menhir (Anse Vata)',
+          description: 'Authentic Breton buckwheat galettes, savory crepes, and sweet salted caramel.',
+          estCostAUD: 95,
+          estCostXPF: 6900
+        },
+        afternoon: {
+          time: '2:00 PM – 5:30 PM',
+          title: 'Resort Beach Stand-Up Paddleboard & Pool Nap',
+          description: 'Hire a stand-up paddleboard on the calm beach right outside the resort. Mum enjoys an afternoon sunbath and book on the manicured lawns under the shade of coastal banyan trees.',
+          tips: 'Anse Vata is sheltered from heavy ocean swell, making paddling effortless.'
+        },
+        evening: {
+          time: '6:30 PM – 9:30 PM',
+          title: 'Iconic Overwater Dining at Le Roof',
+          description: 'Dine on stilts directly over the lagoon at Le Roof. Peer through the illuminated glass viewing portal in the floor to watch dolphins and spotted eagle rays gliding underneath your table!',
+          tips: 'Book well in advance to request a table next to the central marine observation portal.'
+        },
+        dinner: {
+          place: 'Le Roof (Overwater Restaurant, Anse Vata)',
+          description: 'Nouméa’s premier overwater dining experience with local rock oysters, vanilla-crusted prawns, and lagoon coral trout.',
+          estCostAUD: 250,
+          estCostXPF: 18200
+        },
+        dayEstCostAUD: 345,
+        dayEstCostXPF: 25100
+      },
+      {
+        dayNumber: 6,
+        date: 'Friday, 13 Nov 2026',
+        title: 'Pure Resort Indulgence & Grand Farewell',
+        subtitle: 'Resort Morning, Souvenir Shopping, Marmite et Tire-Bouchon Feast',
+        summary: 'A 100% stress-free day. Sleep in, enjoy late breakfast, browse local French boutiques, relax by the pool, and celebrate an incredible week with a farewell dinner at Marmite et Tire-Bouchon.',
+        morning: {
+          time: '9:00 AM – 12:30 PM',
+          title: 'Late Breakfast, Garden Stroll & Boutique Shopping',
+          description: 'Enjoy a leisurely breakfast buffet on the terrace. Stroll the palm-lined boutiques of Anse Vata and Baie des Citrons for French linens, local vanilla beans, and Pacific souvenirs.',
+          tips: 'No schedule, no alarms—wake up entirely naturally.'
+        },
+        lunch: {
+          place: 'Bistrot de la Baie / Beach Cafe',
+          description: 'Crisp salads, croque-monsieur, and iced coffees overlooking the sparkling bay.',
+          estCostAUD: 90,
+          estCostXPF: 6600
+        },
+        afternoon: {
+          time: '2:00 PM – 5:30 PM',
+          title: 'Final Afternoon Poolside Sun & Aquatonic Dip',
+          description: 'Soak in the warm South Pacific sun on your poolside lounger. Take a final rejuvenating soak in the Aquatonic seawater pools while the 9yo splashes in the heated lagoon pool.',
+          tips: 'Order a cocktail from Le Deck to toast an extraordinary, restful holiday.'
+        },
+        evening: {
+          time: '6:30 PM – 9:30 PM',
+          title: 'Celebration Farewell Dinner at Marmite et Tire-Bouchon',
+          description: 'Celebrate the final evening at one of Nouméa’s finest French dining rooms, renowned for warm hospitality, fresh seafood, and impeccable French cellar pairings.',
+          tips: 'The chocolate souffle and lobster cassolette are legendary.'
+        },
+        dinner: {
+          place: 'Marmite et Tire-Bouchon (Baie des Citrons)',
+          description: 'Exquisite French-Pacific fine dining with local seafood, duck breast, and artisanal wines.',
+          estCostAUD: 240,
+          estCostXPF: 17500
+        },
+        dayEstCostAUD: 330,
+        dayEstCostXPF: 24100
+      },
+      {
+        dayNumber: 7,
+        date: 'Saturday, 14 Nov 2026',
+        title: 'Leisurely Breakfast & Departure on QF92',
+        subtitle: 'Final Buffet Breakfast, Single-Suite Packing, Smooth Airport Drive',
+        summary: 'Final buffet breakfast at Le Taom, effortless packing from your single suite, an easy 45-minute highway drive to La Tontouta Airport, and depart on QF92 at 1:50 PM.',
+        morning: {
+          time: '8:00 AM – 10:30 AM',
+          title: 'Final Resort Breakfast & Easy Pack-up',
+          description: 'Linger over fresh croissants, tropical fruit, and cafe au lait. Because you stayed in one place all week, packing takes just 20 minutes. Check out at 10:30 AM.',
+          tips: 'Leave Nouméa by 10:45 AM to allow ample time for the 45-min highway drive.'
+        },
+        lunch: {
+          place: 'La Tontouta Airport Lounge & Duty Free',
+          description: 'Sandwiches, French chocolates, and coffee before boarding.',
+          estCostAUD: 55,
+          estCostXPF: 4000
+        },
+        afternoon: {
+          time: '11:30 AM – 1:50 PM',
+          title: 'Vehicle Return & QF92 Boarding',
+          description: 'Return your 7-seater SUV with a full tank at the terminal. Browse duty-free French cosmetics and wines. Board QF92 departing at 1:50 PM.',
+          tips: 'Direct flight home to Australia.'
+        },
+        evening: {
+          time: 'Afternoon / Evening',
+          title: 'Arrival Home Rested & Rejuvenated',
+          description: 'Arrive home relaxed, refreshed, and with unforgettable memories of the South Pacific.',
+          tips: 'Direct flight home.'
+        },
+        dinner: {
+          place: 'In-Flight / Home',
+          description: 'Qantas in-flight meal service.',
+          estCostAUD: 0,
+          estCostXPF: 0
+        },
+        dayEstCostAUD: 55,
+        dayEstCostXPF: 4000
+      }
+    ],
+    accommodations: [
+      {
+        name: 'Château Royal Beach Resort & Spa',
+        type: 'Superior or Prestige 2-Bedroom Oceanview Suite',
+        location: 'Pointe Magnin / Anse Vata Beach, Nouméa',
+        nights: '6 Nights (Sun 8 Nov – Sat 14 Nov)',
+        bedding: '1 King Bed (Master) + 1 King or 2 Singles (2nd Bed) + Double Sofa Bed (Living)',
+        pricePerNightAUD: 525,
+        pricePerNightXPF: 38300,
+        totalCostAUD: 3150,
+        totalCostXPF: 229800,
+        features: [
+          '3-Hectare Tropical Garden Park',
+          'Heated Outdoor Lagoon Pool & Sun Loungers',
+          'Aquatonic Seawater Spa & Hydro-Massage Pools',
+          'Full Gourmet Kitchen (Oven, Dishwasher, Nespresso)',
+          '2 Full Bathrooms with Walk-in Showers',
+          'Large Private Balcony Overlooking Gardens/Lagoon',
+          'Direct Beachfront Walkway to Anse Vata'
+        ],
+        pros: [
+          'All 5 guests stay together in one spacious 90m² suite',
+          'Daily buffet breakfast included at Le Taom',
+          'Step right out into tropical gardens or heated pool',
+          '5-minute beach walk to Duck Island boat taxi'
+        ],
+        cons: ['High demand during November; must be booked well in advance'],
+        bookingTip: 'Request a Prestige Suite on higher floors for panoramic reef views, or ground floor for direct lawn access.'
+      },
+      {
+        name: 'Le Domaine Nouméa / Le Méridien Resort & Spa',
+        type: '2 Interconnecting Deluxe Resort Rooms (or 2-Bedroom Suite)',
+        location: 'Pointe Magnin, Anse Vata, Nouméa',
+        nights: 'Alternative 5-Star Luxury Resort Option',
+        bedding: '1 King Room connecting to 1 Twin Room (2 Double Beds) + Extra Bed',
+        pricePerNightAUD: 650,
+        pricePerNightXPF: 47400,
+        totalCostAUD: 3900,
+        totalCostXPF: 284400,
+        features: [
+          'Nouméa’s Largest Freeform Resort Swimming Pool',
+          'Deep Nature Spa Pavilions & Heated Jacuzzi',
+          'Direct Sand Access on Pointe Magnin Beach',
+          'Coconut Palm Groves & Manicured Lawns',
+          'Watersports Center (SUP, Kayaks, Windsurf on beach)',
+          'Celebrated French Breakfast Buffet at Le Sextant'
+        ],
+        pros: [
+          'Full 5-star resort service and pampering',
+          'Separate rooms give adults maximum privacy',
+          'Beachside lunch at Le Faré thatched restaurant'
+        ],
+        cons: ['Standard rooms do not have full kitchens (refrigerator and kettle only)'],
+        bookingTip: 'Book guaranteed interconnecting rooms through Marriott Bonvoy.'
+      },
+      {
+        name: 'Hilton Noumea La Promenade Residences',
+        type: '2-Bedroom Oceanfront Apartment Residence',
+        location: 'Central Promenade, Anse Vata, Nouméa',
+        nights: 'Self-Contained Apartment-Resort Alternative',
+        bedding: '1 King Bed + 2 Single Beds + Double Sofa Bed',
+        pricePerNightAUD: 420,
+        pricePerNightXPF: 30600,
+        totalCostAUD: 2520,
+        totalCostXPF: 183600,
+        features: [
+          'Expansive Private Oceanview Terrace',
+          'Resort Swimming Pool & Sun Deck',
+          'Full Kitchen with Dishwasher & Large Fridge',
+          'In-Room Washing Machine & Dryer',
+          'Direct Access to Anse Vata Shopping Arcade & Cafes'
+        ],
+        pros: [
+          'Right in the heart of Anse Vata cafes and dining',
+          'Very cost-effective for 5 guests',
+          'Easy walk to taxi boats and beach'
+        ],
+        cons: ['Located across the promenade road from the beach rather than inside private gardens'],
+        bookingTip: 'Request an Oceanfront Deluxe unit for the widest panoramic balcony.'
+      },
+      {
+        name: 'Hôtel Le Lagon Nouméa',
+        type: '2-Bedroom Family Suite with Spa Bath',
+        location: '100m from Anse Vata Beach, Nouméa',
+        nights: 'Boutique Wellness Hotel Alternative',
+        bedding: '1 Queen Bed + 2 Single Beds + Daybed',
+        pricePerNightAUD: 340,
+        pricePerNightXPF: 24800,
+        totalCostAUD: 2040,
+        totalCostXPF: 148800,
+        features: [
+          'Heated Outdoor Swimming Pool',
+          'Institut de Beauté & Day Spa',
+          'Complimentary Yoga, Pilates & Aqua-gym Classes',
+          'Heated Jacuzzi & Sauna',
+          'Spacious Balcony with Kitchenette'
+        ],
+        pros: [
+          'Exceptional wellness facilities and friendly boutique hospitality',
+          'Great value for a family suite',
+          'Free wellness activities included daily'
+        ],
+        cons: ['100 meters set back from the beach (not direct beachfront frontage)'],
+        bookingTip: 'Book directly for complimentary spa circuit passes.'
+      }
+    ],
+    snorkelingSpots: [
+      {
+        name: 'Îlot Canard (Duck Island)',
+        location: 'Anse Vata (5 min walk from resort to water taxi)',
+        depth: '1 – 4 meters',
+        marineLife: ['Green sea turtles', 'Clownfish in anemones', 'Banded butterflyfish', 'Blue sea stars'],
+        kidFriendlyRating: 5,
+        currentCaution: 'Minimal current within the buoyed zone. Wave-free and sheltered.',
+        entryType: 'Walk-in beach',
+        bestTime: 'Morning (9:00 AM – 12:00 PM) while mum relaxes poolside.',
+        notes: 'Has a designated underwater educational trail with interpretive buoys. Flotation noodles can be hired.'
+      },
+      {
+        name: 'Phare Amédée Outer Barrier Reef',
+        location: 'Outer Barrier Reef (45 min catamaran from Port Moselle)',
+        depth: '2 – 10 meters',
+        marineLife: ['Giant clams (Tridacna)', 'Banded sea kraits', 'Parrotfish', 'Eagle rays'],
+        kidFriendlyRating: 5,
+        currentCaution: 'Very calm within the lighthouse reef flat; outer drop-off monitored by tour crew.',
+        entryType: 'Boat taxi',
+        bestTime: 'Midday glass-bottom boat tour followed by afternoon snorkel off the pier.',
+        notes: 'Completely supervised marine playground with lifesavers and rescue boats present.'
+      },
+      {
+        name: 'Îlot Signal Turtle Reserve',
+        location: 'Port Moselle (25 min speedboat charter)',
+        depth: '1 – 8 meters',
+        marineLife: ['Wild green sea turtles', 'Docile blacktip reef sharks', 'Giant trevally', 'Pristine staghorn corals'],
+        kidFriendlyRating: 4,
+        currentCaution: 'Mild drift current along the reef wall drop-off; easy drift snorkel for kids with fins.',
+        entryType: 'Walk-in beach',
+        bestTime: 'High tide morning for maximum water clarity over coral gardens.',
+        notes: 'Uninhabited reserve. Turtles feed on seagrass beds 20m from the white sand beach.'
+      }
+    ],
+    diningSpots: [
+      {
+        name: 'Le Taom Restaurant (Château Royal)',
+        type: 'Bistro / Seafood',
+        location: 'Pointe Magnin, Anse Vata',
+        specialty: 'Included daily hot & cold breakfast buffet, tropical fruit spreads, fresh French pastries, and oceanfront dinners',
+        recommendation: 'Start every morning with fresh coffee on the outdoor deck overlooking the lagoon.'
+      },
+      {
+        name: 'Le Deck Pool Bar & Grill',
+        type: 'Casual Beach Cafe',
+        location: 'Château Royal Poolside',
+        specialty: 'Poolside burgers, fresh grilled mahi-mahi, chilled rosé, and South Pacific cocktails',
+        recommendation: 'Grab afternoon drinks and light lunch without leaving your poolside sun lounger.'
+      },
+      {
+        name: 'Chez Toto',
+        type: 'Bistro / Seafood',
+        location: 'Quartier Latin, Nouméa',
+        specialty: 'Authentic French bistro classics: duck confit, steak frites, escargots de Bourgogne, homemade tarte tatin',
+        recommendation: 'Nouméa’s most authentic, warm French bistro. Book 2 days ahead for dinner.'
+      },
+      {
+        name: 'Le Roof Overwater Restaurant',
+        type: 'Bistro / Seafood',
+        location: 'Anse Vata (Overwater Pier)',
+        specialty: 'Lagoon coral trout, local rock oysters, vanilla-crusted prawns, chocolate lava cake',
+        recommendation: 'Dine over the water and watch dolphins and spotted eagle rays circle beneath the central floor cutout.'
+      },
+      {
+        name: 'Marmite et Tire-Bouchon',
+        type: 'Bistro / Seafood',
+        location: 'Baie des Citrons Promenade',
+        specialty: 'Fine French-Pacific cuisine, lobster cassolette, duck breast with vanilla sauce, grand cru wines',
+        recommendation: 'The perfect celebration dinner for your final Friday night.'
+      }
+    ],
+    budgetBreakdown: [
+      { category: 'Accommodation', item: '6 Nights 2-Bed Luxury Suite at Château Royal Resort (with Breakfast)', costXPF: 229800, costAUD: 3150, notes: '5 pax in private 90m² oceanfront suite' },
+      { category: 'Vehicle & Fuel', item: '7-Seater SUV Rental (6 days) + Fuel & Parking', costXPF: 64000, costAUD: 875, notes: 'Collected and returned at La Tontouta' },
+      { category: 'Amédée Excursion', item: 'Mary D Phare Amédée Day Cruise (Buffet, Show, Glass-Bottom)', costXPF: 62000, costAUD: 850, notes: 'Full day family package with lunch buffet' },
+      { category: 'Marine Charters', item: 'Duck Island Water Taxi + Îlot Signal Turtle Charter', costXPF: 42000, costAUD: 575, notes: 'Quick, zero-friction boat transfers' },
+      { category: 'Spa & Wellness', item: 'Aquatonic Seawater Labyrinth Passes & Spa Treatment for Mum', costXPF: 26000, costAUD: 360, notes: 'Thalassotherapy circuit and wellness pampering' },
+      { category: 'Food & Dining', item: '5 Restaurant Dinners, Lunches & Poolside Cocktails (Breakfast included)', costXPF: 88200, costAUD: 1200, notes: 'Relaxed dining out with breakfasts provided' }
+    ],
+    checklist: [
+      { id: 'c1', task: 'Book Château Royal 2-Bedroom Superior/Prestige Suite with Breakfast', deadline: '3–6 Months Prior', category: 'booking', notes: 'Limited inventory for 2-bedroom units; high demand' },
+      { id: 'c2', task: 'Reserve 7-seater SUV rental at La Tontouta Airport', deadline: '3 Months Prior', category: 'booking', notes: 'Guarantees easy luggage transport for 5 pax' },
+      { id: 'c3', task: 'Book Mary D Phare Amédée Day Excursion (Tuesday)', deadline: '2 Months Prior', category: 'booking', notes: 'Sails Tuesday; includes island buffet feast' },
+      { id: 'c4', task: 'Book Aquatonic Seawater Spa Treatment for Mum (Wednesday morning)', deadline: '1 Month Prior', category: 'booking', notes: 'Reserve massage or facial in advance' },
+      { id: 'c5', task: 'Reserve Îlot Signal Water Taxi for Wednesday morning', deadline: '1 Month Prior', category: 'booking', notes: 'Guarantees boat charter for turtle snorkeling' },
+      { id: 'c6', task: 'Reserve Chez Toto and Le Roof for evening celebrations', deadline: '2 Weeks Prior', category: 'booking', notes: 'Popular dinner tables fill quickly' }
+    ]
+  },
+
+  'relax-island': {
+    id: 'relax-island',
+    optionNumber: 6,
+    category: 'relaxing',
+    title: 'The Private Coral Island Sanctuary',
+    tagline: '6 Nights on a Protected Coral Marine Reserve with Overwater & Beach Bungalows',
+    badge: '🏝️ Option 6 — Island Sanctuary',
+    heroImageGradient: 'from-cyan-800 via-blue-900 to-indigo-950',
+    baseLocation: 'DoubleTree by Hilton Îlot Maître (200-ha Marine Reserve Islet, 20 mins from Nouméa)',
+    hotelMoves: 0,
+    totalDrivingKm: 90,
+    avgDailyDrivingMins: 10,
+    cost5PaxXPF: 625000,
+    cost5PaxAUD: 8560,
+    costPerPersonAUD: 1712,
+    idealFor: 'Families dreaming of an idyllic, slow-paced South Pacific island escape where you step right out of your bungalow onto white sand or over crystal turquoise water, swim with docile wild green turtles off the beach every afternoon, and lounge beside an oceanfront infinity pool.',
+    overviewSummary: 'Escape Grande Terre completely. A short 20-minute private hotel boat transfer transports you to Îlot Maître, a tranquil 200-hectare marine sanctuary surrounded by white coral sand and turquoise lagoon. Stay in beachfront or tropical garden bungalows under coconut palms. Your wife can step right out into the sand, relax on poolside daybeds with cocktails, and watch the waves lap against the shore. Your 9-year-old and you can walk straight into the knee-deep water where wild green sea turtles graze on seagrass beds right off the beach. Daily buffet breakfast is served at L’Atelier, and scheduled boat shuttles allow easy half-day visits to mainland Nouméa for French dining or shopping.',
+    keyHighlights: [
+      'Exclusive island paradise: 20-minute boat ride from Nouméa into a 200-hectare pristine marine reserve',
+      'Wild green sea turtles off the beach: Snorkel directly from the sand or overwater walkways with resident sea turtles',
+      'Lagoon infinity pool & beach bar: Oceanfront pool with swim-up cocktails, sun loungers, and warm tropical breezes',
+      'Provided island breakfast buffet: Daily breakfast at L’Atelier with tropical fruits, pastries, and ocean panoramas',
+      'Overwater & beach bungalow living: Fall asleep to the gentle sound of the tide; zero cars, zero traffic, zero noise',
+      'Flexible town excursions: Scheduled 20-min boat shuttles to Port Moselle for market visits and French bistro dinners'
+    ],
+    flightInfo: {
+      arrival: 'Sun 8 Nov: QF91 arrives La Tontouta at 12:35 PM',
+      departure: 'Sat 14 Nov: QF92 departs La Tontouta at 1:50 PM'
+    },
+    days: [
+      {
+        dayNumber: 1,
+        date: 'Sunday, 8 Nov 2026',
+        title: 'Arrival & Private Boat Transfer to Îlot Maître',
+        subtitle: 'Airport Transfer, Port Moselle Boat Hop, Check into Island Bungalows',
+        summary: 'Land on QF91, take a comfortable 45-minute private transfer to Port Moselle Marina, and board the DoubleTree catamaran for the scenic 20-minute cruise to Îlot Maître. Step onto the island jetty, unpack your sandals, and toast the sunset.',
+        morning: {
+          time: '12:35 PM – 2:30 PM',
+          title: 'Arrival & Transfer to Marina',
+          description: 'Land on QF91 at La Tontouta Airport. Meet your private minivan transfer for the smooth 45-minute highway drive to Port Moselle Marina in Nouméa.',
+          tips: 'Pick up any duty-free French wine at the airport to enjoy on your private bungalow deck.'
+        },
+        lunch: {
+          place: 'Marina Waterfront Cafe (Port Moselle)',
+          description: 'Quick espresso, pain au chocolat, and fresh baguettes while waiting for the resort boat.',
+          estCostAUD: 50,
+          estCostXPF: 3600
+        },
+        afternoon: {
+          time: '3:30 PM – 5:30 PM',
+          title: 'Catamaran Hop to Îlot Maître & Bungalow Check-in',
+          description: 'Board the 20-minute resort catamaran. Arrive at Îlot Maître’s turquoise lagoon. Check into your deluxe beachfront or garden bungalows nestled under coconut palms. Change into swimwear and take your first plunge in the oceanfront infinity pool.',
+          tips: 'Look over the jetty railings—you will likely spot sea turtles before you even reach your room!'
+        },
+        evening: {
+          time: '6:00 PM – 9:00 PM',
+          title: 'Island Sunset Cocktails & Welcome Feast',
+          description: 'Sip fresh passionfruit cocktails at the Sunset Beach Bar, followed by a lavish seafood buffet at L’Atelier restaurant overlooking the shimmering lagoon.',
+          tips: 'The sunsets over the western barrier reef are completely unobstructed.'
+        },
+        dinner: {
+          place: 'L’Atelier Restaurant (Îlot Maître)',
+          description: 'Pacific seafood buffet with fresh oysters, local lagoon fish, salads, and French desserts.',
+          estCostAUD: 210,
+          estCostXPF: 15300
+        },
+        dayEstCostAUD: 260,
+        dayEstCostXPF: 18900
+      },
+      {
+        dayNumber: 2,
+        date: 'Monday, 9 Nov 2026',
+        title: 'Wild Green Sea Turtles Off the Beach',
+        subtitle: 'Island Buffet Breakfast, Walk-In Turtle Snorkeling, Infinity Pool',
+        summary: 'A day of pure island bliss. Wake up to gentle waves, enjoy breakfast at L’Atelier, and walk straight into the transparent water to swim with wild green sea turtles feeding on the seagrass right off the beach.',
+        morning: {
+          time: '8:30 AM – 12:00 PM',
+          title: 'Island Breakfast & Walk-in Turtle Snorkel',
+          description: 'Linger over tropical fruit and hot croissants at L’Atelier. Step directly onto the white sand in front of your bungalow. Put on snorkel masks and wade out 15 meters—wild green sea turtles graze peacefully on the seagrass beds.',
+          tips: 'Completely wave-free and shallow—even a 9-year-old can stand up in the water next to turtles.'
+        },
+        lunch: {
+          place: 'Sunset Beach Bar & Grill',
+          description: 'Grilled fish skewers, tropical salads, and woodfired flatbreads right by the sand.',
+          estCostAUD: 120,
+          estCostXPF: 8800
+        },
+        afternoon: {
+          time: '2:00 PM – 5:30 PM',
+          title: 'Oceanfront Infinity Pool & Overwater Walkway Stroll',
+          description: 'Mum reclines on poolside daybeds with a book and cold drink. Take an afternoon stroll along the overwater bungalow wooden boardwalks to spot spotted eagle rays and coral fish swimming in the crystal water.',
+          tips: 'High tide brings schools of trevally and parrotfish right beneath the wooden walkways.'
+        },
+        evening: {
+          time: '6:30 PM – 9:00 PM',
+          title: 'Beachside Stargazing & Island Dining',
+          description: 'Dine under the stars listening to the gentle lapping of the tide. Because there are no city lights on the islet, the southern night skies are dazzling.',
+          tips: 'Spot the Southern Cross and the Milky Way stretching across the lagoon.'
+        },
+        dinner: {
+          place: 'L’Atelier Terrace Dining',
+          description: 'A la carte French-Melanesian cuisine with local tuna carpaccio and beef tenderloin.',
+          estCostAUD: 190,
+          estCostXPF: 13900
+        },
+        dayEstCostAUD: 310,
+        dayEstCostXPF: 22700
+      },
+      {
+        dayNumber: 3,
+        date: 'Tuesday, 10 Nov 2026',
+        title: 'Lagoon Water Sports & Coral Garden Safari',
+        subtitle: 'Stand-Up Paddleboarding, Transparent Kayaks, Outer Coral Bommies',
+        summary: 'Paddle transparent kayaks across the turquoise lagoon to view living corals below, relax with afternoon massages, and enjoy an evening cocktail cruise.',
+        morning: {
+          time: '9:00 AM – 12:30 PM',
+          title: 'Transparent Kayaking & SUP Paddle',
+          description: 'Hire transparent kayaks from the water sports hut. Glide over coral gardens and seagrass beds without even getting wet. The 9-year-old can paddle safely in the sheltered lee of the island.',
+          tips: 'The lagoon around Îlot Maître is a protected marine reserve; fishing is strictly prohibited.'
+        },
+        lunch: {
+          place: 'Poolside Lounge / Room Service',
+          description: 'Fresh club sandwiches, burgers, and tropical fruit platters served to your deck.',
+          estCostAUD: 100,
+          estCostXPF: 7300
+        },
+        afternoon: {
+          time: '2:00 PM – 5:30 PM',
+          title: 'Island Massage & Quiet Beach Time',
+          description: 'Mum enjoys an outdoor open-air massage under thatched garden cabanas. Dad & 9yo explore the outer coral bommies at the reef edge with snorkel guides.',
+          tips: 'Afternoon high tide offers the clearest underwater visibility.'
+        },
+        evening: {
+          time: '6:30 PM – 9:00 PM',
+          title: 'Sunset Cocktails & Island Barbecue',
+          description: 'Watch the sun sink into the South Pacific with live acoustic guitar music at the beach bar.',
+          tips: 'Warm tropical island night ambiance.'
+        },
+        dinner: {
+          place: 'Beach BBQ Feast at L’Atelier',
+          description: 'Grilled rock lobster tails, prawns, and steaks with tropical salads and desserts.',
+          estCostAUD: 220,
+          estCostXPF: 16100
+        },
+        dayEstCostAUD: 320,
+        dayEstCostXPF: 23400
+      },
+      {
+        dayNumber: 4,
+        date: 'Wednesday, 11 Nov 2026 (Armistice Day)',
+        title: 'Midweek Island Escape & Peace',
+        subtitle: 'Zero Holiday Hassles, Lazy Infinity Pool Dips, Turtle Encounters',
+        summary: 'While mainland shops are closed for the public holiday, life on Îlot Maître is completely unaffected. Enjoy unhurried breakfasts, warm pool swims, and lazy hammock afternoons.',
+        morning: {
+          time: '9:00 AM – 12:30 PM',
+          title: 'Lazy Breakfast & Island Hammock Time',
+          description: 'Wake up late with no alarms. Read a book in the beach hammocks strung between coconut palms. Wade into the water for a mid-morning swim with the resident green sea turtles.',
+          tips: 'The island is tranquil and self-contained; mainland holiday closures don’t matter at all.'
+        },
+        lunch: {
+          place: 'Sunset Beach Bar',
+          description: 'Light lunch with grilled calamari, fresh salads, and chilled French beer.',
+          estCostAUD: 95,
+          estCostXPF: 6900
+        },
+        afternoon: {
+          time: '2:00 PM – 5:30 PM',
+          title: 'Snorkel Trail & Sun Lounger Nap',
+          description: 'Explore the marine nature trail around the eastern tip of the island. Return for an afternoon nap on the shaded sun loungers beside the infinity pool.',
+          tips: 'Bring waterproof cameras to capture turtles surfacing next to your mask.'
+        },
+        evening: {
+          time: '6:30 PM – 9:00 PM',
+          title: 'French Wine & Island Dining',
+          description: 'Romantic island dinner overlooking the calm lagoon waters.',
+          tips: 'Light trade winds keep insects away and the air comfortably warm.'
+        },
+        dinner: {
+          place: 'L’Atelier Dining Room',
+          description: 'Fresh grilled coral trout with vanilla emulsion, roasted potatoes, and chocolate mousse.',
+          estCostAUD: 190,
+          estCostXPF: 13900
+        },
+        dayEstCostAUD: 285,
+        dayEstCostXPF: 20800
+      },
+      {
+        dayNumber: 5,
+        date: 'Thursday, 12 Nov 2026',
+        title: 'Mainland Evening Excursion: French Bistro in Nouméa',
+        subtitle: 'Island Day, 20-Min Evening Boat Hop, Dinner at Chez Toto',
+        summary: 'Spend the day relaxing on the island, then catch the 5:30 PM resort boat shuttle to Nouméa for an authentic French bistro dinner at Chez Toto in Quartier Latin, returning on the 9:00 PM evening boat.',
+        morning: {
+          time: '8:30 AM – 1:00 PM',
+          title: 'Morning Lagoon Swim & Pool Relaxation',
+          description: 'Enjoy a leisurely breakfast and spend the morning swimming in the pool or walking the perimeter of the island (a 25-minute scenic stroll along the white sand).',
+          tips: 'Low tide exposes beautiful sandbars perfect for child beachcombing.'
+        },
+        lunch: {
+          place: 'L’Atelier Deck',
+          description: 'Fresh Poisson Cru with lime, coconut milk, and crusty bread.',
+          estCostAUD: 100,
+          estCostXPF: 7300
+        },
+        afternoon: {
+          time: '2:30 PM – 5:00 PM',
+          title: 'Rest & Change for Town Excursion',
+          description: 'Relax in your air-conditioned bungalow. Freshen up and get dressed for an evening out in town. Board the 5:30 PM scheduled boat shuttle to Port Moselle Marina.',
+          tips: 'A 20-minute boat ride takes you directly into downtown Nouméa.'
+        },
+        evening: {
+          time: '6:00 PM – 9:30 PM',
+          title: 'Celebration French Bistro Dinner at Chez Toto',
+          description: 'Short 5-minute stroll from Port Moselle into Quartier Latin for dinner at Chez Toto. Feast on duck confit, escargots, and steak frites before boarding the 9:00 PM return boat back to the island.',
+          tips: 'Experience Nouméa’s premier dining without giving up your private island base!'
+        },
+        dinner: {
+          place: 'Chez Toto (Quartier Latin, Nouméa)',
+          description: 'Authentic French dining in Nouméa’s historic quarter.',
+          estCostAUD: 190,
+          estCostXPF: 13900
+        },
+        dayEstCostAUD: 290,
+        dayEstCostXPF: 21200
+      },
+      {
+        dayNumber: 6,
+        date: 'Friday, 13 Nov 2026',
+        title: 'Final Day of Island Bliss & Overwater Dinner',
+        subtitle: 'Turtle Snorkel Finale, Sunset Beach Walk, Island Grand Farewell',
+        summary: 'A glorious final full day on the island. Final swim with the green sea turtles, afternoon relaxation beside the infinity pool, and a celebration farewell dinner overlooking the water.',
+        morning: {
+          time: '9:00 AM – 12:30 PM',
+          title: 'Final Morning Snorkel with Wild Turtles',
+          description: 'Take one last unforgettable morning swim with the resident turtles. The water is crystalline and calm. The 9-year-old can take GoPro photos of turtles grazing just under the surface.',
+          tips: 'Turtles are most active in the morning when the water is glassy calm.'
+        },
+        lunch: {
+          place: 'Sunset Beach Bar',
+          description: 'Light lunch and cold fruit smoothies by the pool.',
+          estCostAUD: 85,
+          estCostXPF: 6200
+        },
+        afternoon: {
+          time: '2:00 PM – 5:30 PM',
+          title: 'Poolside Daybed & Afternoon Packing',
+          description: 'Lounge on the daybeds for a restful afternoon. Slowly pack bags with no rush. Watch the sun dip toward the western horizon for the final island sunset.',
+          tips: 'Take family photos on the overwater bungalow wooden jetty at golden hour.'
+        },
+        evening: {
+          time: '6:30 PM – 9:30 PM',
+          title: 'Island Farewell Celebration Feast',
+          description: 'Celebrate the final night with an overwater celebration dinner at L’Atelier with fine French wine, seafood, and decadent desserts.',
+          tips: 'Toast an incredible week of true South Pacific relaxation.'
+        },
+        dinner: {
+          place: 'L’Atelier (Îlot Maître)',
+          description: 'Grand seafood banquet with lobster, champagne, and tropical desserts.',
+          estCostAUD: 240,
+          estCostXPF: 17500
+        },
+        dayEstCostAUD: 325,
+        dayEstCostXPF: 23700
+      },
+      {
+        dayNumber: 7,
+        date: 'Saturday, 14 Nov 2026',
+        title: 'Morning Island Boat Transfer & Departure',
+        subtitle: 'Breakfast, 20-Min Boat to Mainland, Highway Transfer, QF92 at 1:50 PM',
+        summary: 'Final island breakfast, board the 10:00 AM resort catamaran to Port Moselle, meet your private minivan transfer to La Tontouta Airport, and depart on QF92 at 1:50 PM.',
+        morning: {
+          time: '8:00 AM – 10:30 AM',
+          title: 'Final Breakfast & Island Catamaran Transfer',
+          description: 'Enjoy a leisurely breakfast at L’Atelier. Check out and board the 10:00 AM resort catamaran back to Port Moselle Marina (20 mins). Meet your private airport minivan waiting at the pier.',
+          tips: 'Arrive at La Tontouta Airport by 11:45 AM for easy check-in.'
+        },
+        lunch: {
+          place: 'La Tontouta Terminal Café & Duty Free',
+          description: 'Quick sandwiches, coffee, and duty-free French chocolates before boarding.',
+          estCostAUD: 55,
+          estCostXPF: 4000
+        },
+        afternoon: {
+          time: '11:30 AM – 1:50 PM',
+          title: 'QF92 Boarding & Homeward Flight',
+          description: 'Clear customs and board QF92 departing at 1:50 PM for Australia.',
+          tips: 'Direct flight home.'
+        },
+        evening: {
+          time: 'Afternoon / Evening',
+          title: 'Arrival Home',
+          description: 'Arrive home completely refreshed from your tropical island sanctuary.',
+          tips: 'Direct flight.'
+        },
+        dinner: {
+          place: 'In-Flight / Home',
+          description: 'Qantas in-flight meal service.',
+          estCostAUD: 0,
+          estCostXPF: 0
+        },
+        dayEstCostAUD: 55,
+        dayEstCostXPF: 4000
+      }
+    ],
+    accommodations: [
+      {
+        name: 'DoubleTree by Hilton Nouméa Îlot Maître Resort',
+        type: '2 Deluxe Beach or Garden Bungalows (or Overwater Villa)',
+        location: 'Îlot Maître Coral Reserve (20 min boat from Nouméa)',
+        nights: '6 Nights (Sun 8 Nov – Sat 14 Nov)',
+        bedding: '1 King Bungalow + 1 Twin Bungalow (2 Double Beds) — accommodating all 5 pax',
+        pricePerNightAUD: 720,
+        pricePerNightXPF: 52500,
+        totalCostAUD: 4320,
+        totalCostXPF: 315000,
+        features: [
+          '200-Hectare Protected Marine Reserve Setting',
+          'Wild Green Sea Turtles Swimming 15m from the Beach',
+          'Oceanfront Lagoon Infinity Pool & Sun Deck',
+          'Private Sun Terraces on Each Bungalow',
+          'L’Atelier Oceanfront Restaurant & Sunset Beach Bar',
+          'Water Sports Hut (Transparent Kayaks, Paddleboards)'
+        ],
+        pros: [
+          'Pure 100% tropical island escape with zero cars or city noise',
+          'Step right out of your bungalow onto white sand or into the pool',
+          'Included daily breakfast buffet at L’Atelier',
+          'Incredible off-the-beach snorkeling for kids and adults'
+        ],
+        cons: ['Dining is on the island unless taking the 20-minute boat shuttle to town'],
+        bookingTip: 'Book 2 adjoining garden or beach bungalows, or upgrade 1 to an Overwater Bungalow for the ultimate luxury.'
+      },
+      {
+        name: 'The Island & Mainland Split (Hilton + Château Royal)',
+        type: '4 Nights Island Bungalows + 2 Nights Luxury Suite in Nouméa',
+        location: 'Îlot Maître (Sun–Thu) + Anse Vata, Nouméa (Thu–Sat)',
+        nights: '4 Nights Island + 2 Nights Mainland',
+        bedding: '2 Island Bungalows followed by 2-Bedroom Oceanfront Suite',
+        pricePerNightAUD: 620,
+        pricePerNightXPF: 45200,
+        totalCostAUD: 3720,
+        totalCostXPF: 271200,
+        features: [
+          '4 Nights Robinson Crusoe Island Living with Turtles & Pool',
+          '2 Nights Gourmet Dining, Boutiques & Aquatonic Spa in Nouméa',
+          'Zero Domestic Flights Required (Easy 20-min boat transfer)',
+          'All breakfasts included at both resorts'
+        ],
+        pros: [
+          'The ultimate balance of pure island relaxation and gourmet mainland dining',
+          'Lets you experience both the island sanctuary and Nouméa’s famous French bistros'
+        ],
+        cons: ['Requires 1 hotel move on Thursday morning'],
+        bookingTip: 'Coordinate boat transfer directly with Château Royal check-in time.'
+      },
+      {
+        name: 'Hôtel Beaurivage & Multi-Day Îlot Maître Day Passes',
+        type: '2 Beachfront Rooms in Nouméa + Daily Island Speedboat Access',
+        location: 'Baie des Citrons (Mainland Base) + Daily Îlot Maître Access',
+        nights: 'Budget-Friendly Alternative Option',
+        bedding: '2 Interconnecting Beachfront Rooms',
+        pricePerNightAUD: 380,
+        pricePerNightXPF: 27700,
+        totalCostAUD: 2280,
+        totalCostXPF: 166200,
+        features: [
+          'Beachfront Hotel directly opposite Baie des Citrons netted beach',
+          'Daily speedboat passes to DoubleTree Îlot Maître pool & turtle beaches',
+          'Walk to 20+ French bistros and bakeries in Nouméa',
+          'Lower overall accommodation cost'
+        ],
+        pros: [
+          'Cost-effective while still enjoying the private island pool and turtles during the day',
+          'Ultimate freedom of dining every evening in Nouméa'
+        ],
+        cons: ['Must take the 20-minute boat back to town every afternoon (not sleeping on the island)'],
+        bookingTip: 'Book multi-day island excursion passes at Port Moselle.'
+      }
+    ],
+    snorkelingSpots: [
+      {
+        name: 'Îlot Maître Marine Reserve (Beachfront Shallows)',
+        location: 'Directly in front of DoubleTree bungalows',
+        depth: '1 – 3 meters',
+        marineLife: ['Wild green sea turtles', 'Threadfin butterflyfish', 'Blue sea stars', 'Cowry shells'],
+        kidFriendlyRating: 5,
+        currentCaution: 'Completely zero waves. Calm sandy shallows ideal for children and beginners.',
+        entryType: 'Walk-in beach',
+        bestTime: 'Morning high tide for crystal water directly off the sand.',
+        notes: 'Dozens of resident turtles graze on the seagrass beds just 15 meters from the beach.'
+      },
+      {
+        name: 'Îlot Maître Outer Coral Garden & Reef Edge',
+        location: 'Western tip of Îlot Maître (5 min swim from jetty)',
+        depth: '2 – 6 meters',
+        marineLife: ['Staghorn coral gardens', 'Parrotfish', 'Harmless blacktip reef sharks', 'Eagle rays'],
+        kidFriendlyRating: 4,
+        currentCaution: 'Mild current on outer drop-off; stay within the buoyed marine reserve area.',
+        entryType: 'Walk-in beach',
+        bestTime: 'Midday high tide.',
+        notes: 'Spectacular coral diversity protected from fishing for over 25 years.'
+      },
+      {
+        name: 'Overwater Bungalow Boardwalk Lagoon',
+        location: 'Beneath DoubleTree overwater villas',
+        depth: '1 – 2.5 meters',
+        marineLife: ['Stingrays', 'Schools of silver mullet', 'Needlefish', 'Juvenile reef fish'],
+        kidFriendlyRating: 5,
+        currentCaution: 'Wave-free lagoon basin.',
+        entryType: 'Walk-in beach',
+        bestTime: 'Late afternoon as rays cruise the shallows.',
+        notes: 'Look down from the wooden walkways or jump right in from your villa steps.'
+      }
+    ],
+    diningSpots: [
+      {
+        name: 'L’Atelier Restaurant (Îlot Maître)',
+        type: 'Bistro / Seafood',
+        location: 'DoubleTree Resort Main Pavilion',
+        specialty: 'Included daily hot & cold breakfast buffet, Pacific seafood banquets, grilled coral trout, French wines',
+        recommendation: 'Dine on the open-air wooden deck listening to the waves.'
+      },
+      {
+        name: 'Sunset Beach Bar & Grill',
+        type: 'Casual Beach Cafe',
+        location: 'DoubleTree Poolside & Beach',
+        specialty: 'Poolside cocktails, woodfired flatbreads, grilled burgers, fresh fruit smoothies',
+        recommendation: 'Order drinks right to your poolside sun lounger as the sun dips below the horizon.'
+      },
+      {
+        name: 'Chez Toto',
+        type: 'Bistro / Seafood',
+        location: 'Quartier Latin, Nouméa (Evening Excursion)',
+        specialty: 'Confit de canard, steak tartare, escargots de Bourgogne, homemade tarte tatin',
+        recommendation: 'Catch the 5:30 PM boat shuttle into town on Thursday for a quintessential French bistro feast.'
+      },
+      {
+        name: 'Le Roof Overwater Restaurant',
+        type: 'Bistro / Seafood',
+        location: 'Anse Vata, Nouméa (Optional Town Dinner)',
+        specialty: 'Lagoon fish, rock oysters, vanilla-crusted prawns, central marine floor cutout',
+        recommendation: 'Watch dolphins gliding beneath the floor cutout.'
+      }
+    ],
+    budgetBreakdown: [
+      { category: 'Accommodation', item: '6 Nights 2 Deluxe Bungalows at DoubleTree Îlot Maître (with Breakfast)', costXPF: 315000, costAUD: 4320, notes: '2 private bungalows accommodating all 5 guests' },
+      { category: 'Boat & Land Transfers', item: 'Private Airport Minivan + Return Resort Catamaran Transfers (5 pax)', costXPF: 58000, costAUD: 795, notes: 'Seamless round-trip airport and island boat transfers' },
+      { category: 'Water Sports & Snorkel', item: 'Transparent Kayaks, Stand-Up Paddleboard Hire & Snorkel Sets', costXPF: 24000, costAUD: 330, notes: 'Island water sports equipment' },
+      { category: 'Mainland Excursion Boat', item: 'Evening Return Boat Shuttles to Nouméa for French Bistro Dinner', costXPF: 32000, costAUD: 440, notes: 'Scheduled resort boat shuttles for 5 pax' },
+      { category: 'Food & Dining', item: 'Island Dinners, Poolside Lunches, Cocktails & Chez Toto Dinner (Breakfasts included)', costXPF: 196000, costAUD: 2675, notes: 'Resort dining and celebratory dinner in town' }
+    ],
+    checklist: [
+      { id: 'c1', task: 'Book DoubleTree by Hilton Îlot Maître 2 Bungalows with Breakfast', deadline: '3–6 Months Prior', category: 'booking', notes: 'Limited bungalow inventory on the private island' },
+      { id: 'c2', task: 'Confirm Resort Catamaran Transfer Times from Port Moselle', deadline: '2 Months Prior', category: 'booking', notes: 'Coordinate with QF91 flight arrival time' },
+      { id: 'c3', task: 'Arrange Airport Minivan Transfer from La Tontouta to Port Moselle', deadline: '1 Month Prior', category: 'booking', notes: 'Hassle-free 45-min highway transfer for 5 pax' },
+      { id: 'c4', task: 'Reserve Table at Chez Toto for Thursday evening excursion', deadline: '2 Weeks Prior', category: 'booking', notes: 'Coordinate with 5:30 PM / 9:00 PM boat shuttle' },
+      { id: 'c5', task: 'Pack reef-safe sunscreen, polarized sunglasses, and rash guards', deadline: '1 Week Prior', category: 'gear', notes: 'The South Pacific sun on white sand is intense' }
+    ]
+  },
+
+  'relax-retreat': {
+    id: 'relax-retreat',
+    optionNumber: 7,
+    category: 'relaxing',
+    title: 'The Gentle Nature & Wellness Retreat',
+    tagline: '3 Nights UNESCO Biosphere Resort (Deva/Poé) + 3 Nights Nouméa Lagoon Spa',
+    badge: '🌿 Option 7 — Nature & Wellness',
+    heroImageGradient: 'from-amber-800 via-emerald-800 to-teal-900',
+    baseLocation: '3 Nights Bourail (Domaine de Deva) + 3 Nights Nouméa (Anse Vata) (1 Gentle Move)',
+    hotelMoves: 1,
+    totalDrivingKm: 360,
+    avgDailyDrivingMins: 40,
+    cost5PaxXPF: 520000,
+    cost5PaxAUD: 7125,
+    costPerPersonAUD: 1425,
+    idealFor: 'Families who love luxury nature retreats, wellness spas, uncrowded white beaches, and world-class golf—blended with relaxed urban dining and barrier reef boat hops.',
+    overviewSummary: 'Experience the tranquility of New Caledonia’s wild west coast without roughing it. Spend the first 3 nights at the 5-star Sheraton New Caledonia Deva Spa & Golf Resort, nestled inside an 8,000-hectare UNESCO-protected natural biosphere reserve. Stay in authentic high-ceilinged Melanesian family bungalows. Your wife can indulge at the award-winning Deep Nature Spa, relax beside the massive beachfront infinity pool, or take gentle horse rides and nature walks through the dry forest. Your 9-year-old can paddleboard in the wave-free 17 km Poé lagoon or spot green turtles at the Shark Fault. On Wednesday, enjoy a leisurely scenic drive south to Nouméa, checking into Château Royal for 3 nights of thalassotherapy spa pools, Phare Amédée lighthouse cruises, and French bistro dining.',
+    keyHighlights: [
+      '5-star UNESCO biosphere retreat: 3 nights at Sheraton Deva amidst 8,000 hectares of protected hills and white sand beaches',
+      'Traditional Melanesian bungalow living: Luxurious high-ceilinged bungalows crafted with local woods and private garden decks',
+      'Deep Nature Spa & Golf: World-class wellness treatments, heated outdoor jacuzzis, and an 18-hole Dye Design championship golf course',
+      '17 km wave-free Poé lagoon: Transparent shallow waters perfect for child paddleboarding and sunset beach walks',
+      'Provided 5-star buffet breakfasts: Full hot breakfast spreads at Reef Restaurant (Deva) and Le Taom (Château Royal)',
+      'Gentle two-resort split: Only 1 hotel transition along a smooth paved highway, ending with Nouméa gourmet bistros'
+    ],
+    flightInfo: {
+      arrival: 'Sun 8 Nov: QF91 arrives La Tontouta at 12:35 PM',
+      departure: 'Sat 14 Nov: QF92 departs La Tontouta at 1:50 PM'
+    },
+    days: [
+      {
+        dayNumber: 1,
+        date: 'Sunday, 8 Nov 2026',
+        title: 'Arrival & Scenic Drive to 5-Star Sheraton Deva',
+        subtitle: 'Airport Pickup, RT1 Highway Drive North, Traditional Bungalow Settle-in',
+        summary: 'Land on QF91 at La Tontouta, pick up your 7-seater SUV, and drive an easy 1h45m north on smooth highway RT1 directly to Sheraton Deva. Check into your traditional Melanesian family bungalow, walk to the massive beachfront infinity pool, and enjoy a cocktail as deer graze on the nearby hills.',
+        morning: {
+          time: '12:35 PM – 2:00 PM',
+          title: 'Arrival & 7-Seater Vehicle Pickup',
+          description: 'Land on QF91 at La Tontouta Airport. Pick up your 7-seater SUV at the terminal. Because La Tontouta is already 45 mins north of Nouméa, driving north to Deva is fast and effortless (1h45m on paved RT1).',
+          tips: 'Stock up on road snacks and bottled water at Bouloupari bakery en route.'
+        },
+        lunch: {
+          place: 'Bouloupari Artisan Bakery (RT1)',
+          description: 'Warm quiches, ham-and-cheese croissants, and fresh baguettes on the drive north.',
+          estCostAUD: 55,
+          estCostXPF: 4000
+        },
+        afternoon: {
+          time: '3:45 PM – 6:00 PM',
+          title: 'Sheraton Deva Settle-in & Infinity Pool Dip',
+          description: 'Arrive at the 5-star Sheraton Deva. Check into your high-ceilinged traditional Melanesian bungalow surrounded by banyan trees. Step out onto your private wooden deck, change into swimwear, and head to the giant infinity pool directly facing the UNESCO lagoon.',
+          tips: 'The architectural design of the bungalows is inspired by traditional Kanak huts with soaring wooden beams.'
+        },
+        evening: {
+          time: '6:30 PM – 9:00 PM',
+          title: 'Sunset Dining at Sand Beach Grill',
+          description: 'Enjoy cocktails and fresh local seafood with your feet almost in the sand at the Sand Beach Grill.',
+          tips: 'Listen for the calls of wild rusa deer in the dry forest hills behind the resort.'
+        },
+        dinner: {
+          place: 'Sand Beach Grill (Sheraton Deva)',
+          description: 'Beachfront grilled local venison steaks, fresh reef fish, and French wines.',
+          estCostAUD: 190,
+          estCostXPF: 13900
+        },
+        dayEstCostAUD: 245,
+        dayEstCostXPF: 17900
+      },
+      {
+        dayNumber: 2,
+        date: 'Monday, 9 Nov 2026',
+        title: 'Deep Nature Spa Morning & Shark Fault Turtle Safari',
+        subtitle: '5-Star Buffet Breakfast, Thalassotherapy Spa, Glass-Bottom Boat Reef Safari',
+        summary: 'Start with a lavish buffet breakfast at Reef Restaurant. Mum enjoys a 2-hour massage and jacuzzi circuit at the Deep Nature Spa; Dad and the 9yo take a glass-bottom boat tour to the Shark Fault to snorkel with wild green sea turtles.',
+        morning: {
+          time: '8:30 AM – 12:30 PM',
+          title: 'Deep Nature Spa (Mum) & Shark Fault Safari (Dad & 9yo)',
+          description: 'Mum enjoys a serene morning at the Deep Nature Spa pavilion with heated outdoor jacuzzi and relaxing massage. Dad & 9yo take a 10-minute drive to Poé Beach to board the glass-bottom boat safari out to the Shark Fault to snorkel with green sea turtles and harmless reef sharks.',
+          tips: 'The Shark Fault boat trip is safe, supervised, and includes child-sized lifejackets and fins.'
+        },
+        lunch: {
+          place: 'Bistrot de la Roche (Roche Percée)',
+          description: 'Relaxed cafe lunch near the iconic Bonhomme rock landmark.',
+          estCostAUD: 95,
+          estCostXPF: 6900
+        },
+        afternoon: {
+          time: '2:30 PM – 5:30 PM',
+          title: 'Calm Poé Beach Paddleboarding & Pool Relaxation',
+          description: 'Reunite at the resort. The 17 km Poé lagoon is completely wave-free and shallow—ideal for child stand-up paddleboarding. Mum relaxes poolside on padded daybeds.',
+          tips: 'Stand-up paddleboards and kayaks are free for Sheraton resort guests.'
+        },
+        evening: {
+          time: '6:30 PM – 9:00 PM',
+          title: 'Melanesian Seafood Dinner at Reef Restaurant',
+          description: 'Dine in the grand high-ceilinged timber dining room overlooking the illuminated pool.',
+          tips: 'Sample the traditional Bougna (chicken or fish baked in banana leaves with coconut milk).'
+        },
+        dinner: {
+          place: 'Reef Restaurant (Sheraton Deva)',
+          description: 'Fine buffet and a la carte dining featuring local Pacific ingredients.',
+          estCostAUD: 200,
+          estCostXPF: 14600
+        },
+        dayEstCostAUD: 295,
+        dayEstCostXPF: 21500
+      },
+      {
+        dayNumber: 3,
+        date: 'Tuesday, 10 Nov 2026',
+        title: 'Gentle Deva Nature Walks & 18-Hole Championship Golf',
+        subtitle: 'Morning Horse Riding or Forest Walk, Golf Course, Infinity Pool Sunset',
+        summary: 'Explore the 8,000-hectare Domaine de Deva. Mum takes a gentle morning nature stroll or scenic horse trail ride; Dad can play 9 holes on the Dye Design championship golf course; afternoon together by the pool.',
+        morning: {
+          time: '8:30 AM – 12:00 PM',
+          title: 'Deva Nature Exploration & Dye Design Golf',
+          description: 'Gentle walking trails lead through dry forest lookouts with panoramic lagoon views. Optional gentle horse riding through the forest trails, or 9 holes of golf on the ocean-facing course.',
+          tips: 'The trails are flat, shaded, and very easy for all fitness levels.'
+        },
+        lunch: {
+          place: 'Poolside Snack Bar (Sheraton Deva)',
+          description: 'Fresh woodfired pizzas, tropical fruit smoothies, and crisp French salads.',
+          estCostAUD: 90,
+          estCostXPF: 6600
+        },
+        afternoon: {
+          time: '2:00 PM – 5:30 PM',
+          title: 'Private Bungalow Deck Siesta & Beach Walk',
+          description: 'Unwind with an afternoon siesta on your private bungalow veranda. Take a late afternoon beach walk along the empty white silica sands of Poé as the sun begins to set.',
+          tips: 'Poé beach is one of the longest, most peaceful natural beaches in the South Pacific.'
+        },
+        evening: {
+          time: '6:30 PM – 9:00 PM',
+          title: 'Farewell Deva Dinner & Stargazing',
+          description: 'Final dinner at Sheraton Deva. Stargaze beside the unlit beach—the southern sky is ablaze with stars.',
+          tips: 'Zero light pollution makes the Milky Way visible to the naked eye.'
+        },
+        dinner: {
+          place: 'Sand Beach Grill',
+          description: 'Gourmet burgers, grilled mahi-mahi, and French desserts.',
+          estCostAUD: 170,
+          estCostXPF: 12400
+        },
+        dayEstCostAUD: 260,
+        dayEstCostXPF: 19000
+      },
+      {
+        dayNumber: 4,
+        date: 'Wednesday, 11 Nov 2026 (Armistice Day)',
+        title: 'Scenic Drive South & Check into Château Royal Resort',
+        subtitle: 'Fort Teremba Historic Stop, Nouméa Arrival, Aquatonic Spa Settle-in',
+        summary: 'Enjoy breakfast at Deva, then take a relaxed 2-hour highway drive south to Nouméa, stopping at historic Fort Teremba. Check into your 2-bedroom suite at Château Royal Beach Resort & Spa and relax in the heated seawater spa pools.',
+        morning: {
+          time: '9:00 AM – 12:30 PM',
+          title: 'Leisurely Drive South & Fort Teremba',
+          description: 'Check out of Sheraton Deva. Drive south along paved RT1. Stop at the historic 19th-century Fort Teremba to view the restored military fortress and coastal lookouts. Arrive in Nouméa by 12:30 PM.',
+          tips: 'Because Wednesday is a public holiday, highway traffic is quiet and pleasant.'
+        },
+        lunch: {
+          place: 'La Foa Roadside Bistro / Bakery Picnic',
+          description: 'Fresh quiches, fruit tarts, and baguette sandwiches.',
+          estCostAUD: 60,
+          estCostXPF: 4400
+        },
+        afternoon: {
+          time: '1:30 PM – 5:00 PM',
+          title: 'Château Royal Check-in & Aquatonic Seawater Spa',
+          description: 'Check into your 2-bedroom suite at Château Royal on Anse Vata. Unpack and head straight down to the Aquatonic heated seawater hydro-massage labyrinth to soothe tired muscles after the drive.',
+          tips: 'Heated to 32°C, the seawater spa labyrinth is deeply relaxing for adults.'
+        },
+        evening: {
+          time: '6:30 PM – 9:00 PM',
+          title: 'Baie des Citrons Sunset Bistro Dinner',
+          description: 'Short 3-minute drive to Baie des Citrons for a relaxed French dinner overlooking the illuminated bay.',
+          tips: 'Enjoy a stroll along the beachfront promenade after dinner.'
+        },
+        dinner: {
+          place: 'Stone Grill / L’Oustalet',
+          description: 'Hot volcanic stone cooking with fresh prawns, steaks, and French wines.',
+          estCostAUD: 180,
+          estCostXPF: 13100
+        },
+        dayEstCostAUD: 240,
+        dayEstCostXPF: 17500
+      },
+      {
+        dayNumber: 5,
+        date: 'Thursday, 12 Nov 2026',
+        title: 'Phare Amédée Lighthouse Barrier Reef Cruise',
+        subtitle: 'Catamaran Day Excursion, Glass-Bottom Boat, Polynesian Buffet & Show',
+        summary: 'A completely hassle-free day excursion to Phare Amédée: climb the historic 1865 cast-iron lighthouse, view giant clams from the glass-bottom boat, enjoy an included Tahitian feast, and relax under shaded palm umbrellas.',
+        morning: {
+          time: '8:15 AM – 12:30 PM',
+          title: 'Mary D Catamaran to Phare Amédée',
+          description: 'Short 8-minute drive to Port Moselle. Cruise 45 mins on the luxury catamaran to Amédée Island. Take the glass-bottom boat to see giant clams and turtles, or climb the 247 steps of the 1865 lighthouse for panoramic 360° reef views.',
+          tips: 'All equipment and activities are fully included in the day package.'
+        },
+        lunch: {
+          place: 'Amédée Island Tropical Buffet Feast',
+          description: 'Lavish island lunch buffet included with roasted meats, grilled fish, salads, and live Tahitian dance show.',
+          estCostAUD: 0,
+          estCostXPF: 0
+        },
+        afternoon: {
+          time: '1:30 PM – 4:30 PM',
+          title: 'Shaded Thatched Gazebos & Reef Snorkeling',
+          description: 'Mum naps on beach loungers under shaded palm umbrellas with a cool sea breeze. Dad & 9yo snorkel the pier drop-off with docile banded sea kraits and parrotfish. Cruise back to Nouméa at 4:30 PM.',
+          tips: 'Supervised marine playground with lifesavers on duty.'
+        },
+        evening: {
+          time: '6:30 PM – 9:00 PM',
+          title: 'Casual Waterfront Dinner at Anse Vata',
+          description: 'Relaxed dinner along the palm-lined Anse Vata promenade.',
+          tips: 'Fresh seafood pizzas and local beer.'
+        },
+        dinner: {
+          place: 'La Barca / Le Bilboquet Plage',
+          description: 'Fresh local mahi-mahi, calamari, and gourmet pizzas.',
+          estCostAUD: 160,
+          estCostXPF: 11700
+        },
+        dayEstCostAUD: 160,
+        dayEstCostXPF: 11700
+      },
+      {
+        dayNumber: 6,
+        date: 'Friday, 13 Nov 2026',
+        title: 'Duck Island Snorkel & Overwater Grand Finale',
+        subtitle: 'Duck Island 5-Min Hop, Aquarium des Lagons, Le Roof Farewell Feast',
+        summary: 'Morning boat hop to Duck Island for coral trail snorkeling, an afternoon of heated pool relaxation at Château Royal, and an unforgettable farewell dinner over the water at Le Roof.',
+        morning: {
+          time: '9:00 AM – 12:30 PM',
+          title: 'Duck Island Marine Nature Trail Hop',
+          description: 'Walk 5 minutes down the sand to the taxi boat pier. 5-minute boat hop across to Duck Island. Snorkel along the marked underwater trail with clownfish, blue sea stars, and angelfish.',
+          tips: 'Hire thatched umbrella sun loungers on Duck Island.'
+        },
+        lunch: {
+          place: 'Le Canard Beach Cafe (Duck Island)',
+          description: 'Fresh Poisson Cru (lime-cured tuna with coconut milk) and burgers on the island.',
+          estCostAUD: 110,
+          estCostXPF: 8000
+        },
+        afternoon: {
+          time: '2:00 PM – 5:30 PM',
+          title: 'Château Royal Heated Pool & Sunset Packing',
+          description: 'Return to the resort for an unhurried afternoon by the heated lagoon pool. Relax with cold drinks as the sun begins to set over the barrier reef.',
+          tips: 'Order a cocktail from Le Deck to toast an extraordinary, restful holiday.'
+        },
+        evening: {
+          time: '6:30 PM – 9:30 PM',
+          title: 'Grand Farewell Dinner at Le Roof (Overwater)',
+          description: 'Celebrate an unforgettable 6 nights at Le Roof, built on stilts directly over the water. Watch dolphins and spotted eagle rays circle beneath the illuminated glass viewing portal in the dining room floor!',
+          tips: 'Nouméa’s most iconic dining experience.'
+        },
+        dinner: {
+          place: 'Le Roof (Overwater Restaurant, Anse Vata)',
+          description: 'Local rock oysters, vanilla-crusted prawns, lagoon coral trout, and fine French wines.',
+          estCostAUD: 250,
+          estCostXPF: 18200
+        },
+        dayEstCostAUD: 360,
+        dayEstCostXPF: 26200
+      },
+      {
+        dayNumber: 7,
+        date: 'Saturday, 14 Nov 2026',
+        title: 'Final Bakery Breakfast & Departure on QF92',
+        subtitle: 'Resort Breakfast, 45-Min Highway Drive, QF92 Boarding at 1:50 PM',
+        summary: 'Final buffet breakfast at Château Royal, easy 45-minute drive to La Tontouta International Airport, vehicle drop-off, and depart on QF92 at 1:50 PM.',
+        morning: {
+          time: '8:00 AM – 10:30 AM',
+          title: 'Final Breakfast & Suite Checkout',
+          description: 'Enjoy a leisurely breakfast on the terrace at Le Taom. Pack luggage and check out at 10:30 AM. Smooth 45-minute highway drive north to La Tontouta Airport.',
+          tips: 'Arrive at the airport by 11:30 AM.'
+        },
+        lunch: {
+          place: 'Airport Terminal Café & Duty Free',
+          description: 'Sandwiches, French chocolates, and coffee before boarding.',
+          estCostAUD: 55,
+          estCostXPF: 4000
+        },
+        afternoon: {
+          time: '11:30 AM – 1:50 PM',
+          title: 'Vehicle Return & QF92 Boarding',
+          description: 'Return your 7-seater SUV with a full tank at the terminal. Browse duty-free French cosmetics and wines. Board QF92 departing at 1:50 PM.',
+          tips: 'Direct flight home to Australia.'
+        },
+        evening: {
+          time: 'Afternoon / Evening',
+          title: 'Arrival Home Rested & Restored',
+          description: 'Arrive home completely refreshed with wonderful South Pacific memories.',
+          tips: 'Direct flight.'
+        },
+        dinner: {
+          place: 'In-Flight / Home',
+          description: 'Qantas in-flight meal service.',
+          estCostAUD: 0,
+          estCostXPF: 0
+        },
+        dayEstCostAUD: 55,
+        dayEstCostXPF: 4000
+      }
+    ],
+    accommodations: [
+      {
+        name: 'Sheraton New Caledonia Deva Spa & Golf Resort',
+        type: 'Traditional 2-Bedroom Melanesian Bungalow (or 2 Connecting Rooms)',
+        location: 'Domaine de Deva, Bourail (Direct Poé Beach frontage)',
+        nights: '3 Nights (Sun 8 Nov – Wed 11 Nov)',
+        bedding: '1 King Bed + 2 Double/Single Beds — accommodating 5 pax',
+        pricePerNightAUD: 560,
+        pricePerNightXPF: 40800,
+        totalCostAUD: 1680,
+        totalCostXPF: 122400,
+        features: [
+          '8,000-Hectare UNESCO Natural Biosphere Reserve Setting',
+          'Traditional High-Ceilinged Melanesian Timber Bungalows',
+          'Giant Beachfront Infinity Swimming Pool',
+          'Deep Nature Spa Pavilions & Outdoor Jacuzzis',
+          '18-Hole Dye Design Championship Golf Course',
+          'Direct Access to 13 km of White Sand at Poé Beach',
+          'Complimentary Stand-Up Paddleboards & Sea Kayaks'
+        ],
+        pros: [
+          'Supreme tranquil luxury surrounded by nature and wild deer',
+          'Full 5-star buffet breakfast included at Reef Restaurant',
+          'Uncrowded beach walks and transparent shallow lagoon waters',
+          'World-class wellness spa on-site'
+        ],
+        cons: ['2h15m highway drive from Nouméa (smooth paved RT1 highway)'],
+        bookingTip: 'Request a Traditional Bungalow with ocean or lagoon view for maximum privacy.'
+      },
+      {
+        name: 'Château Royal Beach Resort & Spa',
+        type: 'Superior or Prestige 2-Bedroom Oceanview Suite',
+        location: 'Pointe Magnin / Anse Vata, Nouméa',
+        nights: '3 Nights (Wed 11 Nov – Sat 14 Nov)',
+        bedding: '1 King Bed + 1 King/Twin + Double Sofa Bed',
+        pricePerNightAUD: 525,
+        pricePerNightXPF: 38300,
+        totalCostAUD: 1575,
+        totalCostXPF: 114900,
+        features: [
+          '3-Hectare Tropical Park on Anse Vata Lagoon',
+          'Heated Outdoor Swimming Pool & Sun Deck',
+          'Aquatonic Seawater Hydro-Massage Spa Labyrinth',
+          'Full Gourmet Kitchen & 2 Full Bathrooms',
+          '5-Minute Beach Walk to Duck Island Water Taxi'
+        ],
+        pros: [
+          'The perfect luxury urban base for the second half of the trip',
+          'Walking distance to 15+ authentic French bistros',
+          'Daily buffet breakfast included at Le Taom'
+        ],
+        cons: ['Requires splitting stay across two premier resorts (1 move on Wednesday)'],
+        bookingTip: 'Book both resorts on breakfast-inclusive packages.'
+      },
+      {
+        name: 'Hôtel Évasion en Province Nord / Sarramea',
+        type: 'Lush Mountain Rainforest Bungalow Chalets',
+        location: 'Sarramea (1h30m north of Nouméa)',
+        nights: 'Rainforest Wellness Alternative Option',
+        bedding: 'Family Bungalow (1 Queen + 3 Single Beds)',
+        pricePerNightAUD: 260,
+        pricePerNightXPF: 18900,
+        totalCostAUD: 780,
+        totalCostXPF: 56700,
+        features: [
+          'Hidden in Pristine Tropical Mountain Rainforest',
+          'Natural Freshwater River Swimming Pools (Trou d’Eau)',
+          'Outdoor Swimming Pool & Shaded Garden Terraces',
+          'Organic Table d’Hôte Melanesian Dining'
+        ],
+        pros: [
+          'Total quietude and cool mountain air',
+          'Authentic immersion in New Caledonia’s lush interior'
+        ],
+        cons: ['Mountain setting with river swimming rather than ocean/lagoon beach'],
+        bookingTip: 'Great for travelers who love rainforest hiking and mountain tranquility.'
+      },
+      {
+        name: 'Domaine de Poé Beachfront Chalets',
+        type: '2-Bedroom Self-Contained Beachfront Wooden Chalet',
+        location: 'Plage de Poé, Bourail',
+        nights: 'Casual Coastal Chalet Alternative Option',
+        bedding: '1 King + 2 Singles + Sofa Bed',
+        pricePerNightAUD: 240,
+        pricePerNightXPF: 17500,
+        totalCostAUD: 720,
+        totalCostXPF: 52500,
+        features: [
+          'Steps from the White Sand of Poé Beach',
+          'Private Wooden Deck with Gas BBQ',
+          'Full Kitchen & Dining Area',
+          'Wave-Free Shallow Lagoon Swimming'
+        ],
+        pros: [
+          'Charming casual beach lifestyle right on the sand',
+          'Self-catering barbecues under the stars'
+        ],
+        cons: ['Self-catering; no included resort breakfast buffet or spa on-site'],
+        bookingTip: 'Book well in advance as beachfront chalets are limited.'
+      }
+    ],
+    snorkelingSpots: [
+      {
+        name: 'The Shark Fault (Faille aux Requins)',
+        location: 'Poé Barrier Reef (10 min boat from Poé Beach)',
+        depth: '2 – 10 meters',
+        marineLife: ['Green sea turtles', 'Docile blacktip reef sharks', 'Stingrays', 'Vibrant outer corals'],
+        kidFriendlyRating: 4,
+        currentCaution: 'Sheltered within the fault; glass-bottom boat provides surface viewing for non-swimmers.',
+        entryType: 'Boat taxi',
+        bestTime: 'Morning charter departure with calm winds.',
+        notes: 'Spectacular underwater pass cutting through the barrier reef.'
+      },
+      {
+        name: 'Plage de Poé Lagoon Shallows',
+        location: 'Directly in front of Sheraton Deva and Poé chalets',
+        depth: '0.5 – 2 meters',
+        marineLife: ['Needlefish', 'Juvenile trevally', 'Blue sea stars', 'Clam beds'],
+        kidFriendlyRating: 5,
+        currentCaution: 'Completely zero waves. Flat transparent lagoon basin ideal for small children.',
+        entryType: 'Walk-in beach',
+        bestTime: 'High tide for swimming and paddleboarding.',
+        notes: '17 km of unbroken wave-free lagoon.'
+      },
+      {
+        name: 'Phare Amédée Outer Reef',
+        location: 'Outer Barrier Reef, Nouméa (Mary D day cruise)',
+        depth: '2 – 10 meters',
+        marineLife: ['Giant clams (Tridacna)', 'Banded sea kraits', 'Parrotfish', 'Eagle rays'],
+        kidFriendlyRating: 5,
+        currentCaution: 'Calm within lighthouse reef flat.',
+        entryType: 'Boat taxi',
+        bestTime: 'Midday cruise visit.',
+        notes: 'Visited during the Nouméa leg of the trip.'
+      },
+      {
+        name: 'Îlot Canard (Duck Island)',
+        location: 'Anse Vata, Nouméa (5 min boat taxi)',
+        depth: '1 – 4 meters',
+        marineLife: ['Clownfish', 'Sea turtles', 'Butterflyfish', 'Coral gardens'],
+        kidFriendlyRating: 5,
+        currentCaution: 'Sheltered and calm within marked buoy trail.',
+        entryType: 'Walk-in beach',
+        bestTime: 'Morning high tide.',
+        notes: 'Visited from Château Royal during the second leg.'
+      }
+    ],
+    diningSpots: [
+      {
+        name: 'Reef Restaurant (Sheraton Deva)',
+        type: 'Bistro / Seafood',
+        location: 'Domaine de Deva, Bourail',
+        specialty: 'Included daily 5-star breakfast buffet, Pacific seafood banquets, traditional Bougna',
+        recommendation: 'Dine in the soaring Melanesian grand hall overlooking the illuminated infinity pool.'
+      },
+      {
+        name: 'Sand Beach Grill (Sheraton Deva)',
+        type: 'Casual Beach Cafe',
+        location: 'Poé Beachfront, Deva',
+        specialty: 'Grilled Bourail venison steaks, fresh lagoon fish, beachfront cocktails, woodfired pizzas',
+        recommendation: 'Sunset drinks with your feet in the sand listening to the ocean breeze.'
+      },
+      {
+        name: 'Le Taom Restaurant (Château Royal)',
+        type: 'Bistro / Seafood',
+        location: 'Pointe Magnin, Anse Vata, Nouméa',
+        specialty: 'Included daily breakfast buffet, French pastries, tropical fruit, oceanfront dining',
+        recommendation: 'Enjoy breakfast on the garden terrace for your second leg in Nouméa.'
+      },
+      {
+        name: 'Chez Toto',
+        type: 'Bistro / Seafood',
+        location: 'Quartier Latin, Nouméa',
+        specialty: 'Authentic French duck confit, steak frites, and homemade tarte tatin',
+        recommendation: 'Nouméa’s favorite family-run French bistro.'
+      },
+      {
+        name: 'Le Roof Overwater Restaurant',
+        type: 'Bistro / Seafood',
+        location: 'Anse Vata, Nouméa',
+        specialty: 'Overwater fine dining, lagoon fish, oysters, central floor viewing portal with dolphins',
+        recommendation: 'Grand finale dinner on Friday night.'
+      }
+    ],
+    budgetBreakdown: [
+      { category: 'Accommodation', item: '3N Sheraton Deva Bungalow + 3N Château Royal Suite (Breakfasts included)', costXPF: 237300, costAUD: 3255, notes: 'Two premier 5-star resort bases for 5 pax' },
+      { category: 'Vehicle & Highway Fuel', item: '7-Seater SUV Rental (6 days) + Highway Fuel (360 km)', costXPF: 76000, costAUD: 1040, notes: 'Comfortable highway cruiser for Grande Terre' },
+      { category: 'Deva & Poé Excursions', item: 'Poé Shark Fault Boat Safari + Horse Riding / SUP Hire', costXPF: 42000, costAUD: 575, notes: 'Reef and biosphere excursions' },
+      { category: 'Phare Amédée Cruise', item: 'Mary D Catamaran Day Cruise (Buffet, Show & Glass-Bottom)', costXPF: 62000, costAUD: 850, notes: 'Day excursion from Nouméa base' },
+      { category: 'Spa & Wellness', item: 'Deep Nature Spa Treatment (Deva) + Aquatonic Passes (Nouméa)', costXPF: 28000, costAUD: 385, notes: 'Two premier spa experiences for mum' },
+      { category: 'Food & Dining', item: 'Resort Dinners, French Bistros & Lunches (Breakfasts included)', costXPF: 74700, costAUD: 1020, notes: 'High-standard dining with breakfasts provided' }
+    ],
+    checklist: [
+      { id: 'c1', task: 'Book Sheraton Deva Traditional 2-Bedroom Bungalow with Breakfast', deadline: '3–6 Months Prior', category: 'booking', notes: 'Bungalows in high demand during November' },
+      { id: 'c2', task: 'Book Château Royal 2-Bedroom Suite for second leg (Wed–Sat)', deadline: '3–6 Months Prior', category: 'booking', notes: 'Ensure breakfast is included' },
+      { id: 'c3', task: 'Reserve 7-Seater SUV at La Tontouta Airport', deadline: '3 Months Prior', category: 'booking', notes: 'Direct airport terminal collection and return' },
+      { id: 'c4', task: 'Book Deep Nature Spa treatments at Deva & Aquatonic at Château Royal', deadline: '1 Month Prior', category: 'booking', notes: 'Reserve treatments for Monday and Wednesday' },
+      { id: 'c5', task: 'Book Poé Shark Fault Glass-Bottom Boat Safari', deadline: '1 Month Prior', category: 'booking', notes: 'Best scheduled for Monday morning' },
+      { id: 'c6', task: 'Book Mary D Phare Amédée Day Cruise for Thursday', deadline: '1 Month Prior', category: 'booking', notes: 'Sails Thursday from Port Moselle' }
+    ]
   }
+
 };

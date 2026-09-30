@@ -21,6 +21,9 @@ const getInitialTab = (): ItineraryId => {
   if (hash === 'isle-of-pines' || hash === 'opt2') return 'isle-of-pines';
   if (hash === 'west-coast' || hash === 'opt3') return 'west-coast';
   if (hash === 'best-of-both' || hash === 'opt4' || hash === 'express-iop') return 'best-of-both';
+  if (hash === 'relax-resort' || hash === 'opt5' || hash === 'chateau-royal' || hash === 'resort') return 'relax-resort';
+  if (hash === 'relax-island' || hash === 'opt6' || hash === 'ilot-maitre' || hash === 'island') return 'relax-island';
+  if (hash === 'relax-retreat' || hash === 'opt7' || hash === 'deva' || hash === 'retreat') return 'relax-retreat';
   if (hash === 'compare' || hash === 'matrix') return 'compare';
   return 'islet';
 };
@@ -263,30 +266,48 @@ export const App: React.FC = () => {
               </span>
             </div>
 
-            <div className="flex items-center gap-4 text-slate-400">
+            <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-slate-400">
               <button
                 onClick={() => handleTabChange('islet')}
                 className="hover:text-cyan-400 transition cursor-pointer"
               >
-                Option 1
+                Option 1: Islet
               </button>
               <button
                 onClick={() => handleTabChange('isle-of-pines')}
                 className="hover:text-cyan-400 transition cursor-pointer"
               >
-                Option 2
+                Option 2: Pines
               </button>
               <button
                 onClick={() => handleTabChange('west-coast')}
                 className="hover:text-cyan-400 transition cursor-pointer"
               >
-                Option 3
+                Option 3: West Coast
               </button>
               <button
                 onClick={() => handleTabChange('best-of-both')}
                 className="hover:text-cyan-400 transition cursor-pointer"
               >
-                Option 4
+                Option 4: Best of Both
+              </button>
+              <button
+                onClick={() => handleTabChange('relax-resort')}
+                className="hover:text-teal-400 text-teal-300 transition cursor-pointer font-medium"
+              >
+                🌺 Option 5: Grand Lagoon
+              </button>
+              <button
+                onClick={() => handleTabChange('relax-island')}
+                className="hover:text-teal-400 text-teal-300 transition cursor-pointer font-medium"
+              >
+                🏝️ Option 6: Coral Island
+              </button>
+              <button
+                onClick={() => handleTabChange('relax-retreat')}
+                className="hover:text-teal-400 text-teal-300 transition cursor-pointer font-medium"
+              >
+                🌿 Option 7: Nature Retreat
               </button>
               <button
                 onClick={() => handleTabChange('compare')}

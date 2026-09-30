@@ -1,4 +1,4 @@
-export type ItineraryId = 'islet' | 'isle-of-pines' | 'west-coast' | 'best-of-both' | 'compare';
+export type ItineraryId = 'islet' | 'isle-of-pines' | 'west-coast' | 'best-of-both' | 'relax-resort' | 'relax-island' | 'relax-retreat' | 'compare';
 
 export interface Activity {
   time: string;
@@ -89,8 +89,9 @@ export interface ChecklistItem {
 }
 
 export interface ItineraryOption {
-  id: 'islet' | 'isle-of-pines' | 'west-coast' | 'best-of-both';
+  id: 'islet' | 'isle-of-pines' | 'west-coast' | 'best-of-both' | 'relax-resort' | 'relax-island' | 'relax-retreat';
   optionNumber: number;
+  category?: 'active' | 'relaxing';
   title: string;
   tagline: string;
   badge: string;
@@ -126,7 +127,7 @@ export interface LocationMarker {
   pinClass: 'pin-blue' | 'pin-emerald' | 'pin-amber' | 'pin-purple' | 'pin-rose';
   emoji: string;
   info: string;
-  itineraries: ('islet' | 'isle-of-pines' | 'west-coast' | 'best-of-both')[];
+  itineraries: ('islet' | 'isle-of-pines' | 'west-coast' | 'best-of-both' | 'relax-resort' | 'relax-island' | 'relax-retreat')[];
 }
 
 export interface ComparisonFactor {
@@ -152,10 +153,26 @@ export interface ComparisonFactor {
     badge?: string;
     text: string;
   };
+  relaxResort?: {
+    highlight?: boolean;
+    badge?: string;
+    text: string;
+  };
+  relaxIsland?: {
+    highlight?: boolean;
+    badge?: string;
+    text: string;
+  };
+  relaxRetreat?: {
+    highlight?: boolean;
+    badge?: string;
+    text: string;
+  };
 }
 
 export interface QuizOption {
-  id: 'islet' | 'isle-of-pines' | 'west-coast' | 'best-of-both';
+  id: 'islet' | 'isle-of-pines' | 'west-coast' | 'best-of-both' | 'relax-resort' | 'relax-island' | 'relax-retreat';
+  category?: 'active' | 'relaxing';
   icon: string;
   title: string;
   description: string;

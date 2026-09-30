@@ -1,6 +1,58 @@
 import { LocationMarker } from './types';
 
 export const LOCATIONS: LocationMarker[] = [
+  // --- Premier Resorts & Wellness (Relaxing Options) ---
+  {
+    id: 'chateau',
+    name: 'Château Royal Beach Resort & Spa',
+    lat: -22.3080,
+    lng: 166.4520,
+    pinClass: 'pin-blue',
+    emoji: '🌺',
+    info: 'Premier 3-hectare lagoon resort base. 2-bedroom suites with kitchen, heated pool, Aquatonic spa, direct beach access.',
+    itineraries: ['relax-resort', 'relax-retreat']
+  },
+  {
+    id: 'meridien',
+    name: 'Le Domaine Nouméa / Le Méridien Resort',
+    lat: -22.3105,
+    lng: 166.4535,
+    pinClass: 'pin-emerald',
+    emoji: '🏨',
+    info: '5-star beachfront resort in coconut groves. Nouméa’s largest freeform pool, Deep Nature Spa, water sports.',
+    itineraries: ['relax-resort']
+  },
+  {
+    id: 'maitre',
+    name: 'DoubleTree by Hilton Îlot Maître Resort',
+    lat: -22.3350,
+    lng: 166.4020,
+    pinClass: 'pin-emerald',
+    emoji: '🏝️',
+    info: '200ha marine reserve coral island. Wild green turtles swim off the beach, overwater bungalows, oceanview infinity pool.',
+    itineraries: ['relax-island']
+  },
+  {
+    id: 'sheraton_deva',
+    name: 'Sheraton New Caledonia Deva Spa & Golf Resort',
+    lat: -21.6025,
+    lng: 165.3420,
+    pinClass: 'pin-amber',
+    emoji: '🌿',
+    info: '5-star UNESCO biosphere reserve resort. Traditional Melanesian bungalows, Deep Nature Spa, 18-hole golf, 13km Poé beach.',
+    itineraries: ['relax-retreat']
+  },
+  {
+    id: 'aquatonic',
+    name: 'Aquatonic Heated Seawater Labyrinth Spa',
+    lat: -22.3082,
+    lng: 166.4522,
+    pinClass: 'pin-purple',
+    emoji: '💆‍♀️',
+    info: 'World-famous heated seawater thalassotherapy pool, hydro-massage jets, and wellness treatments at Château Royal.',
+    itineraries: ['relax-resort', 'relax-retreat']
+  },
+
   // --- Nouméa & Southern Lagoon ---
   {
     id: 'citrons',
@@ -9,8 +61,8 @@ export const LOCATIONS: LocationMarker[] = [
     lng: 166.4357,
     pinClass: 'pin-blue',
     emoji: '🏖️',
-    info: 'Your apartment base. Safe netted swimming beach directly opposite; casual French bistros.',
-    itineraries: ['islet', 'isle-of-pines', 'west-coast', 'best-of-both']
+    info: 'Safe netted swimming beach directly opposite; casual French bistros and seaside bakeries.',
+    itineraries: ['islet', 'isle-of-pines', 'west-coast', 'best-of-both', 'relax-resort', 'relax-retreat']
   },
   {
     id: 'vatanav',
@@ -20,7 +72,7 @@ export const LOCATIONS: LocationMarker[] = [
     pinClass: 'pin-emerald',
     emoji: '🚤',
     info: '5 min boat hop to Duck Island; waterfront promenade, ice creams and bakeries.',
-    itineraries: ['islet', 'isle-of-pines', 'west-coast', 'best-of-both']
+    itineraries: ['islet', 'isle-of-pines', 'west-coast', 'best-of-both', 'relax-resort', 'relax-retreat']
   },
   {
     id: 'canard',
@@ -30,7 +82,7 @@ export const LOCATIONS: LocationMarker[] = [
     pinClass: 'pin-emerald',
     emoji: '🦆',
     info: 'Underwater marine nature trail with marked buoys. Ideal kid snorkeling with friendly marine life.',
-    itineraries: ['islet', 'isle-of-pines', 'west-coast', 'best-of-both']
+    itineraries: ['islet', 'isle-of-pines', 'west-coast', 'best-of-both', 'relax-resort', 'relax-retreat']
   },
   {
     id: 'ouentoro',
@@ -40,7 +92,7 @@ export const LOCATIONS: LocationMarker[] = [
     pinClass: 'pin-blue',
     emoji: '🔭',
     info: 'Panoramic 360° lookout over the southern lagoon barrier reef and historic WWII cannon emplacements.',
-    itineraries: ['islet', 'west-coast', 'best-of-both']
+    itineraries: ['islet', 'west-coast', 'best-of-both', 'relax-resort']
   },
   {
     id: 'aquarium',
@@ -50,7 +102,7 @@ export const LOCATIONS: LocationMarker[] = [
     pinClass: 'pin-blue',
     emoji: '🐠',
     info: 'Living coral exhibits, fluorescent corals, nautilus, and rescued sea turtles.',
-    itineraries: ['islet', 'best-of-both']
+    itineraries: ['islet', 'best-of-both', 'relax-resort', 'relax-retreat']
   },
   {
     id: 'portmoselle',
@@ -60,7 +112,7 @@ export const LOCATIONS: LocationMarker[] = [
     pinClass: 'pin-emerald',
     emoji: '⛵',
     info: 'Board high-speed water taxis to Îlot Signal; morning market with fresh tropical fruits and baguettes.',
-    itineraries: ['islet', 'isle-of-pines', 'west-coast', 'best-of-both']
+    itineraries: ['islet', 'isle-of-pines', 'west-coast', 'best-of-both', 'relax-resort', 'relax-island', 'relax-retreat']
   },
   {
     id: 'signal',
@@ -70,7 +122,7 @@ export const LOCATIONS: LocationMarker[] = [
     pinClass: 'pin-emerald',
     emoji: '🐢',
     info: 'Pristine marine sanctuary. Snorkel along the reef drop-off with wild green turtles.',
-    itineraries: ['islet', 'isle-of-pines', 'west-coast', 'best-of-both']
+    itineraries: ['islet', 'isle-of-pines', 'west-coast', 'best-of-both', 'relax-resort', 'relax-retreat']
   },
   {
     id: 'amedee',
@@ -80,7 +132,7 @@ export const LOCATIONS: LocationMarker[] = [
     pinClass: 'pin-rose',
     emoji: '🗼',
     info: 'Historic 1865 cast-iron lighthouse, giant clams, banded sea kraits, and glass-bottom boat tours.',
-    itineraries: ['islet', 'best-of-both']
+    itineraries: ['islet', 'best-of-both', 'relax-resort', 'relax-retreat']
   },
   {
     id: 'boulari',
@@ -150,7 +202,7 @@ export const LOCATIONS: LocationMarker[] = [
     pinClass: 'pin-purple',
     emoji: '✈️',
     info: 'International flight arrival (QF91 at 12:35 PM) & departure (QF92 at 1:50 PM).',
-    itineraries: ['islet', 'isle-of-pines', 'west-coast', 'best-of-both']
+    itineraries: ['islet', 'isle-of-pines', 'west-coast', 'best-of-both', 'relax-resort', 'relax-island', 'relax-retreat']
   },
   {
     id: 'gea',
@@ -294,7 +346,7 @@ export const LOCATIONS: LocationMarker[] = [
     pinClass: 'pin-amber',
     emoji: '🏖️',
     info: 'Your beachfront chalet base on 17 km of calm, shallow lagoon. Step directly into wave-free water.',
-    itineraries: ['west-coast']
+    itineraries: ['west-coast', 'relax-retreat']
   },
   {
     id: 'faille',
@@ -304,7 +356,7 @@ export const LOCATIONS: LocationMarker[] = [
     pinClass: 'pin-blue',
     emoji: '🐢',
     info: 'Underwater canyon cutting through outer barrier reef. Snorkel with green turtles and rays via glass-bottom boat.',
-    itineraries: ['west-coast']
+    itineraries: ['west-coast', 'relax-retreat']
   },
   {
     id: 'roche',
@@ -525,6 +577,82 @@ export const MAP_CONFIGS = {
         color: '#0284c7',
         weight: 3,
         dashArray: '5, 5'
+      }
+    ]
+  },
+  'relax-resort': {
+    center: [-22.31, 166.44] as [number, number],
+    zoom: 12,
+    polylines: [
+      {
+        points: [
+          [-22.3080, 166.4520], // Château Royal
+          [-22.3135, 166.4368]  // Duck Island
+        ] as [number, number][],
+        color: '#0d9488',
+        weight: 3,
+        dashArray: '6, 6'
+      },
+      {
+        points: [
+          [-22.2745, 166.4411], // Port Moselle
+          [-22.4764, 166.4678]  // Phare Amédée
+        ] as [number, number][],
+        color: '#0284c7',
+        weight: 3,
+        dashArray: '6, 6'
+      },
+      {
+        points: [
+          [-22.2745, 166.4411], // Port Moselle
+          [-22.2961, 166.2922]  // Îlot Signal
+        ] as [number, number][],
+        color: '#0284c7',
+        weight: 3,
+        dashArray: '6, 6'
+      }
+    ]
+  },
+  'relax-island': {
+    center: [-22.31, 166.42] as [number, number],
+    zoom: 12,
+    polylines: [
+      {
+        points: [
+          [-22.2745, 166.4411], // Port Moselle
+          [-22.3350, 166.4020]  // DoubleTree Îlot Maître
+        ] as [number, number][],
+        color: '#06b6d4',
+        weight: 4,
+        dashArray: '6, 6',
+        opacity: 0.9
+      }
+    ]
+  },
+  'relax-retreat': {
+    center: [-21.90, 165.90] as [number, number],
+    zoom: 8,
+    polylines: [
+      {
+        points: [
+          [-22.0147, 166.2131], // Airport
+          [-21.7100, 165.8300], // La Foa
+          [-21.5706, 165.4981], // Bourail
+          [-21.6025, 165.3420]  // Sheraton Deva
+        ] as [number, number][],
+        color: '#d97706',
+        weight: 4,
+        opacity: 0.85
+      },
+      {
+        points: [
+          [-21.6025, 165.3420], // Sheraton Deva
+          [-21.5706, 165.4981], // Bourail
+          [-22.3080, 166.4520]  // Château Royal Nouméa
+        ] as [number, number][],
+        color: '#0d9488',
+        weight: 4,
+        opacity: 0.85
       }
     ]
   },

@@ -23,22 +23,25 @@ export const Navbar: React.FC<NavbarProps> = ({
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [currencyModalOpen, setCurrencyModalOpen] = useState(false);
 
-  const tabs: { id: ItineraryId; label: string; icon: React.ReactNode; badge?: string }[] = [
-    { id: 'islet', label: 'Option 1: Islet Explorer', icon: <Palmtree className="w-4 h-4 text-sky-400" /> },
-    { id: 'isle-of-pines', label: 'Option 2: Isle of Pines', icon: <Compass className="w-4 h-4 text-emerald-400" /> },
-    { id: 'west-coast', label: 'Option 3: West Coast & Poé', icon: <MapPin className="w-4 h-4 text-amber-400" /> },
-    { id: 'best-of-both', label: 'Option 4: Best of Both', icon: <Sparkles className="w-4 h-4 text-purple-400" />, badge: 'New' },
-    { id: 'compare', label: 'Compare All 4', icon: <Scale className="w-4 h-4 text-indigo-400" />, badge: 'Decision Tool' },
+  const tabs: { id: ItineraryId; label: string; shortLabel: string; group: 'active' | 'relax' | 'compare'; icon: React.ReactNode; badge?: string }[] = [
+    { id: 'islet', label: 'Option 1: Islet Explorer', shortLabel: 'Opt 1: Islet', group: 'active', icon: <Palmtree className="w-4 h-4 text-sky-400" /> },
+    { id: 'isle-of-pines', label: 'Option 2: Isle of Pines', shortLabel: 'Opt 2: Pines', group: 'active', icon: <Compass className="w-4 h-4 text-emerald-400" /> },
+    { id: 'west-coast', label: 'Option 3: West Coast & Poé', shortLabel: 'Opt 3: West Coast', group: 'active', icon: <MapPin className="w-4 h-4 text-amber-400" /> },
+    { id: 'best-of-both', label: 'Option 4: Best of Both', shortLabel: 'Opt 4: Both', group: 'active', icon: <Sparkles className="w-4 h-4 text-purple-400" /> },
+    { id: 'relax-resort', label: 'Option 5: Grand Lagoon Resort', shortLabel: 'Opt 5: Resort', group: 'relax', icon: <Palmtree className="w-4 h-4 text-teal-400" />, badge: 'Relax' },
+    { id: 'relax-island', label: 'Option 6: Private Coral Island', shortLabel: 'Opt 6: Island', group: 'relax', icon: <Sparkles className="w-4 h-4 text-cyan-400" />, badge: 'Overwater' },
+    { id: 'relax-retreat', label: 'Option 7: Nature & Wellness Retreat', shortLabel: 'Opt 7: Retreat', group: 'relax', icon: <Compass className="w-4 h-4 text-rose-400" />, badge: 'Spa+Golf' },
+    { id: 'compare', label: 'Compare All 7', shortLabel: 'Compare All', group: 'compare', icon: <Scale className="w-4 h-4 text-indigo-400" />, badge: 'Decision Tool' },
   ];
 
   return (
     <header className="sticky top-0 z-50 bg-slate-900/95 backdrop-blur-md border-b border-slate-800 text-white transition-all shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-16 gap-2">
           
           {/* Brand Logo */}
           <div 
-            className="flex items-center gap-2.5 cursor-pointer select-none"
+            className="flex items-center gap-2.5 cursor-pointer select-none shrink-0"
             onClick={() => setActiveTab('islet')}
           >
             <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center text-white shadow-lg shadow-cyan-500/20">
@@ -49,28 +52,36 @@ export const Navbar: React.FC<NavbarProps> = ({
                 <span>New Caledonia</span>
                 <span className="text-cyan-400 font-semibold text-xs px-2 py-0.5 rounded-full bg-cyan-950 border border-cyan-800">Nov 2026</span>
               </div>
-              <p className="text-xs text-slate-400 hidden sm:block">Family Holiday Itineraries (4 Adults + 1 Child)</p>
+              <p className="text-xs text-slate-400 hidden xl:block">Family Holiday Itineraries (4 Adults + 1 Child)</p>
             </div>
           </div>
 
-          {/* Desktop Navigation Tabs */}
-          <nav className="hidden lg:flex items-center gap-1">
+          {/* Desktop Navigation Tabs (Horizontal Scroll / Compact) */}
+          <nav className="hidden lg:flex items-center gap-1 overflow-x-auto py-1 scrollbar-none">
             {tabs.map((tab) => {
               const isActive = activeTab === tab.id;
+              const isRelax = tab.group === 'relax';
               return (
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`flex items-center gap-2 px-3.5 py-2 rounded-lg text-sm font-medium transition-all ${
+                  className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-medium whitespace-nowrap transition-all ${
                     isActive
-                      ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 shadow-sm'
+                      ? isRelax
+                        ? 'bg-teal-500/25 text-teal-200 border border-teal-500/50 shadow-sm font-semibold'
+                        : 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 shadow-sm font-semibold'
                       : 'text-slate-300 hover:text-white hover:bg-slate-800/60'
                   }`}
+                  title={tab.label}
                 >
                   {tab.icon}
-                  <span>{tab.label}</span>
+                  <span>{tab.shortLabel}</span>
                   {tab.badge && (
-                    <span className="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-indigo-500/30 text-indigo-300 border border-indigo-500/40">
+                    <span className={`text-[9px] uppercase font-bold tracking-wider px-1 py-0.2 rounded border ${
+                      isRelax 
+                        ? 'bg-teal-500/20 text-teal-300 border-teal-500/30'
+                        : 'bg-indigo-500/30 text-indigo-300 border-indigo-500/40'
+                    }`}>
                       {tab.badge}
                     </span>
                   )}
@@ -80,7 +91,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           </nav>
 
           {/* Action Tools */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 shrink-0">
             
             {/* Currency Mode Trigger */}
             <button

@@ -33,10 +33,25 @@ This single-page application (SPA) unifies 3 deep-dive itinerary options and an 
    - **Highlights:** Savor world-class French dining, patisseries, and apartment luxury in Nouméa every night, while experiencing the #1 South Pacific wonder: Upi Bay wooden pirogues, Piscine Naturelle aquarium, and grilled spiny rock lobster.
    - **Ideal for:** Families who demand excellent food and comfortable lodging, but refuse to miss the iconic natural wonders of the Isle of Pines.
 
-5. **12-Factor Comparison Matrix & Priority Quiz (`#compare`)**
-   - **Interactive Priority Quiz:** Instant match based on your family's travel style.
-   - **Master Archipelago Map:** Geographic scale comparison across Grande Terre and Isle of Pines.
-   - **12-Factor Side-by-Side Matrix:** Logistics, kid safety, snorkeling, bakeries, weather resilience, and total budget across all 4 options.
+5. **Option 5: The Grand Lagoon Resort & Spa Base (`#relax-resort`)**
+   - **Base:** Nouméa Luxury Beachfront (Château Royal Beach Resort & Spa, Le Méridien Nouméa Resort & Spa, Hilton Nouméa La Promenade Residences, or Hôtel Le Lagon).
+   - **Highlights:** 3 hectares of manicured tropical parkland, heated outdoor lagoon pool, indoor Aquatonic heated seawater hydrotherapy labyrinth, direct beach access, daily buffet breakfast included, 5-minute stroll to Duck Island water taxi, Phare Amédée day cruise.
+   - **Ideal for:** Ultimate relaxation with zero packing/unpacking, lush gardens, spa pampering, and effortless reef excursions for dad and kids.
+
+6. **Option 6: The Private Coral Island Sanctuary (`#relax-island`)**
+   - **Base:** DoubleTree by Hilton Noumea Ilot Maitre Resort (200-hectare protected coral reef reserve, 20-min catamaran from Nouméa).
+   - **Highlights:** Walk straight from garden or overwater villas into the sea; wild green sea turtles grazing 15 meters off the beach; infinity pool overlooking the lagoon; zero cars, zero traffic; sunset catamaran to Nouméa for French waterfront dinners.
+   - **Ideal for:** Pure island escapism with resort comforts, crystal waters, and snorkeling right off your doorstep.
+
+7. **Option 7: The Gentle Nature & Wellness Retreat (`#relax-retreat`)**
+   - **Base:** 3 nights Sheraton New Caledonia Deva Spa & Golf Resort (Bourail) + 3 nights Château Royal Beach Resort (Nouméa).
+   - **Highlights:** 8,000 hectares of UNESCO World Heritage biosphere reserve, traditional Melanesian bungalow architecture, Deep Nature Spa hydrotherapy, Dye Designs 18-hole golf, 17 km wave-free Poé lagoon paddling, followed by grand beachfront dining and Amédée lighthouse cruise in Nouméa.
+   - **Ideal for:** Combining 5-star nature wellness, spa pampering, calm lagoon wading, and grand coastal dining with just 1 scenic drive.
+
+8. **Multi-Factor Comparison Matrix & Priority Quiz (`#compare`)**
+   - **Interactive Priority Quiz:** Instant match across all 7 travel styles and priorities.
+   - **Master Archipelago Map:** Geographic scale comparison across Grande Terre, Ilot Maître, and Isle of Pines.
+   - **Multi-Factor Side-by-Side Matrix:** Logistics, kid safety, snorkeling, bakeries, weather resilience, and total budget with view filter toggles (All 7, Relaxing Resorts, Active Touring).
    - **Dynamic Currency Converter:** Toggle between XPF, AUD, or both with live exchange rate adjustments.
    - **Persistent Checklist:** Pre-departure planning checklist stored in `localStorage`.
 
